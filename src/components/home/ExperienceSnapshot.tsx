@@ -16,7 +16,7 @@ export function ExperienceSnapshot({ locale, copy, items }: Props) {
             as="li"
             key={item.id}
             delay={i * 60}
-            className="grid grid-cols-[auto_1fr] items-center gap-x-5 gap-y-3 border-t border-line px-6 py-6 first:border-t-0 md:grid-cols-[3.5rem_minmax(0,4fr)_minmax(0,6fr)_9.5rem] md:gap-x-8 md:px-8"
+            className="grid grid-cols-[auto_1fr] items-center gap-x-5 gap-y-3 border-t border-line px-6 py-6 first:border-t-0 md:grid-cols-[6rem_minmax(0,4fr)_minmax(0,6fr)_9.5rem] md:gap-x-8 md:px-8"
           >
             <CompanyLogo item={item} />
             <span>

@@ -10,9 +10,16 @@ export function CompanyLogo({ item }: { item: ExperienceItem }) {
     .slice(0, 2);
 
   return (
-    <span className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-line bg-paper p-2">
+    <span className="flex h-14 w-24 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-line bg-paper px-3 py-2">
       {item.logo ? (
-        <Image src={item.logo.src} width={item.logo.width} height={item.logo.height} alt={item.company} className="h-auto max-h-full w-auto max-w-full object-contain" />
+        <Image
+          src={item.logo.src}
+          width={item.logo.width}
+          height={item.logo.height}
+          alt={item.company}
+          unoptimized={item.logo.src.endsWith(".svg")}
+          className="h-auto max-h-full w-auto max-w-full object-contain"
+        />
       ) : (
         <span aria-hidden="true" className="font-display text-lg text-ink">
           {initials}

@@ -1,10 +1,11 @@
 import type { ExperienceItem } from "./types";
 
-/** Reverse chronological. Sourced from the CV and Dilara's confirmations. */
+/** Reverse chronological. Sourced from the CV and Dilara's confirmations. Logos: official company websites. */
 export const experience: ExperienceItem[] = [
   {
     id: "logo-ba",
     company: "Logo Yazılım",
+    logo: { src: "/images/logos/logo-yazilim.svg", width: 93, height: 34 },
     role: { tr: "İş Analisti Stajyeri", en: "Business Analyst Intern", de: "Praktikantin Business Analyse" },
     period: { tr: "Şub – May 2026", en: "Feb – May 2026", de: "Feb. – Mai 2026" },
     location: { tr: "Türkiye", en: "Türkiye", de: "Türkei" },
@@ -17,6 +18,7 @@ export const experience: ExperienceItem[] = [
   {
     id: "mikro-pm",
     company: "Mikro Yazılım",
+    logo: { src: "/images/logos/mikro-yazilim.png", width: 603, height: 317 },
     role: { tr: "Ürün Yönetimi Stajyeri", en: "Product Management Intern", de: "Praktikantin Produktmanagement" },
     period: { tr: "Ağu – Eyl 2025", en: "Aug – Sep 2025", de: "Aug. – Sep. 2025" },
     location: { tr: "Türkiye", en: "Türkiye", de: "Türkei" },
@@ -29,6 +31,7 @@ export const experience: ExperienceItem[] = [
   {
     id: "logo-dev",
     company: "Logo Yazılım",
+    logo: { src: "/images/logos/logo-yazilim.svg", width: 93, height: 34 },
     role: { tr: "Yazılım Geliştirme Stajyeri", en: "Software Development Intern", de: "Praktikantin Softwareentwicklung" },
     period: { tr: "Tem – Ağu 2025", en: "Jul – Aug 2025", de: "Juli – Aug. 2025" },
     location: { tr: "Türkiye", en: "Türkiye", de: "Türkei" },
