@@ -27,7 +27,6 @@ export default async function WorkPage() {
               <ProjectCard
                 project={project}
                 locale={locale}
-                flip={i % 2 === 1}
                 statusLabel={dict.status[project.status]}
                 readLabel={dict.work.readCase}
                 headingLevel="h2"

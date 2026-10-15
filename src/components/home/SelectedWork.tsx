@@ -28,7 +28,6 @@ export function SelectedWork({ locale, projects, copy, status }: Props) {
             <ProjectCard
               project={project}
               locale={locale}
-              flip={i % 2 === 1}
               statusLabel={status[project.status]}
               readLabel={copy.readCase}
             />

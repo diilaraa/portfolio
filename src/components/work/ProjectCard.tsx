@@ -9,36 +9,24 @@ import { cvdFilterPlates } from "@/content/cvdFilterPlates";
 type CardProps = {
   project: Project;
   locale: Locale;
-  flip?: boolean;
   statusLabel: string;
   readLabel: string;
   headingLevel?: "h2" | "h3";
 };
 
-/** Full-width horizontal project card; the whole card is the link, the button is visual only. */
-export function ProjectCard({ project, locale, flip = false, statusLabel, readLabel, headingLevel = "h3" }: CardProps) {
+/**
+ * Full-width horizontal project card: text on the left, image on the right.
+ * The whole card is the link; the button is visual only.
+ */
+export function ProjectCard({ project, locale, statusLabel, readLabel, headingLevel = "h3" }: CardProps) {
   const link = href(locale, `/work/${project.slug}`);
   const Heading = headingLevel;
   const hasCover = Boolean(project.cover);
-  return (
-    <div
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-paper-raised shadow-[0_1px_2px_rgb(18_18_18/0.04)] transition-[translate,box-shadow] duration-300 ease-soft hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgb(18_18_18/0.3)] md:grid md:grid-cols-12"
-    >
-      {hasCover && (
-        <div
-          className={`relative overflow-hidden border-b border-line bg-band-gray md:col-span-7 md:border-b-0 ${
-            flip ? "md:order-2 md:border-l" : "md:border-r"
-          }`}
-        >
-          <ProjectCover project={project} locale={locale} />
-        </div>
-      )}
+  const contain = project.cover?.fit === "contain";
 
-      <div
-        className={`flex flex-col justify-center p-6 md:p-10 ${hasCover ? "md:col-span-5" : "md:col-span-12"} ${
-          flip ? "md:order-1" : ""
-        }`}
-      >
+  return (
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-paper-raised shadow-[0_1px_2px_rgb(18_18_18/0.04)] transition-[translate,box-shadow] duration-300 ease-soft hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgb(18_18_18/0.3)] md:grid md:grid-cols-12">
+      <div className={`flex flex-col justify-center p-6 md:p-10 ${hasCover ? "md:col-span-5" : "md:col-span-12"}`}>
         <div className="flex flex-wrap items-center gap-3">
           <StatusBadge status={project.status} label={statusLabel} />
           <span className="text-label font-medium text-ink-muted">{project.period[locale]}</span>
@@ -63,11 +51,25 @@ export function ProjectCard({ project, locale, flip = false, statusLabel, readLa
           </span>
         </div>
       </div>
+
+      {hasCover && (
+        <div
+          className={`relative order-first overflow-hidden border-b border-line md:order-none md:col-span-7 md:border-b-0 md:border-l ${
+            contain ? "bg-paper" : "bg-band-gray"
+          }`}
+        >
+          <ProjectCover project={project} locale={locale} fill />
+        </div>
+      )}
     </div>
   );
 }
 
-export function ProjectCover({ project, locale }: { project: Project; locale: Locale }) {
+/**
+ * Project image. With `fill`, it covers the whole panel it sits in (card image column);
+ * without, it keeps a 16:10 frame (case study header).
+ */
+export function ProjectCover({ project, locale, fill = false }: { project: Project; locale: Locale; fill?: boolean }) {
   if (!project.cover) return null;
 
   // The CVD study shows the filters' plate outputs as an uncaptioned mosaic.
@@ -89,6 +91,10 @@ export function ProjectCover({ project, locale }: { project: Project; locale: Lo
     );
   }
 
+  const contain = project.cover.fit === "contain";
+  const position = contain ? "object-center" : project.cover.focus === "left" ? "object-left-top" : "object-top";
+  const frame = fill ? "aspect-[16/10] md:absolute md:inset-0 md:aspect-auto md:h-full" : contain ? "aspect-[16/10] max-h-[24rem]" : "aspect-[16/10]";
+
   return (
     <Image
       src={project.cover.src}
@@ -96,11 +102,7 @@ export function ProjectCover({ project, locale }: { project: Project; locale: Lo
       height={project.cover.height}
       alt={project.cover.alt[locale]}
       sizes="(min-width: 768px) 58vw, 100vw"
-      className={`aspect-[16/10] h-full w-full ${
-        project.cover.fit === "contain"
-          ? "max-h-[28rem] bg-paper object-contain p-8"
-          : `object-cover ${project.cover.focus === "left" ? "object-left-top" : "object-top"}`
-      } transition-transform duration-500 ease-soft group-hover:scale-[1.03]`}
+      className={`${frame} w-full ${contain ? "object-contain p-10 md:p-14" : "object-cover"} ${position} transition-transform duration-500 ease-soft group-hover:scale-[1.03]`}
     />
   );
 }
