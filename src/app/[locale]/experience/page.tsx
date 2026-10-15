@@ -5,6 +5,7 @@ import { experience } from "@/content/experience";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { CompanyLogo } from "@/components/ui/CompanyLogo";
+import { TechList } from "@/components/ui/TechList";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { locale, pages } = await getPages();
@@ -56,13 +57,7 @@ export default async function ExperiencePage() {
                   {item.tools.length > 0 && (
                     <div>
                       <h3 className="text-label font-semibold text-pink">{copy.tools}</h3>
-                      <ul className="mt-3 flex flex-wrap gap-1.5">
-                        {item.tools.map((tool) => (
-                          <li key={tool} className="rounded-md bg-band-gray px-2 py-1 text-[0.75rem] text-ink">
-                            {tool}
-                          </li>
-                        ))}
-                      </ul>
+                      <TechList items={item.tools} className="mt-3" label={copy.tools} />
                     </div>
                   )}
                 </div>

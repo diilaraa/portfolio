@@ -10,6 +10,7 @@ import { StatusBadge } from "@/components/ui/StatusBadge";
 import { ButtonLink } from "@/components/ui/Button";
 import { ProjectCover } from "@/components/work/ProjectCard";
 import { CaseBlock } from "@/components/work/CaseBlocks";
+import { TechList } from "@/components/ui/TechList";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -85,13 +86,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/wor
               <Meta label={copy.role}>{project.role[locale]}</Meta>
               <Meta label={copy.period}>{project.period[locale]}</Meta>
               <Meta label={copy.stack}>
-                <span className="mt-1 flex flex-wrap gap-1.5">
-                  {project.stack.map((tech) => (
-                    <span key={tech} className="rounded-md bg-paper px-2 py-1 text-[0.75rem] text-ink">
-                      {tech}
-                    </span>
-                  ))}
-                </span>
+                <TechList items={project.stack} tone="paper" className="mt-1" />
               </Meta>
               {project.links && project.links.length > 0 && (
                 <Meta label={copy.links}>

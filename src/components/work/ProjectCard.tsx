@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Project } from "@/content/types";
 import { href, type Locale } from "@/lib/i18n";
 import { StatusBadge } from "@/components/ui/StatusBadge";
+import { TechList } from "@/components/ui/TechList";
 import { cvdFilterPlates } from "@/content/cvdFilterPlates";
 
 type CardProps = {
@@ -50,13 +51,7 @@ export function ProjectCard({ project, locale, flip = false, statusLabel, readLa
         </Heading>
         <p className="mt-3 max-w-[60ch] text-ink-muted">{project.summary[locale]}</p>
 
-        <ul className="mt-6 flex flex-wrap gap-1.5" aria-label="Stack">
-          {project.stack.map((tech) => (
-            <li key={tech} className="rounded-md bg-band-gray px-2 py-1 text-[0.75rem] text-ink">
-              {tech}
-            </li>
-          ))}
-        </ul>
+        <TechList items={project.stack} className="mt-6" />
 
         <div className="pt-8">
           <span

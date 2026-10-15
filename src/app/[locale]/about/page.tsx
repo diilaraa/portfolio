@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import { education, languages, skillGroups } from "@/content/about";
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import { TechList } from "@/components/ui/TechList";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { locale, pages } = await getPages();
@@ -72,13 +73,7 @@ export default async function AboutPage() {
               <Reveal key={group.title.en} className="rounded-2xl border border-line bg-paper p-6">
                 <h3 className="font-display text-h3 text-ink">{group.title[locale]}</h3>
                 <p className="mt-1 text-sm text-ink-muted">{group.usedIn[locale]}</p>
-                <ul className="mt-4 flex flex-wrap gap-1.5">
-                  {group.items.map((skill) => (
-                    <li key={skill} className="rounded-md bg-band-blue px-2.5 py-1 text-sm text-ink">
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
+                <TechList items={group.items} tone="blue" size="md" className="mt-4" label={group.title[locale]} />
               </Reveal>
             ))}
           </div>

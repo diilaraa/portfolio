@@ -6,6 +6,7 @@ import { archive, projects } from "@/content/projects";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { ProjectCard } from "@/components/work/ProjectCard";
+import { TechList } from "@/components/ui/TechList";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { locale, pages } = await getPages();
@@ -72,13 +73,7 @@ export default async function WorkPage() {
                       {item.link.label[locale]} <span aria-hidden="true">↗</span>
                     </a>
                   )}
-                  <ul className="mt-auto flex flex-wrap gap-1.5 pt-5" aria-label="Stack">
-                    {item.stack.map((tech) => (
-                      <li key={tech} className="rounded-md bg-band-gray px-2 py-1 text-[0.75rem] text-ink">
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
+                  <TechList items={item.stack} className="mt-auto pt-5" />
                 </div>
               </li>
             ))}
