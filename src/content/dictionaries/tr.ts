@@ -48,6 +48,7 @@ export const tr = {
       "2 uluslararası hakemli dergi yayını",
       "TÜBİTAK 2209-A",
     ],
+    avatarAlt: "Pembe başörtülü, dizüstü bilgisayarında çalışan Dilara'nın piksel sanatı avatarı.",
     ctaWork: "Çalışmaları gör",
     ctaResearch: "Araştırmayı oku",
   },
@@ -66,11 +67,18 @@ export const tr = {
   research: {
     eyebrow: "Araştırma",
     title: "Renk görme farklılıkları için filtre tasarımı.",
-    metricFrom: "%33,95",
-    metricTo: "%90,31",
-    metricLabel: "Ortalama F1 skoru",
-    metricNote:
-      "Orijinal görüntüler ile önerilen 5. filtre sürümünün karşılaştırması: yedi renk görme tipinin ortalaması, test seti, MobileNetV1 ile değerlendirme. Kaynak: Symmetry 2025, Tablo 8 (ortalama tablodan hesaplanmıştır).",
+    aboutTitle: "Bu makaleler ne üzerine?",
+    about: [
+      "Renk körlüğü olan kişiler, dijital görüntülerdeki bazı renkleri birbirinden ayırt edemez; örneğin Ishihara test plakalarındaki sayıları göremezler.",
+      "Bu iki makalede, görüntüleri bu kişilerin daha iyi algılayabileceği hale getiren özgün görüntü işleme filtreleri tasarladık. Filtrelerin işe yarayıp yaramadığını insan yorumuna bırakmadan, bir yapay zekâ modeliyle (MobileNet) ölçtük.",
+    ],
+    resultLabel: "Sonuç",
+    result:
+      "Filtre uygulandıktan sonra model, yedi renk körlüğü tipinin ortalamasında görüntüleri çok daha doğru sınıflandırdı: F1 skoru %33,95'ten %90,31'e yükseldi.",
+    resultSource: "Symmetry 2025 · test seti · 5. filtre sürümü",
+    imageCredit: "Görsel: Akalın vd., Symmetry 2025, Şekil 6 (CC BY 4.0)",
+    beforeLabel: "Orijinal",
+    afterLabel: "Filtreli",
     publications: "Yayınlar",
     all: "Araştırma ve yayınlar",
   },

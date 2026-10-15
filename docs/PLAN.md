@@ -96,26 +96,24 @@ E-posta (dilaratop02@gmail.com — görünür, onaylandı), LinkedIn, GitHub, ko
 
 ## 4. Tasarım sistemi
 
-### 4.1 Renk (revize: krem zemin, siyah · mavi · pembe — yalnız açık tema)
-| Token | Değer | Kullanım | Kontrast (krem üzerinde) |
+### 4.1 Renk (revize 2: beyaz zemin, siyah · mavi · pembe — yalnız açık tema)
+| Token | Değer | Kullanım | Kontrast (beyaz üzerinde) |
 |---|---|---|---|
-| `--paper` | `#F6EFE3` | Sayfa zemini (krem) | — |
-| `--paper-raised` | `#FBF7F0` | Kart, panel | — |
-| `--ink` | `#121212` | Ana metin, koyu bloklar | 16.4:1 |
-| `--ink-muted` | `#57534E` | İkincil metin | 6.7:1 |
-| `--line` | `#E2D8C8` | Ayraçlar | — |
-| `--pink` | `#C2185B` | Vurgu, "iş" dili, CTA hover | 5.1:1 |
-| `--blue` | `#2340D0` | "Kod" dili, bağlantılar, metrikler | 6.8:1 |
-| `--status-progress` | `#735A12` | "In progress" rozeti | 5.7:1 |
+| `--paper` | `#FFFFFF` | Sayfa zemini, kartlar | — |
+| `--band-gray` | `#F6F6F8` | Çalışmalar bandı | — |
+| `--band-blue` | `#EEF1FB` | Araştırma bandı, etiketler | — |
+| `--band-pink` | `#FCEEF3` | Hero kanıt etiketleri | — |
+| `--ink` | `#121212` | Ana metin, koyu bloklar | 18.7:1 |
+| `--ink-muted` | `#52525B` | İkincil metin | 7.7:1 |
+| `--pink` | `#C2185B` | Vurgu, CTA hover | 5.9:1 |
+| `--blue` | `#2340D0` | Bağlantılar, DOI butonları | 7.7:1 |
 
-Pembe/mavi çifti renk körlüğünde de parlaklık farkıyla ayırt edilir; renk asla tek başına anlam taşımaz.
+Tüm metin renkleri bant zeminlerinde de ≥ 5.2:1.
 
-### 4.2 Tipografi (revize)
-- **Bricolage Grotesque** (600, -0.03em) — display ve başlıklar
-- **Manrope** — gövde ve arayüz
-- **DM Mono** — meta, etiket, metrik, kod
-- Akışkan ölçek: display `clamp(2.5rem, 6.2vw, 5.75rem)`, h1 `clamp(2.25rem, 4.5vw, 3.75rem)`, h2 `clamp(1.75rem, 3vw, 2.5rem)`, h3 `1.375rem`, gövde `1.0625rem / 1.65`, mono etiket `0.8125rem`
-- Okuma genişliği maks. 68ch; `next/font` ile kendi sunucumuzdan, Türkçe karakterler için `latin-ext`
+### 4.2 Tipografi (revize 2)
+- **Bricolage Grotesque** (600, -0.03em) — başlıklar
+- **Manrope** — gövde, arayüz ve etiketler
+- Monospace font kullanılmıyor (Dilara'nın isteği).
 
 ### 4.3 Düzen
 - 12 sütun ızgara, maks. 1240px, kenar boşluğu mobilde 20px / masaüstünde 40px

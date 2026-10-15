@@ -2,15 +2,16 @@
 
 /* Design tokens — see docs/PLAN.md §4. Every text/background pair is measured against WCAG AA. */
 :root {
-  /* Cream paper, near-black ink, raspberry pink and cobalt blue. Light only by design. */
-  --paper: #f6efe3;
-  --paper-raised: #fbf7f0;
+  /* White paper, near-black ink, raspberry pink and cobalt blue. Light only by design. */
+  --paper: #ffffff;
+  --paper-raised: #ffffff;
   --ink: #121212;
-  --ink-muted: #57534e;
-  --line: #e2d8c8;
+  --ink-muted: #52525b;
+  --line: #e4e4e7;
   /* Section bands: each one keeps every text color above 4.5:1. */
-  --band-sand: #ede3d1;
-  --band-blue: #e6eaf7;
+  --band-gray: #f6f6f8;
+  --band-blue: #eef1fb;
+  --band-pink: #fceef3;
   --pink: #c2185b;
   --blue: #2340d0;
   --status-progress: #735a12;
@@ -25,7 +26,8 @@
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-line: var(--line);
-  --color-band-sand: var(--band-sand);
+  --color-band-gray: var(--band-gray);
+  --color-band-pink: var(--band-pink);
   --color-band-blue: var(--band-blue);
   --color-pink: var(--pink);
   --color-blue: var(--blue);
@@ -33,7 +35,6 @@
 
   --font-display: var(--font-bricolage), system-ui, sans-serif;
   --font-sans: var(--font-manrope), system-ui, sans-serif;
-  --font-mono: var(--font-dm-mono), ui-monospace, monospace;
 
   --text-display: clamp(2.5rem, 6.2vw, 5.75rem);
   --text-display--line-height: 1.02;

@@ -23,7 +23,7 @@ export function ContactCta({ copy }: { copy: Dictionary["contactCta"] }) {
               {copy.cvEn} <span aria-hidden="true">↓</span>
             </a>
           </div>
-          <p className="mt-8 font-mono text-label text-paper/70">{site.email}</p>
+          <p className="mt-8 text-label font-medium text-paper/70">{site.email}</p>
         </Reveal>
       </div>
     </section>

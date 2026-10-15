@@ -51,6 +51,7 @@ export const de: Dictionary = {
       "2 begutachtete Zeitschriftenartikel",
       "TÜBİTAK 2209-A",
     ],
+    avatarAlt: "Pixel-Art-Avatar von Dilara mit rosa Kopftuch am Laptop.",
     ctaWork: "Projekte ansehen",
     ctaResearch: "Forschung lesen",
   },
@@ -69,11 +70,18 @@ export const de: Dictionary = {
   research: {
     eyebrow: "Forschung",
     title: "Filterdesign für Farbsehschwächen.",
-    metricFrom: "33,95 %",
-    metricTo: "90,31 %",
-    metricLabel: "Mittlerer F1-Score",
-    metricNote:
-      "Originalbilder im Vergleich zur vorgeschlagenen Filterversion 5: Mittelwert über sieben Arten von Farbsehschwäche, Testdatensatz, bewertet mit MobileNetV1. Quelle: Symmetry 2025, Tabelle 8 (Mittelwert aus der Tabelle berechnet).",
+    aboutTitle: "Worum geht es in den Artikeln?",
+    about: [
+      "Menschen mit Farbenblindheit können bestimmte Farben in digitalen Bildern nicht unterscheiden; zum Beispiel erkennen sie die Zahlen auf Ishihara-Tafeln nicht.",
+      "In diesen beiden Artikeln haben wir eigene Bildverarbeitungsfilter entwickelt, die Bilder für sie besser wahrnehmbar machen. Ob die Filter wirken, haben wir nicht per menschlichem Urteil, sondern mit einem KI-Modell (MobileNet) gemessen.",
+    ],
+    resultLabel: "Ergebnis",
+    result:
+      "Mit Filter klassifizierte das Modell die Bilder im Mittel über sieben Arten von Farbenblindheit deutlich genauer: Der F1-Score stieg von 33,95 % auf 90,31 %.",
+    resultSource: "Symmetry 2025 · Testdatensatz · Filterversion 5",
+    imageCredit: "Bild: Akalın et al., Symmetry 2025, Abb. 6 (CC BY 4.0)",
+    beforeLabel: "Original",
+    afterLabel: "Gefiltert",
     publications: "Publikationen",
     all: "Forschung und Publikationen",
   },

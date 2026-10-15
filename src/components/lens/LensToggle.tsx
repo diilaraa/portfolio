@@ -67,7 +67,7 @@ export function LensToggle({ labels }: Props) {
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((value) => !value)}
-        className="flex h-11 items-center gap-2 rounded-full border border-line px-3 font-mono text-label text-ink transition-colors duration-200 hover:border-ink"
+        className="flex h-11 items-center gap-2 rounded-full border border-line px-3 text-label font-medium text-ink transition-colors duration-200 hover:border-ink"
       >
         <LensIcon active={active !== "none"} />
         <span className="sr-only sm:not-sr-only">{labels.button}</span>
@@ -99,7 +99,7 @@ export function LensToggle({ labels }: Props) {
                 </label>
               ))}
             </div>
-            <p className="mt-4 font-mono text-[0.75rem] text-ink-muted">{labels.source}</p>
+            <p className="mt-4 text-[0.75rem] text-ink-muted">{labels.source}</p>
           </fieldset>
         </div>
       )}

@@ -1,10 +1,10 @@
 import { ButtonLink } from "./Button";
 
-export type SectionTone = "paper" | "sand" | "blue";
+export type SectionTone = "paper" | "gray" | "blue";
 
 const toneClass: Record<SectionTone, string> = {
   paper: "bg-paper",
-  sand: "bg-band-sand",
+  gray: "bg-band-gray",
   blue: "bg-band-blue",
 };
 
@@ -26,7 +26,7 @@ export function Section({ id, eyebrow, title, tone = "paper", action, children }
       <div className="mx-auto w-full max-w-[77.5rem] px-5 md:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            {eyebrow && <p className="mb-3 font-mono text-label text-ink-muted">{eyebrow}</p>}
+            {eyebrow && <p className="mb-3 text-label font-medium text-ink-muted">{eyebrow}</p>}
             <h2 id={headingId} className="max-w-[22ch] font-display text-h1 text-ink text-balance">
               {title}
             </h2>

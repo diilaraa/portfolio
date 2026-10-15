@@ -11,7 +11,7 @@ export function LocaleSwitch({ current, label }: Props) {
 
   return (
     <nav aria-label={label}>
-      <ul className="flex items-center font-mono text-label">
+      <ul className="flex items-center text-label font-medium">
         {locales.map((locale) => {
           const isCurrent = locale === current;
           return (
