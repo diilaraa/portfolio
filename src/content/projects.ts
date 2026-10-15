@@ -233,16 +233,16 @@ export const archive: ArchiveProject[] = [
       de: "Immobilienanalyse mit Data Mining",
     },
     summary: {
-      tr: "HepsiEmlak'tan toplanan 2.180 ilan × 135 sütunluk veri seti temizlenerek 57 sütuna indirildi (encoding sonrası 87 özellik). Eksik değerler açıklama metninden ve ilişkili sütunlardan dolduruldu; merkeze ve denize uzaklık gibi yeni özellikler türetildi, aykırı değerler IQR ile ele alındı. Ebrar Mert ile konut tipi tahmini için PCA ve sınıf ağırlıklarıyla Random Forest modelleri kurduk.",
-      en: "A dataset of 2,180 HepsiEmlak listings × 135 columns was cleaned down to 57 columns (87 features after encoding). Missing values were filled from the description text and related columns, new features such as distance to the city center and the sea were derived, and outliers were handled with IQR. With Ebrar Mert I built Random Forest models with PCA and class weights to predict property type.",
-      de: "Ein Datensatz mit 2.180 HepsiEmlak-Anzeigen × 135 Spalten wurde auf 57 Spalten bereinigt (87 Merkmale nach dem Encoding). Fehlende Werte wurden aus dem Beschreibungstext und verwandten Spalten ergänzt, neue Merkmale wie die Entfernung zum Zentrum und zum Meer abgeleitet und Ausreißer per IQR behandelt. Mit Ebrar Mert habe ich Random-Forest-Modelle mit PCA und Klassengewichten zur Vorhersage des Immobilientyps gebaut.",
+      tr: "HepsiEmlak'tan toplanan 2.180 ilan × 135 sütunluk veri seti temizlenerek 57 sütuna indirildi (encoding sonrası 87 özellik). Eksik değerler açıklama metninden ve ilişkili sütunlardan dolduruldu; merkeze ve denize uzaklık gibi yeni özellikler türetildi, aykırı değerler IQR ile ele alındı. Konut tipi tahmini ile kategorik ve sayısal fiyat tahmini gibi farklı senaryolar için çeşitli makine öğrenmesi modelleri eğitildi.",
+      en: "A dataset of 2,180 HepsiEmlak listings × 135 columns was cleaned down to 57 columns (87 features after encoding). Missing values were filled from the description text and related columns, new features such as distance to the city center and the sea were derived, and outliers were handled with IQR. Machine learning models were trained for different scenarios, such as property type prediction and categorical and numerical price prediction.",
+      de: "Ein Datensatz mit 2.180 HepsiEmlak-Anzeigen × 135 Spalten wurde auf 57 Spalten bereinigt (87 Merkmale nach dem Encoding). Fehlende Werte wurden aus dem Beschreibungstext und verwandten Spalten ergänzt, neue Merkmale wie die Entfernung zum Zentrum und zum Meer abgeleitet und Ausreißer per IQR behandelt. Für verschiedene Szenarien – etwa die Vorhersage des Immobilientyps sowie kategoriale und numerische Preisvorhersagen – wurden Modelle des maschinellen Lernens trainiert.",
     },
     team: {
       tr: "10 kişilik ekip · takım lideri",
       en: "10-person team · team lead",
       de: "10-köpfiges Team · Teamleitung",
     },
-    stack: ["Python", "pandas", "scikit-learn", "Random Forest", "PCA", "Matplotlib", "Seaborn"],
+    stack: ["Python", "pandas", "scikit-learn", "XGBoost", "LightGBM", "Matplotlib", "Seaborn"],
     image: {
       src: "/images/archive/real-estate-distance.webp",
       width: 580,
