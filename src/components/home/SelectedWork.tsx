@@ -45,7 +45,7 @@ function ProjectCard({ project, locale, wide, statusLabel, readLabel }: CardProp
           <StatusBadge status={project.status} label={statusLabel} />
           <span className="font-mono text-label text-ink-muted">{project.period[locale]}</span>
         </div>
-        <h3 className="mt-4 font-serif text-h2 text-ink text-balance">
+        <h3 className="mt-4 font-display text-h2 text-ink text-balance">
           <Link href={link} className="after:absolute after:inset-0 after:content-['']">
             {project.title[locale]}
           </Link>

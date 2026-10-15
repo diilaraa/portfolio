@@ -16,9 +16,9 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
             <p className="mt-4 flex flex-wrap items-baseline gap-x-4 font-mono tracking-tight">
               <span className="text-h2 text-ink-muted">{copy.metricFrom}</span>
               <span aria-hidden="true" className="text-h2 text-ink-muted">→</span>
-              <span className="text-[clamp(3rem,8vw,5.5rem)] leading-none text-cool">{copy.metricTo}</span>
+              <span className="text-[clamp(3rem,8vw,5.5rem)] leading-none text-blue">{copy.metricTo}</span>
             </p>
-            <figcaption className="mt-6 max-w-[52ch] border-l-2 border-warm pl-4 text-sm leading-relaxed text-ink-muted">
+            <figcaption className="mt-6 max-w-[52ch] border-l-2 border-pink pl-4 text-sm leading-relaxed text-ink-muted">
               {copy.metricNote}
             </figcaption>
           </figure>
@@ -35,7 +35,7 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
                   rel="noopener noreferrer"
                   className="group block"
                 >
-                  <span className="font-serif text-h3 text-ink group-hover:text-cool">{pub.title}</span>
+                  <span className="font-display text-h3 text-ink group-hover:text-blue">{pub.title}</span>
                   <span className="mt-2 block text-sm text-ink-muted">
                     {pub.authors.map((author, i) => (
                       <span key={author}>

@@ -5,15 +5,14 @@ import type { HeroTone } from "@/content/dictionaries/tr";
 import { featuredProjects } from "@/content/projects";
 import { publications } from "@/content/publications";
 import { experience } from "@/content/experience";
-import { Layers } from "@/components/home/Layers";
 import { SelectedWork } from "@/components/home/SelectedWork";
 import { ResearchHighlight } from "@/components/home/ResearchHighlight";
 import { ExperienceSnapshot } from "@/components/home/ExperienceSnapshot";
 import { ContactCta } from "@/components/home/ContactCta";
 
 const toneClass: Record<HeroTone, string> = {
-  warm: "italic text-warm",
-  cool: "font-mono text-[0.72em] tracking-tight text-cool",
+  warm: "text-pink",
+  cool: "font-mono text-[0.8em] font-normal tracking-[-0.04em] text-blue",
   plain: "",
 };
 
@@ -26,7 +25,7 @@ export default async function HomePage() {
       <section className="mx-auto w-full max-w-[77.5rem] px-5 pt-16 md:px-10 md:pt-28">
         <p className="font-mono text-label text-ink-muted">{home.eyebrow}</p>
 
-        <h1 className="mt-8 max-w-[14ch] font-serif text-display text-ink text-balance">
+        <h1 className="mt-8 max-w-[14ch] font-display text-display text-ink text-balance">
           {home.hero.map((part, i) => (
             <span key={i} className={toneClass[part.tone]}>
               {part.text}
@@ -46,20 +45,19 @@ export default async function HomePage() {
         <div className="mt-12 flex flex-wrap gap-3">
           <Link
             href={href(locale, "/work")}
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-ink px-6 text-paper transition-colors duration-200 hover:bg-warm"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-ink px-6 text-paper transition-colors duration-200 hover:bg-pink"
           >
             {home.ctaWork} <span aria-hidden="true">→</span>
           </Link>
           <Link
             href={href(locale, "/research")}
-            className="inline-flex h-12 items-center rounded-full border border-ink px-6 text-ink transition-colors duration-200 hover:border-cool hover:text-cool"
+            className="inline-flex h-12 items-center rounded-full border border-ink px-6 text-ink transition-colors duration-200 hover:border-blue hover:text-blue"
           >
             {home.ctaResearch}
           </Link>
         </div>
       </section>
 
-      <Layers copy={dict.layers} />
       <SelectedWork locale={locale} projects={featuredProjects} copy={dict.work} status={dict.status} />
       <ResearchHighlight locale={locale} copy={dict.research} publications={publications} />
       <ExperienceSnapshot locale={locale} copy={dict.experienceSnapshot} items={experience} />

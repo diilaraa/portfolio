@@ -43,7 +43,7 @@ export function HeaderNav({ items, label, openLabel, closeLabel, mobileExtra }: 
             aria-current={active ? "page" : undefined}
             className={
               large
-                ? `block py-3 font-serif text-h1 ${active ? "text-warm" : "text-ink"}`
+                ? `block py-3 font-display text-h1 ${active ? "text-pink" : "text-ink"}`
                 : `link-draw py-1 text-[0.9375rem] transition-colors duration-200 ${
                     active ? "text-ink" : "text-ink-muted hover:text-ink"
                   }`

@@ -24,7 +24,7 @@ export function ExperienceSnapshot({ locale, copy, items }: Props) {
           >
             <span className="font-mono text-label text-ink-muted md:col-span-2">{item.period[locale]}</span>
             <span className="md:col-span-4">
-              <span className="block font-serif text-h3 text-ink">{item.company}</span>
+              <span className="block font-display text-h3 text-ink">{item.company}</span>
               <span className="block text-sm text-ink-muted">
                 {item.role[locale]} · {item.location[locale]}
               </span>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, DM_Mono, Manrope } from "next/font/google";
 import { getDictionary, getLocale } from "@/lib/dictionary";
 import { locales } from "@/lib/i18n";
 import { site } from "@/lib/site";
@@ -9,21 +9,20 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import "../globals.css";
 
-const serif = Instrument_Serif({
-  weight: "400",
-  style: ["normal", "italic"],
+const display = Bricolage_Grotesque({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-instrument-serif",
+  variable: "--font-bricolage",
 });
 
-const sans = Inter({
+const sans = Manrope({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
+  variable: "--font-manrope",
 });
 
-const mono = JetBrains_Mono({
+const mono = DM_Mono({
+  weight: ["400", "500"],
   subsets: ["latin", "latin-ext"],
-  variable: "--font-jetbrains-mono",
+  variable: "--font-dm-mono",
 });
 
 export async function generateStaticParams() {
@@ -55,7 +54,7 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
   const { dict } = await getDictionary();
 
   return (
-    <html lang={locale} className={`${serif.variable} ${sans.variable} ${mono.variable} antialiased`} suppressHydrationWarning>
+    <html lang={locale} className={`${display.variable} ${sans.variable} ${mono.variable} antialiased`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: lensInitScript }} />
       </head>

@@ -54,30 +54,6 @@ export const en: Dictionary = {
     ctaWork: "View work",
     ctaResearch: "Read the research",
   },
-  layers: {
-    eyebrow: "How I work",
-    title: "One system, three layers.",
-    items: [
-      {
-        key: "business",
-        name: "Business",
-        lead: "I clarify the need and turn it into functional analysis, priorities, and product decisions.",
-        proof: ["Logo · business analysis", "Mikro · product management", "Munich · accounting operations"],
-      },
-      {
-        key: "integration",
-        name: "Integration",
-        lead: "I understand how systems talk to each other: services, schemas, and contracts.",
-        proof: ["REST and SOAP", "UBL · XSD · Schematron · XSLT", "Postman and SoapUI"],
-      },
-      {
-        key: "code",
-        name: "Code & data",
-        lead: "I build the solution, train the model, and measure the result.",
-        proof: ["C# · React · Next.js · Flask", "YOLOv9 · scikit-learn", "Original OpenCV filters"],
-      },
-    ],
-  },
   work: {
     eyebrow: "Selected work",
     title: "Real problems, measured results.",

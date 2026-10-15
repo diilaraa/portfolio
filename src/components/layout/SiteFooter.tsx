@@ -16,7 +16,7 @@ export async function SiteFooter() {
     <footer className="mt-auto border-t border-line">
       <div className="mx-auto grid max-w-[77.5rem] gap-10 px-5 py-14 md:grid-cols-12 md:px-10">
         <div className="md:col-span-5">
-          <p className="font-serif text-h2 text-ink">Dilara Top</p>
+          <p className="font-display text-h2 text-ink">Dilara Top</p>
           <p className="mt-2 font-mono text-label text-ink-muted">{dict.footer.location}</p>
         </div>
         <ul className="grid gap-3 md:col-span-4">

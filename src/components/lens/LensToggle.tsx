@@ -79,13 +79,13 @@ export function LensToggle({ labels }: Props) {
           className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(20rem,calc(100vw-2.5rem))] rounded-md border border-line bg-paper-raised p-5 shadow-[0_12px_32px_-12px_rgb(15_27_45/0.25)]"
         >
           <fieldset>
-            <legend className="font-serif text-h3 leading-tight text-ink">{labels.title}</legend>
+            <legend className="font-display text-h3 leading-tight text-ink">{labels.title}</legend>
             <p className="mt-2 text-sm leading-relaxed text-ink-muted">{labels.description}</p>
             <div className="mt-4 grid gap-1">
               {settings.map((setting) => (
                 <label
                   key={setting}
-                  className="flex min-h-11 cursor-pointer items-center gap-3 rounded px-2 text-sm text-ink hover:bg-paper has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-cool"
+                  className="flex min-h-11 cursor-pointer items-center gap-3 rounded px-2 text-sm text-ink hover:bg-paper has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-blue"
                 >
                   <input
                     type="radio"
@@ -93,7 +93,7 @@ export function LensToggle({ labels }: Props) {
                     value={setting}
                     checked={active === setting}
                     onChange={() => applySetting(setting)}
-                    className="size-4 accent-[var(--cool)] focus-visible:outline-none"
+                    className="size-4 accent-[var(--blue)] focus-visible:outline-none"
                   />
                   {labels.options[setting]}
                 </label>
@@ -116,7 +116,7 @@ function LensIcon({ active }: { active: boolean }) {
         strokeWidth="1.5"
         strokeLinejoin="round"
       />
-      <circle cx="12" cy="12" r="3.25" fill={active ? "var(--warm)" : "none"} stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="12" cy="12" r="3.25" fill={active ? "var(--pink)" : "none"} stroke="currentColor" strokeWidth="1.5" />
     </svg>
   );
 }

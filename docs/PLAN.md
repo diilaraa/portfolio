@@ -46,8 +46,8 @@ Tüm rotalar `/[locale]/…` altında: `/tr`, `/en`, `/de`. `/` → `/tr` yönle
 ## 3. Sayfa yapıları
 
 ### 3.1 Home
-1. **Hero** — İsim (küçük, üstte), ana cümle (büyük serif; "business" turuncu italik, "code" mavi mono), alt satır, iki CTA: *View work* · *Read the research*. Sağ üstte **CVD lens** anahtarı.
-2. **Three layers** — Business / Integration / Code & data: üç sütun, her birinde tek cümle + 2–3 kanıt bağlantısı.
+1. **Hero** — İsim (küçük, üstte), ana cümle (büyük grotesk; "iş" pembe, "kod" mavi mono), alt satır, iki CTA: *View work* · *Read the research*. Sağ üstte **CVD lens** anahtarı.
+2. ~~Three layers~~ — Dilara'nın isteğiyle kaldırıldı.
 3. **Selected work** — 3 öne çıkan kart (Mpox, CVD filtreleri, ElectricMotor); asimetrik editoryal ızgara, büyük görsel + mono meta satırı.
 4. **Research highlight** — "33.95% → 90.31%" büyük sayı + bağlam dipnotu (aşağıda §6), iki yayının künyesi.
 5. **Experience snapshot** — 4 satırlık yatay zaman çizgisi (2019 Münih → 2026 Logo BA).
@@ -96,26 +96,26 @@ E-posta (dilaratop02@gmail.com — görünür, onaylandı), LinkedIn, GitHub, ko
 
 ## 4. Tasarım sistemi
 
-### 4.1 Renk (CVD-güvenli: turuncu/mavi çifti tüm yaygın renk körlüğü tiplerinde ayırt edilebilir)
-| Token | Light | Dark | Kullanım |
+### 4.1 Renk (revize: krem zemin, siyah · mavi · pembe — yalnız açık tema)
+| Token | Değer | Kullanım | Kontrast (krem üzerinde) |
 |---|---|---|---|
-| `--paper` | `#F2EFE8` | `#0C1522` | Sayfa zemini |
-| `--paper-raised` | `#FAF8F3` | `#132033` | Kart, kod bloğu |
-| `--ink` | `#0F1B2D` | `#ECE8DF` | Ana metin |
-| `--ink-muted` | `#4A5568` | `#A9B1BD` | İkincil metin |
-| `--line` | `#D9D4C8` | `#24324A` | Ayraçlar |
-| `--warm` | `#B43C0B` | `#F08A4B` | "Business" vurgusu, CTA |
-| `--cool` | `#1D4E89` | `#7FB0E8` | "Code" vurgusu, bağlantılar |
-| `--status-progress` | `#735A12` | `#E3C46A` | "In progress" rozeti |
+| `--paper` | `#F6EFE3` | Sayfa zemini (krem) | — |
+| `--paper-raised` | `#FBF7F0` | Kart, panel | — |
+| `--ink` | `#121212` | Ana metin, koyu bloklar | 16.4:1 |
+| `--ink-muted` | `#57534E` | İkincil metin | 6.7:1 |
+| `--line` | `#E2D8C8` | Ayraçlar | — |
+| `--pink` | `#C2185B` | Vurgu, "iş" dili, CTA hover | 5.1:1 |
+| `--blue` | `#2340D0` | "Kod" dili, bağlantılar, metrikler | 6.8:1 |
+| `--status-progress` | `#735A12` | "In progress" rozeti | 5.7:1 |
 
-Tüm metin/zemin çiftleri WCAG AA (≥4.5:1) için ölçüldü (en düşük: `--warm` light 5.1:1); renk asla tek başına anlam taşımaz (ikon/etiket eşlik eder).
+Pembe/mavi çifti renk körlüğünde de parlaklık farkıyla ayırt edilir; renk asla tek başına anlam taşımaz.
 
-### 4.2 Tipografi
-- **Instrument Serif** — display ve başlıklar (iş dili)
-- **Inter** — gövde ve arayüz
-- **JetBrains Mono** — meta, etiket, metrik, kod (makine dili)
-- Akışkan ölçek: display `clamp(2.75rem, 7vw, 6.5rem)`, h1 `clamp(2.25rem, 4.5vw, 3.75rem)`, h2 `clamp(1.75rem, 3vw, 2.5rem)`, h3 `1.375rem`, gövde `1.0625rem / 1.65`, mono etiket `0.8125rem`
-- Okuma genişliği maks. 68ch; `next/font` ile kendi sunucumuzdan, `display: swap`
+### 4.2 Tipografi (revize)
+- **Bricolage Grotesque** (600, -0.03em) — display ve başlıklar
+- **Manrope** — gövde ve arayüz
+- **DM Mono** — meta, etiket, metrik, kod
+- Akışkan ölçek: display `clamp(2.5rem, 6.2vw, 5.75rem)`, h1 `clamp(2.25rem, 4.5vw, 3.75rem)`, h2 `clamp(1.75rem, 3vw, 2.5rem)`, h3 `1.375rem`, gövde `1.0625rem / 1.65`, mono etiket `0.8125rem`
+- Okuma genişliği maks. 68ch; `next/font` ile kendi sunucumuzdan, Türkçe karakterler için `latin-ext`
 
 ### 4.3 Düzen
 - 12 sütun ızgara, maks. 1240px, kenar boşluğu mobilde 20px / masaüstünde 40px

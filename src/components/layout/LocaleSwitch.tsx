@@ -23,7 +23,7 @@ export function LocaleSwitch({ current, label }: Props) {
                 aria-current={isCurrent ? "true" : undefined}
                 aria-label={localeLabels[locale].name}
                 className={`flex size-11 items-center justify-center transition-colors duration-200 ${
-                  isCurrent ? "text-ink underline decoration-warm decoration-2 underline-offset-[6px]" : "text-ink-muted hover:text-ink"
+                  isCurrent ? "text-ink underline decoration-pink decoration-2 underline-offset-[6px]" : "text-ink-muted hover:text-ink"
                 }`}
               >
                 {localeLabels[locale].short}

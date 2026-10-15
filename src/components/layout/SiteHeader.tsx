@@ -15,7 +15,7 @@ export async function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-paper">
       <div className="mx-auto flex h-[4.5rem] max-w-[77.5rem] items-center justify-between gap-6 px-5 md:px-10">
-        <Link href={href(locale)} className="font-serif text-[1.625rem] leading-none text-ink transition-colors duration-200 hover:text-warm">
+        <Link href={href(locale)} className="font-display text-[1.625rem] leading-none text-ink transition-colors duration-200 hover:text-pink">
           Dilara Top
         </Link>
 

@@ -9,14 +9,14 @@ export function ContactCta({ copy }: { copy: Dictionary["contactCta"] }) {
   return (
     <section aria-labelledby="contact-cta-title" className="mx-auto w-full max-w-[77.5rem] px-5 md:px-10">
       <Reveal className="rounded-md bg-ink px-6 py-14 text-paper md:px-14 md:py-20">
-        <h2 id="contact-cta-title" className="max-w-[18ch] font-serif text-h1 text-balance">
+        <h2 id="contact-cta-title" className="max-w-[18ch] font-display text-h1 text-balance">
           {copy.title}
         </h2>
         <p className="mt-5 max-w-[52ch] text-paper/80">{copy.body}</p>
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <a
             href={`mailto:${site.email}`}
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-paper px-6 text-ink transition-colors duration-200 hover:bg-warm hover:text-paper"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-paper px-6 text-ink transition-colors duration-200 hover:bg-pink hover:text-paper"
           >
             {copy.email} <span aria-hidden="true">→</span>
           </a>

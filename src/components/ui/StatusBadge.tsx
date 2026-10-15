@@ -1,10 +1,10 @@
 import type { ProjectStatus } from "@/content/types";
 
 const styles: Record<ProjectStatus, string> = {
-  research: "border-cool text-cool",
+  research: "border-blue text-blue",
   live: "border-ink text-ink",
   "in-progress": "border-status-progress text-status-progress",
-  competition: "border-warm text-warm",
+  competition: "border-pink text-pink",
 };
 
 /** Status is always spelled out, never shown by color alone. */

@@ -17,7 +17,7 @@ export function Section({ id, eyebrow, title, action, children, className = "" }
       <div className="flex flex-wrap items-end justify-between gap-6 border-t border-line pt-8">
         <div>
           <p className="font-mono text-label text-ink-muted">{eyebrow}</p>
-          <h2 id={headingId} className="mt-3 max-w-[22ch] font-serif text-h1 text-ink text-balance">
+          <h2 id={headingId} className="mt-3 max-w-[22ch] font-display text-h1 text-ink text-balance">
             {title}
           </h2>
         </div>

@@ -51,30 +51,6 @@ export const tr = {
     ctaWork: "Çalışmaları gör",
     ctaResearch: "Araştırmayı oku",
   },
-  layers: {
-    eyebrow: "Nasıl çalışırım",
-    title: "Tek bir sistem, üç katman.",
-    items: [
-      {
-        key: "business",
-        name: "İş",
-        lead: "İhtiyacı netleştirir; fonksiyonel analize, önceliklere ve ürün kararlarına dönüştürürüm.",
-        proof: ["Logo · iş analizi", "Mikro · ürün yönetimi", "Münih · muhasebe operasyonları"],
-      },
-      {
-        key: "integration",
-        name: "Entegrasyon",
-        lead: "Sistemlerin birbiriyle nasıl konuştuğunu anlarım: servisler, şemalar ve sözleşmeler.",
-        proof: ["REST ve SOAP", "UBL · XSD · Schematron · XSLT", "Postman ve SoapUI"],
-      },
-      {
-        key: "code",
-        name: "Kod ve veri",
-        lead: "Çözümü kurar, modeli eğitir ve sonucu ölçerim.",
-        proof: ["C# · React · Next.js · Flask", "YOLOv9 · scikit-learn", "Özgün OpenCV filtreleri"],
-      },
-    ] as { key: LayerKey; name: string; lead: string; proof: string[] }[],
-  },
   work: {
     eyebrow: "Seçili çalışmalar",
     title: "Gerçek problemler, ölçülen sonuçlar.",
@@ -119,4 +95,3 @@ export const tr = {
 
 export type Dictionary = typeof tr;
 export type HeroTone = "warm" | "cool" | "plain";
-export type LayerKey = "business" | "integration" | "code";

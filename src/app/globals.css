@@ -1,32 +1,19 @@
 @import "tailwindcss";
 
-/* Design tokens — see docs/PLAN.md §4. Contrast pairs are measured against WCAG AA. */
+/* Design tokens — see docs/PLAN.md §4. Every text/background pair is measured against WCAG AA. */
 :root {
-  --paper: #f2efe8;
-  --paper-raised: #faf8f3;
-  --ink: #0f1b2d;
-  --ink-muted: #4a5568;
-  --line: #d9d4c8;
-  --warm: #b43c0b;
-  --cool: #1d4e89;
+  /* Cream paper, near-black ink, raspberry pink and cobalt blue. Light only by design. */
+  --paper: #f6efe3;
+  --paper-raised: #fbf7f0;
+  --ink: #121212;
+  --ink-muted: #57534e;
+  --line: #e2d8c8;
+  --pink: #c2185b;
+  --blue: #2340d0;
   --status-progress: #735a12;
 
   --ease-out-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
   color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #0c1522;
-    --paper-raised: #132033;
-    --ink: #ece8df;
-    --ink-muted: #a9b1bd;
-    --line: #24324a;
-    --warm: #f08a4b;
-    --cool: #7fb0e8;
-    --status-progress: #e3c46a;
-    color-scheme: dark;
-  }
 }
 
 @theme inline {
@@ -35,15 +22,15 @@
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-line: var(--line);
-  --color-warm: var(--warm);
-  --color-cool: var(--cool);
+  --color-pink: var(--pink);
+  --color-blue: var(--blue);
   --color-status-progress: var(--status-progress);
 
-  --font-serif: var(--font-instrument-serif), "Times New Roman", serif;
-  --font-sans: var(--font-inter), system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, monospace;
 
-  --text-display: clamp(2.75rem, 7vw, 6.5rem);
+  --text-display: clamp(2.5rem, 6.2vw, 5.75rem);
   --text-display--line-height: 1.02;
   --text-h1: clamp(2.25rem, 4.5vw, 3.75rem);
   --text-h1--line-height: 1.08;
@@ -73,13 +60,18 @@
     line-height: 1.65;
   }
 
+  .font-display {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+
   ::selection {
-    background: var(--warm);
+    background: var(--pink);
     color: var(--paper);
   }
 
   :focus-visible {
-    outline: 2px solid var(--cool);
+    outline: 2px solid var(--blue);
     outline-offset: 3px;
     border-radius: 2px;
   }
