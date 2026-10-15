@@ -45,6 +45,9 @@ export type Publication = {
   details: string;
   date: Localized;
   doi: string;
+  aim: Localized;
+  method: Localized;
+  contribution: Localized;
 };
 
 export type ExperienceItem = {
@@ -57,4 +60,8 @@ export type ExperienceItem = {
   location: Localized;
   /** Short line for the home page snapshot. */
   snapshot: Localized;
+  context: Localized;
+  did: Localized<string[]>;
+  connected: Localized;
+  tools: string[];
 };
