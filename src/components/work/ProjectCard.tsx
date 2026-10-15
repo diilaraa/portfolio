@@ -101,7 +101,7 @@ export function ProjectCover({ project, locale }: { project: Project; locale: Lo
       height={project.cover.height}
       alt={project.cover.alt[locale]}
       sizes="(min-width: 768px) 58vw, 100vw"
-      className="aspect-[16/10] h-full w-full object-cover object-left-top transition-transform duration-500 ease-soft group-hover:scale-[1.03]"
+      className={`aspect-[16/10] h-full w-full object-cover ${project.cover.focus === "left" ? "object-left-top" : "object-top"} transition-transform duration-500 ease-soft group-hover:scale-[1.03]`}
     />
   );
 }

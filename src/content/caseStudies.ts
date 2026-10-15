@@ -501,13 +501,13 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "image",
             image: {
-              src: "/images/work/electricmotor/homepage.webp",
-              width: 1440,
-              height: 790,
+              src: "/images/work/electricmotor/home-hero.webp",
+              width: 1897,
+              height: 910,
               alt: L(
-                "ElectricMotor ana sayfası: koyu zemin üzerinde kırmızı bir Tesla Roadster ve randevu butonu.",
-                "ElectricMotor home page: a red Tesla Roadster on a dark background with a booking button.",
-                "ElectricMotor-Startseite: ein roter Tesla Roadster auf dunklem Hintergrund mit Termin-Button.",
+                "ElectricMotor ana sayfası: koyu zemin üzerinde kırmızı bir Tesla Roadster, hizmet sloganı ve randevu butonları.",
+                "ElectricMotor home page: a red Tesla Roadster on a dark background with the service tagline and booking buttons.",
+                "ElectricMotor-Startseite: ein roter Tesla Roadster auf dunklem Hintergrund mit Leistungsslogan und Termin-Buttons.",
               ),
               caption: L("Ana sayfa", "Home page", "Startseite"),
             },

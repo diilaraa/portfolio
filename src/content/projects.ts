@@ -95,13 +95,13 @@ export const projects: Project[] = [
     },
     stack: ["Next.js", "React", "TypeScript", "Vercel"],
     cover: {
-      src: "/images/work/electricmotor/homepage.webp",
-      width: 1440,
-      height: 790,
+      src: "/images/work/electricmotor/home-hero.webp",
+      width: 1897,
+      height: 910,
       alt: {
-        tr: "ElectricMotor ana sayfası: koyu zemin üzerinde kırmızı bir Tesla Roadster ve randevu butonu.",
-        en: "ElectricMotor home page: a red Tesla Roadster on a dark background with a booking button.",
-        de: "ElectricMotor-Startseite: ein roter Tesla Roadster auf dunklem Hintergrund mit Termin-Button.",
+        tr: "ElectricMotor ana sayfası: koyu zemin üzerinde kırmızı bir Tesla Roadster, hizmet sloganı ve randevu butonları.",
+        en: "ElectricMotor home page: a red Tesla Roadster on a dark background with the service tagline and booking buttons.",
+        de: "ElectricMotor-Startseite: ein roter Tesla Roadster auf dunklem Hintergrund mit Leistungsslogan und Termin-Buttons.",
       },
     },
     links: [{ label: { tr: "Canlı site", en: "Live site", de: "Live-Website" }, href: "https://electricmotor.ae/" }],
@@ -123,6 +123,7 @@ export const projects: Project[] = [
       src: "/images/work/dokar-zemin/homepage.webp",
       width: 1896,
       height: 872,
+      focus: "left",
       alt: {
         tr: "Dokar Zemin ana sayfa tasarımı: şantiyedeki fore kazık makineleri üzerinde \"Zemin İyileştirme Sistemleri\" başlığı.",
         en: "Dokar Zemin home page design: the headline \"Zemin İyileştirme Sistemleri\" (ground improvement systems) over piling rigs.",

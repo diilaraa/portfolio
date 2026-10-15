@@ -10,6 +10,8 @@ export type ImageAsset = {
   alt: Localized;
   /** Required whenever the image comes from a publication or third party. */
   credit?: Localized;
+  /** Which side to keep when the image is cropped into a card; defaults to the top centre. */
+  focus?: "left" | "center";
 };
 
 export type ProjectStatus = "research" | "live" | "in-progress" | "competition";
