@@ -46,7 +46,7 @@ Tüm rotalar `/[locale]/…` altında: `/tr`, `/en`, `/de`. `/` → `/tr` yönle
 ## 3. Sayfa yapıları
 
 ### 3.1 Home
-1. **Hero** — İsim (küçük, üstte), ana cümle (büyük grotesk; "iş" pembe, "kod" mavi mono), alt satır, iki CTA: *View work* · *Read the research*. Sağ üstte **CVD lens** anahtarı.
+1. **Hero (scroll intro)** — Önce "Merhaba, ben Dilara Top." ve ortada avatar; kaydırınca avatar sağa geçer, ana cümle, kanıt etiketleri, butonlar ve teknoloji logoları (simple-icons, `scripts/gen-tech-icons.mjs`) yerine oturur. Mobilde ve azaltılmış harekette statik. Ana cümle: "iş" pembe, "kod" mavi, alt satır, iki CTA: *View work* · *Read the research*. Sağ üstte **CVD lens** anahtarı.
 2. ~~Three layers~~ — Dilara'nın isteğiyle kaldırıldı.
 3. **Selected work** — 3 öne çıkan kart (Mpox, CVD filtreleri, ElectricMotor); asimetrik editoryal ızgara, büyük görsel + mono meta satırı.
 4. **Research highlight** — "33.95% → 90.31%" büyük sayı + bağlam dipnotu (aşağıda §6), iki yayının künyesi.

@@ -117,6 +117,43 @@ html[data-lens="achromatopsia"] body { filter: url(#cvd-achromatopsia); }
   }
 }
 
+/* Hero intro (see HeroIntro.tsx): "Hi, I'm Dilara Top" with the avatar centred, which then
+   slides right as the hero content settles in. Static layout on small screens, without JS,
+   or with reduced motion. */
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .js .hero-intro {
+    --p: 0;
+    height: 190vh;
+  }
+  .js .hero-intro__sticky {
+    position: sticky;
+    top: 4.5rem;
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - 4.5rem);
+  }
+  .js .hero-intro__greeting {
+    position: absolute;
+    inset-inline: 0;
+    top: 2.5rem;
+    margin: 0;
+    text-align: center;
+    pointer-events: none;
+    opacity: clamp(0, calc(1 - var(--p) * 2.2), 1);
+    translate: 0 calc(var(--p) * -3rem);
+  }
+  .js .hero-intro__cue {
+    display: flex;
+  }
+  .js .hero-intro__content {
+    opacity: clamp(0, calc((var(--p) - 0.35) * 2.2), 1);
+    translate: 0 calc((1 - var(--p)) * 2rem);
+  }
+  .js .hero-intro__avatar {
+    translate: calc((1 - var(--p)) * var(--dx, 0px)) calc((1 - var(--p)) * var(--dy, 0px));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

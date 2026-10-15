@@ -4,8 +4,6 @@ import type { Publication } from "@/content/types";
 import { href, type Locale } from "@/lib/i18n";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { FilterPipelines } from "./FilterPipelines";
-import { filterPipelines } from "@/content/filterPipelines";
 
 type Props = { locale: Locale; copy: Dictionary["research"]; publications: Publication[] };
 
@@ -75,8 +73,6 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
           </ol>
         </Reveal>
       </div>
-
-      <FilterPipelines locale={locale} title={copy.pipelinesTitle} pipelines={filterPipelines} />
     </Section>
   );
 }

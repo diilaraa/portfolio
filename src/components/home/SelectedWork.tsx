@@ -6,6 +6,7 @@ import { href, type Locale } from "@/lib/i18n";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { StatusBadge } from "@/components/ui/StatusBadge";
+import { cvdFilterPlates } from "@/content/cvdFilterPlates";
 
 type Props = {
   locale: Locale;
@@ -95,31 +96,22 @@ function ProjectCard({ project, locale, flip, statusLabel, readLabel }: CardProp
 function Cover({ project, locale }: { project: Project; locale: Locale }) {
   if (!project.cover) return null;
 
-  // The CVD study is best shown as the before/after pair rather than a single tiny plate.
+  // The CVD study shows the filters' plate outputs as an uncaptioned mosaic.
   if (project.slug === "cvd-image-filters") {
     return (
-      <figure className="flex aspect-[16/10] h-full flex-col items-center justify-center gap-4 p-6">
-        <div className="flex w-full items-center justify-center gap-5">
+      <div className="grid h-full grid-cols-[repeat(5,minmax(0,1fr))] content-center gap-2 p-4 sm:gap-3 sm:p-8" role="img" aria-label={project.cover.alt[locale]}>
+        {cvdFilterPlates.map((plate) => (
           <Image
-            src="/images/work/cvd-image-filters/ishihara-before.webp"
-            width={162}
-            height={160}
+            key={plate.src}
+            src={plate.src}
+            width={plate.width}
+            height={plate.height}
             alt=""
-            className="w-[34%] max-w-36 rounded-full"
+            sizes="(min-width: 768px) 10vw, 18vw"
+            className="aspect-square w-full rounded-lg object-cover transition-transform duration-500 ease-soft group-hover:scale-[1.04]"
           />
-          <span aria-hidden="true" className="text-h3 text-ink-muted">→</span>
-          <Image
-            src={project.cover.src}
-            width={project.cover.width}
-            height={project.cover.height}
-            alt={project.cover.alt[locale]}
-            className="w-[34%] max-w-36 rounded-full transition-transform duration-500 ease-soft group-hover:scale-[1.04]"
-          />
-        </div>
-        {project.cover.credit && (
-          <figcaption className="text-center text-[0.6875rem] text-ink-muted">{project.cover.credit[locale]}</figcaption>
-        )}
-      </figure>
+        ))}
+      </div>
     );
   }
 

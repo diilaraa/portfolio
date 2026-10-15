@@ -65,9 +65,9 @@ export const projects: Project[] = [
       width: 168,
       height: 170,
       alt: {
-        tr: "Önerilen 5. filtre sürümü uygulanmış Ishihara test plakası; 8 rakamı belirgin biçimde görünüyor.",
-        en: "Ishihara test plate after the proposed Filter Version 5; the number 8 stands out clearly.",
-        de: "Ishihara-Tafel nach Filterversion 5; die Zahl 8 ist deutlich erkennbar.",
+        tr: "Özgün filtrelerin Ishihara test plakası üzerindeki ara ve son çıktıları; 8 rakamı adım adım belirginleşiyor.",
+        en: "Intermediate and final outputs of the filters on an Ishihara test plate; the number 8 becomes clearer step by step.",
+        de: "Zwischen- und Endergebnisse der Filter auf einer Ishihara-Tafel; die Zahl 8 wird Schritt für Schritt deutlicher.",
       },
       credit: {
         tr: "Akalın, Özkan Aksoy, Top ve Kara, Symmetry 2025, Şekil 6 (CC BY 4.0)",
