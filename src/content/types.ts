@@ -12,6 +12,8 @@ export type ImageAsset = {
   credit?: Localized;
   /** Which side to keep when the image is cropped into a card; defaults to the top centre. */
   focus?: "left" | "center";
+  /** "contain" shows the whole image (logos); default crops to fill. */
+  fit?: "cover" | "contain";
 };
 
 export type ProjectStatus = "research" | "live" | "in-progress" | "competition";

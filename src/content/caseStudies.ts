@@ -647,17 +647,132 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "TEKNOFEST 2025'te SAÜ INWO takımıyla, kan hücresi görüntülerinden kanser tespitine yönelik bir öğrenci projesi geliştirdik. Proje yarı final aşamasına ulaştı.",
-              "At TEKNOFEST 2025, team SAÜ INWO developed a student project on cancer detection from blood cell images. The project reached the semi-finals.",
-              "Beim TEKNOFEST 2025 hat das Team SAÜ INWO ein Studierendenprojekt zur Krebserkennung aus Blutzellbildern entwickelt. Das Projekt erreichte das Halbfinale.",
+              "TEKNOFEST 2025 İnsanlık Yararına Teknoloji Yarışması'na Sağlık Teknolojileri kategorisinde, \"Sağlık çalışanlarına yönelik çözümler — yapay öğrenme uygulamaları ve karar destek sistemleri\" başlığıyla katıldık. Projemiz \"Kan Hücreleri Görüntülerinden Kanser Tespiti için Yapay Zekâ ve Web Tabanlı Klinik Karar Destek Sistemi\" yarı finale kaldı.",
+              "We entered the TEKNOFEST 2025 Technology for the Benefit of Humanity competition in the Health Technologies category, under \"solutions for healthcare professionals — machine learning applications and decision support systems\". Our project, an AI and web-based clinical decision support system for cancer detection from blood cell images, reached the semi-finals.",
+              "Wir nahmen am TEKNOFEST-2025-Wettbewerb „Technologie zum Wohl der Menschheit“ in der Kategorie Gesundheitstechnologien teil, Themenfeld „Lösungen für Gesundheitsfachkräfte – maschinelles Lernen und Entscheidungsunterstützung“. Unser Projekt, ein KI- und webbasiertes klinisches Entscheidungssystem zur Krebserkennung aus Blutzellbildern, erreichte das Halbfinale.",
             ),
           },
           {
             type: "p",
             text: L(
-              "Takımın yürütücüsüydüm; ekipte Esma Kara ve Hayrunnisa Yılmaz vardı. Benim odağım, görüntüleri modele hazırlayan özgün bir görüntü işleme filtresi geliştirmekti.",
-              "I led the team, together with Esma Kara and Hayrunnisa Yılmaz. My focus was developing an original image processing filter that prepares the images for the model.",
-              "Ich habe das Team geleitet, gemeinsam mit Esma Kara und Hayrunnisa Yılmaz. Mein Schwerpunkt war ein eigener Bildverarbeitungsfilter, der die Bilder für das Modell vorbereitet.",
+              "SAU InWo (Incredible Women), 2025'te üç arkadaşın kurduğu bir takım: Esma Kara, Hayrunnisa Yılmaz ve takım kaptanı olarak ben. Danışmanımız Dr. Öğr. Üyesi Fatma Akalın'dı. Takım logomuzu Esma tasarladı.",
+              "SAU InWo (Incredible Women) is a team founded in 2025 by three friends: Esma Kara, Hayrunnisa Yılmaz, and me as team captain. Our advisor was Asst. Prof. Fatma Akalın. Esma designed our team logo.",
+              "SAU InWo (Incredible Women) ist ein Team, das 2025 von drei Freundinnen gegründet wurde: Esma Kara, Hayrunnisa Yılmaz und mir als Teamkapitänin. Unsere Betreuerin war Dr. Fatma Akalın. Esma hat unser Teamlogo gestaltet.",
+            ),
+          },
+        ],
+      },
+      {
+        id: "problem",
+        title: L("Problem", "Problem", "Problem"),
+        blocks: [
+          {
+            type: "p",
+            text: L(
+              "Akut Lenfoblastik Lösemi (ALL), kemik iliğinde olgunlaşmamış lenfositlerin (blast hücrelerinin) kontrolsüz çoğalmasıyla ortaya çıkan ciddi bir kanser türü. Tanıda kullanılan periferik kan yayması mikroskop altında elle incelenir; bu süreç zaman alır, uzmanın deneyimine göre değişebilir ve iş yükü nedeniyle gecikmelere yol açabilir.",
+              "Acute Lymphoblastic Leukemia (ALL) is a serious cancer in which immature lymphocytes (blast cells) multiply uncontrollably in the bone marrow. Diagnosis relies on peripheral blood smears examined by hand under a microscope, which is slow, depends on the expert's experience, and can be delayed by workload.",
+              "Akute lymphatische Leukämie (ALL) ist eine schwere Krebserkrankung, bei der sich unreife Lymphozyten (Blasten) im Knochenmark unkontrolliert vermehren. Die Diagnose stützt sich auf Blutausstriche, die manuell unter dem Mikroskop untersucht werden – langsam, abhängig von der Erfahrung der Fachkraft und durch Arbeitslast verzögerbar.",
+            ),
+          },
+        ],
+      },
+      {
+        id: "method",
+        title: L("Yöntem", "Method", "Methode"),
+        blocks: [
+          {
+            type: "p",
+            text: L(
+              "Veri olarak Università degli Studi di Milano'nun ALL-IDB veri setini kullandık. Akışımız görüntü işleme, özellik çıkarımı ve sınıflandırmadan oluşuyor:",
+              "We used the ALL-IDB dataset from the Università degli Studi di Milano. Our pipeline consists of image processing, feature extraction, and classification:",
+              "Als Daten nutzten wir den ALL-IDB-Datensatz der Università degli Studi di Milano. Unsere Pipeline besteht aus Bildverarbeitung, Merkmalsextraktion und Klassifikation:",
+            ),
+          },
+          {
+            type: "list",
+            items: LL(
+              [
+                "Ön işleme: yeniden boyutlandırma, normalizasyon, RGB'den HSV ve CIELab'a dönüşüm, medyan ve Gauss filtresiyle gürültü giderme, kontrast germe ve histogram eşitleme.",
+                "Segmentasyon: HSV uzayında otomatik eşikleme (Zack / üçgen yöntemi), morfolojik işlemler, bitişik hücreler için Watershed ve her hücre için otomatik kırpma.",
+                "Özellik çıkarımı: alan, çevre, eksantriklik, dairesellik ve çekirdek/sitoplazma oranı gibi geometrik özellikler; HSV, CMYK ve CIELab renk istatistikleri; GLCM ve Gabor filtresiyle doku özellikleri.",
+                "Sınıflandırma ve arayüz: transfer öğrenme modelleri ve YOLOv9 ile blast hücre tespiti; sonuçların Flask tabanlı bir web arayüzünde gösterilmesi.",
+              ],
+              [
+                "Preprocessing: resizing, normalization, RGB to HSV and CIELab conversion, median and Gaussian denoising, contrast stretching, and histogram equalization.",
+                "Segmentation: automatic thresholding in HSV (Zack / triangle method), morphological operations, Watershed for touching cells, and automatic cropping of each cell.",
+                "Feature extraction: geometric features such as area, perimeter, eccentricity, circularity, and nucleus/cytoplasm ratio; HSV, CMYK, and CIELab color statistics; texture features with GLCM and Gabor filters.",
+                "Classification and interface: transfer learning models and YOLOv9 for blast cell detection, with results shown in a Flask-based web interface.",
+              ],
+              [
+                "Vorverarbeitung: Skalierung, Normalisierung, Umwandlung von RGB nach HSV und CIELab, Entrauschen mit Median- und Gaußfilter, Kontraststreckung und Histogrammausgleich.",
+                "Segmentierung: automatische Schwellenwertbildung im HSV-Raum (Zack-/Dreiecksverfahren), morphologische Operationen, Watershed für sich berührende Zellen und automatischer Zuschnitt jeder Zelle.",
+                "Merkmalsextraktion: geometrische Merkmale wie Fläche, Umfang, Exzentrizität, Rundheit und Kern-Plasma-Verhältnis; Farbstatistiken in HSV, CMYK und CIELab; Texturmerkmale mit GLCM und Gabor-Filtern.",
+                "Klassifikation und Oberfläche: Transfer-Learning-Modelle und YOLOv9 zur Blastenerkennung, Ergebnisse in einer Flask-basierten Weboberfläche.",
+              ],
+            ),
+          },
+          {
+            type: "image",
+            image: {
+              src: "/images/work/teknofest-blood-cell/filter-pipeline.webp",
+              width: 681,
+              height: 326,
+              alt: L(
+                "Kan yayması görüntüsünün adım adım işlenmesi: orijinal görüntü, LAB uzayında CLAHE, HSV uzayında Gabor filtresi, bilateral filtre ve Watershed segmentasyonuyla çizilmiş hücre sınırları.",
+                "Step-by-step processing of a blood smear image: original, CLAHE in LAB space, Gabor filter in HSV space, bilateral filter, and cell outlines from Watershed segmentation.",
+                "Schrittweise Verarbeitung eines Blutausstrichs: Original, CLAHE im LAB-Raum, Gabor-Filter im HSV-Raum, bilateraler Filter und Zellkonturen aus der Watershed-Segmentierung.",
+              ),
+              caption: L(
+                "Filtre ve segmentasyon akışı: CLAHE → Gabor → bilateral filtre → Watershed",
+                "Filter and segmentation pipeline: CLAHE → Gabor → bilateral filter → Watershed",
+                "Filter- und Segmentierungsablauf: CLAHE → Gabor → bilateraler Filter → Watershed",
+              ),
+            },
+          },
+        ],
+      },
+      {
+        id: "prototype",
+        title: L("Arayüz taslağı", "Interface draft", "Oberflächenentwurf"),
+        blocks: [
+          {
+            type: "p",
+            text: L(
+              "Yarı final sunumunda, uzmanın görüntü yükleyip analiz sonucunu görebileceği Türkçe bir web arayüzü taslağı hazırladık. Hedefimiz, devlet hastanelerinde de kullanılabilecek ücretsiz ve erişilebilir bir karar destek aracıydı.",
+              "For the semi-final presentation we drafted a Turkish web interface where a specialist can upload an image and see the analysis. Our goal was a free, accessible decision support tool that public hospitals could use too.",
+              "Für die Halbfinal-Präsentation entwarfen wir eine türkischsprachige Weboberfläche, in der Fachkräfte ein Bild hochladen und die Analyse sehen können. Ziel war ein kostenloses, zugängliches Werkzeug, das auch staatliche Krankenhäuser nutzen können.",
+            ),
+          },
+          {
+            type: "image",
+            image: {
+              src: "/images/work/teknofest-blood-cell/ui-mockup.webp",
+              width: 1160,
+              height: 1093,
+              alt: L(
+                "Akut Lenfoblastik Lösemi görüntü analizi karar destek sistemi arayüz taslağı: görüntü yükleme, işlenmiş hücre görüntüleri, analiz butonu ve sonuç kutusu.",
+                "Interface draft of the acute lymphoblastic leukemia image analysis tool: image upload, processed cell images, an analyze button, and a result box.",
+                "Oberflächenentwurf des ALL-Bildanalysewerkzeugs: Bild-Upload, verarbeitete Zellbilder, Analyse-Button und Ergebnisfeld.",
+              ),
+              caption: L(
+                "Arayüz taslağı (yarı final sunumu); sonuç kutusundaki değer örnektir.",
+                "Interface draft (semi-final presentation); the value in the result box is a placeholder.",
+                "Oberflächenentwurf (Halbfinal-Präsentation); der Wert im Ergebnisfeld ist ein Platzhalter.",
+              ),
+            },
+          },
+        ],
+      },
+      {
+        id: "role",
+        title: L("Rolüm", "My role", "Meine Rolle"),
+        blocks: [
+          {
+            type: "p",
+            text: L(
+              "Takım kaptanıydım. Görev dağılımımızda üçümüz de görüntü işleme teknikleriyle filtre tasarımı, model eğitimi ve entegrasyon üzerinde çalıştık; benim odağım görüntüleri modele hazırlayan özgün görüntü işleme filtresinin geliştirilmesiydi.",
+              "I was the team captain. In our task split all three of us worked on filter design with image processing, model training, and integration; my focus was developing the original image processing filter that prepares the images for the model.",
+              "Ich war Teamkapitänin. Laut Aufgabenverteilung arbeiteten wir alle drei an Filterdesign, Modelltraining und Integration; mein Schwerpunkt war der eigene Bildverarbeitungsfilter, der die Bilder für das Modell vorbereitet.",
             ),
           },
           {
