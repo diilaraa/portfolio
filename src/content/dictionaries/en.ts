@@ -78,8 +78,7 @@ export const en: Dictionary = {
     all: "Research and publications",
   },
   experienceSnapshot: {
-    eyebrow: "Experience",
-    title: "From accounting records to product decisions.",
+    title: "Experience",
     all: "Full experience",
   },
   contactCta: {

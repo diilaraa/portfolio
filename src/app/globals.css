@@ -8,6 +8,9 @@
   --ink: #121212;
   --ink-muted: #57534e;
   --line: #e2d8c8;
+  /* Section bands: each one keeps every text color above 4.5:1. */
+  --band-sand: #ede3d1;
+  --band-blue: #e6eaf7;
   --pink: #c2185b;
   --blue: #2340d0;
   --status-progress: #735a12;
@@ -22,6 +25,8 @@
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-line: var(--line);
+  --color-band-sand: var(--band-sand);
+  --color-band-blue: var(--band-blue);
   --color-pink: var(--pink);
   --color-blue: var(--blue);
   --color-status-progress: var(--status-progress);

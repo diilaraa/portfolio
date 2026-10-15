@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getDictionary } from "@/lib/dictionary";
 import { href } from "@/lib/i18n";
 import type { HeroTone } from "@/content/dictionaries/tr";
@@ -9,6 +8,7 @@ import { SelectedWork } from "@/components/home/SelectedWork";
 import { ResearchHighlight } from "@/components/home/ResearchHighlight";
 import { ExperienceSnapshot } from "@/components/home/ExperienceSnapshot";
 import { ContactCta } from "@/components/home/ContactCta";
+import { ButtonLink } from "@/components/ui/Button";
 
 const toneClass: Record<HeroTone, string> = {
   warm: "text-pink",
@@ -21,8 +21,8 @@ export default async function HomePage() {
   const { home } = dict;
 
   return (
-    <div className="grid gap-[clamp(5rem,12vw,10rem)] pb-[clamp(5rem,12vw,10rem)]">
-      <section className="mx-auto w-full max-w-[77.5rem] px-5 pt-16 md:px-10 md:pt-28">
+    <>
+      <section className="mx-auto w-full max-w-[77.5rem] px-5 pb-[clamp(4.5rem,10vw,8rem)] pt-16 md:px-10 md:pt-28">
         <p className="font-mono text-label text-ink-muted">{home.eyebrow}</p>
 
         <h1 className="mt-8 max-w-[14ch] font-display text-display text-ink text-balance">
@@ -43,18 +43,12 @@ export default async function HomePage() {
         </div>
 
         <div className="mt-12 flex flex-wrap gap-3">
-          <Link
-            href={href(locale, "/work")}
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-ink px-6 text-paper transition-colors duration-200 hover:bg-pink"
-          >
-            {home.ctaWork} <span aria-hidden="true">→</span>
-          </Link>
-          <Link
-            href={href(locale, "/research")}
-            className="inline-flex h-12 items-center rounded-full border border-ink px-6 text-ink transition-colors duration-200 hover:border-blue hover:text-blue"
-          >
+          <ButtonLink href={href(locale, "/work")} arrow>
+            {home.ctaWork}
+          </ButtonLink>
+          <ButtonLink href={href(locale, "/research")} variant="secondary">
             {home.ctaResearch}
-          </Link>
+          </ButtonLink>
         </div>
       </section>
 
@@ -62,6 +56,6 @@ export default async function HomePage() {
       <ResearchHighlight locale={locale} copy={dict.research} publications={publications} />
       <ExperienceSnapshot locale={locale} copy={dict.experienceSnapshot} items={experience} />
       <ContactCta copy={dict.contactCta} />
-    </div>
+    </>
   );
 }

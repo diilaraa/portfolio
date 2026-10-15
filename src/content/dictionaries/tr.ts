@@ -75,8 +75,7 @@ export const tr = {
     all: "Araştırma ve yayınlar",
   },
   experienceSnapshot: {
-    eyebrow: "Deneyim",
-    title: "Muhasebe kayıtlarından ürün kararlarına.",
+    title: "Deneyim",
     all: "Tüm deneyim",
   },
   contactCta: {
