@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0F1B2D"/>
+  <text x="11" y="44" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="34" fill="#F08A4B">D</text>
+  <text x="35" y="44" font-family="ui-monospace, Menlo, monospace" font-size="24" fill="#7FB0E8">T</text>
+</svg>
