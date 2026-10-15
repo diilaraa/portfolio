@@ -12,6 +12,7 @@ import { ContactCta } from "@/components/home/ContactCta";
 import { ButtonLink } from "@/components/ui/Button";
 import { HeroIntro } from "@/components/home/HeroIntro";
 import { TechRow } from "@/components/home/TechRow";
+import { DraggableAvatar } from "@/components/home/DraggableAvatar";
 
 const toneClass: Record<HeroTone, string> = {
   warm: "text-pink",
@@ -69,15 +70,18 @@ export default async function HomePage() {
             </div>
 
             <div className="hero-intro__avatar mx-auto w-full max-w-[20rem] md:col-span-5 md:max-w-[26rem]">
-              <Image
-                src="/images/avatar.webp"
-                width={765}
-                height={1024}
-                alt={home.avatarAlt}
-                priority
-                sizes="(min-width: 768px) 26rem, 20rem"
-                className="h-auto max-h-[58svh] w-full object-contain"
-              />
+              <DraggableAvatar>
+                <Image
+                  src="/images/avatar.webp"
+                  width={765}
+                  height={1024}
+                  alt={home.avatarAlt}
+                  priority
+                  sizes="(min-width: 768px) 26rem, 20rem"
+                  draggable={false}
+                  className="h-auto max-h-[58svh] w-full object-contain"
+                />
+              </DraggableAvatar>
             </div>
           </div>
         </div>
