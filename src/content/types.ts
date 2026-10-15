@@ -40,6 +40,7 @@ export type ArchiveProject = {
   /** Team or role note, e.g. "with Esma Kara". */
   team?: Localized;
   image?: ImageAsset;
+  link?: { label: Localized; href: string };
 };
 
 export type Publication = {

@@ -102,6 +102,5 @@ export const en: Dictionary = {
   footer: {
     location: "Kocaeli, Türkiye",
     rights: "All rights reserved.",
-    builtWith: "Designed and built with Next.js and Tailwind CSS.",
   },
 };

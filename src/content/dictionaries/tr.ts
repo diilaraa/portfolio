@@ -99,7 +99,6 @@ export const tr = {
   footer: {
     location: "Kocaeli, Türkiye",
     rights: "Tüm hakları saklıdır.",
-    builtWith: "Next.js ve Tailwind CSS ile tasarlanıp geliştirildi.",
   },
 };
 

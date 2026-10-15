@@ -40,7 +40,6 @@ export async function SiteFooter() {
           <p>
             © {year} Dilara Top. {dict.footer.rights}
           </p>
-          <p className="mt-2">{dict.footer.builtWith}</p>
         </div>
       </div>
     </footer>

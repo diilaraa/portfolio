@@ -233,11 +233,30 @@ export const archive: ArchiveProject[] = [
       de: "Immobilienanalyse mit Data Mining",
     },
     summary: {
-      tr: "Takım lideri. 1.000+ örnekli veri setinde Lojistik Regresyon, Random Forest, C4.5 ve K-NN karşılaştırması ve hiperparametre optimizasyonu.",
-      en: "Team lead. Compared Logistic Regression, Random Forest, C4.5, and K-NN on a 1,000+ sample dataset, with hyperparameter tuning.",
-      de: "Teamleitung. Vergleich von Logistischer Regression, Random Forest, C4.5 und K-NN auf über 1.000 Datensätzen inkl. Hyperparameter-Optimierung.",
+      tr: "HepsiEmlak'tan toplanan 2.180 ilan × 135 sütunluk veri seti temizlenerek 57 sütuna indirildi (encoding sonrası 87 özellik). Eksik değerler açıklama metninden ve ilişkili sütunlardan dolduruldu; merkeze ve denize uzaklık gibi yeni özellikler türetildi, aykırı değerler IQR ile ele alındı. Ebrar Mert ile konut tipi tahmini için PCA ve sınıf ağırlıklarıyla Random Forest modelleri kurduk.",
+      en: "A dataset of 2,180 HepsiEmlak listings × 135 columns was cleaned down to 57 columns (87 features after encoding). Missing values were filled from the description text and related columns, new features such as distance to the city center and the sea were derived, and outliers were handled with IQR. With Ebrar Mert I built Random Forest models with PCA and class weights to predict property type.",
+      de: "Ein Datensatz mit 2.180 HepsiEmlak-Anzeigen × 135 Spalten wurde auf 57 Spalten bereinigt (87 Merkmale nach dem Encoding). Fehlende Werte wurden aus dem Beschreibungstext und verwandten Spalten ergänzt, neue Merkmale wie die Entfernung zum Zentrum und zum Meer abgeleitet und Ausreißer per IQR behandelt. Mit Ebrar Mert habe ich Random-Forest-Modelle mit PCA und Klassengewichten zur Vorhersage des Immobilientyps gebaut.",
     },
-    stack: ["Python", "scikit-learn"],
+    team: {
+      tr: "10 kişilik ekip · takım lideri",
+      en: "10-person team · team lead",
+      de: "10-köpfiges Team · Teamleitung",
+    },
+    stack: ["Python", "pandas", "scikit-learn", "Random Forest", "PCA", "Matplotlib", "Seaborn"],
+    image: {
+      src: "/images/archive/real-estate-distance.webp",
+      width: 580,
+      height: 497,
+      alt: {
+        tr: "Sakarya merkezine uzaklığa göre fiyat kategorisi dağılımı: 0-5, 5-10, 10-20 ve 20+ km gruplarında düşük, orta ve yüksek fiyatlı ilan sayıları.",
+        en: "Price category distribution by distance to Sakarya city center: low, medium, and high-priced listings in the 0-5, 5-10, 10-20, and 20+ km groups.",
+        de: "Verteilung der Preiskategorien nach Entfernung zum Zentrum von Sakarya: niedrige, mittlere und hohe Preise in den Gruppen 0-5, 5-10, 10-20 und 20+ km.",
+      },
+    },
+    link: {
+      label: { tr: "GitHub deposu", en: "GitHub repository", de: "GitHub-Repository" },
+      href: "https://github.com/diilaraa/MachineLearningAlgorithms_wOpenSourceData",
+    },
   },
   {
     title: { tr: "Veritabanı Tasarımı ve Arayüz", en: "Database Design and Interface", de: "Datenbankdesign und Oberfläche" },

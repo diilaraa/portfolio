@@ -62,6 +62,16 @@ export default async function WorkPage() {
                   <h3 className="font-display text-h3 text-ink">{item.title[locale]}</h3>
                   {item.team && <p className="mt-1 text-sm font-medium text-pink">{item.team[locale]}</p>}
                   <p className="mt-2 leading-relaxed text-ink-muted">{item.summary[locale]}</p>
+                  {item.link && (
+                    <a
+                      href={item.link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 w-fit font-medium text-blue underline decoration-1 underline-offset-4 hover:decoration-2"
+                    >
+                      {item.link.label[locale]} <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
                   <ul className="mt-auto flex flex-wrap gap-1.5 pt-5" aria-label="Stack">
                     {item.stack.map((tech) => (
                       <li key={tech} className="rounded-md bg-band-gray px-2 py-1 text-[0.75rem] text-ink">
