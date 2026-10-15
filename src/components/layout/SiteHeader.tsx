@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getDictionary } from "@/lib/dictionary";
 import { href } from "@/lib/i18n";
@@ -15,8 +16,16 @@ export async function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-paper">
       <div className="mx-auto flex h-[4.5rem] max-w-[77.5rem] items-center justify-between gap-6 px-5 md:px-10">
-        <Link href={href(locale)} className="font-display text-[1.625rem] leading-none text-ink transition-colors duration-200 hover:text-pink">
-          Dilara Top
+        <Link href={href(locale)} className="group flex items-center gap-2.5 text-ink">
+          <Image
+            src="/images/avatar-head.webp"
+            width={128}
+            height={128}
+            alt=""
+            priority
+            className="size-10 rounded-full bg-band-pink transition-transform duration-300 ease-soft group-hover:-rotate-6 group-hover:scale-105"
+          />
+          <span className="font-display text-[1.625rem] leading-none transition-colors duration-200 group-hover:text-pink">Dilara Top</span>
         </Link>
 
         <div className="flex items-center gap-2 lg:gap-8">
