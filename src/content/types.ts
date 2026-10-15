@@ -50,6 +50,8 @@ export type Publication = {
 export type ExperienceItem = {
   id: string;
   company: string;
+  /** Official company logo; until a file is supplied the UI shows a monogram tile. */
+  logo?: { src: string; width: number; height: number };
   role: Localized;
   period: Localized;
   location: Localized;

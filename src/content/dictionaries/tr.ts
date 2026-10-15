@@ -76,7 +76,8 @@ export const tr = {
     result:
       "Filtre uygulandıktan sonra model, yedi renk körlüğü tipinin ortalamasında görüntüleri çok daha doğru sınıflandırdı: F1 skoru %33,95'ten %90,31'e yükseldi.",
     resultSource: "Symmetry 2025 · test seti · 5. filtre sürümü",
-    imageCredit: "Görsel: Akalın vd., Symmetry 2025, Şekil 6 (CC BY 4.0)",
+    imageCredit: "Kaynak: Akalın vd., Symmetry 2025",
+    pipelinesTitle: "Özgün filtreler, adım adım",
     beforeLabel: "Orijinal",
     afterLabel: "Filtreli",
     publications: "Yayınlar",

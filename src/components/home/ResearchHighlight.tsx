@@ -4,6 +4,8 @@ import type { Publication } from "@/content/types";
 import { href, type Locale } from "@/lib/i18n";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import { FilterPipelines } from "./FilterPipelines";
+import { filterPipelines } from "@/content/filterPipelines";
 
 type Props = { locale: Locale; copy: Dictionary["research"]; publications: Publication[] };
 
@@ -29,9 +31,9 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
 
           <figure className="mt-8 rounded-xl bg-band-blue p-5">
             <div className="flex items-center justify-center gap-5">
-              <PlateFigure src="/images/work/cvd-image-filters/ishihara-before.webp" w={162} h={160} label={copy.beforeLabel} />
+              <PlateFigure src="/images/work/cvd-image-filters/compare-before.webp" w={278} h={278} label={copy.beforeLabel} />
               <span aria-hidden="true" className="text-h3 text-ink-muted">→</span>
-              <PlateFigure src="/images/work/cvd-image-filters/ishihara-after.webp" w={168} h={170} label={copy.afterLabel} />
+              <PlateFigure src="/images/work/cvd-image-filters/compare-after.webp" w={279} h={279} label={copy.afterLabel} />
             </div>
             <figcaption className="mt-4 text-center text-[0.75rem] text-ink-muted">{copy.imageCredit}</figcaption>
           </figure>
@@ -73,6 +75,8 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
           </ol>
         </Reveal>
       </div>
+
+      <FilterPipelines locale={locale} title={copy.pipelinesTitle} pipelines={filterPipelines} />
     </Section>
   );
 }
@@ -81,7 +85,7 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
 function PlateFigure({ src, w, h, label }: { src: string; w: number; h: number; label: string }) {
   return (
     <div className="flex w-[38%] max-w-32 flex-col items-center gap-2">
-      <Image src={src} width={w} height={h} alt="" className="w-full rounded-full" />
+      <Image src={src} width={w} height={h} alt="" className="w-full rounded-lg" />
       <span className="text-sm font-medium text-ink">{label}</span>
     </div>
   );

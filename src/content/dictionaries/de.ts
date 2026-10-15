@@ -79,7 +79,8 @@ export const de: Dictionary = {
     result:
       "Mit Filter klassifizierte das Modell die Bilder im Mittel über sieben Arten von Farbenblindheit deutlich genauer: Der F1-Score stieg von 33,95 % auf 90,31 %.",
     resultSource: "Symmetry 2025 · Testdatensatz · Filterversion 5",
-    imageCredit: "Bild: Akalın et al., Symmetry 2025, Abb. 6 (CC BY 4.0)",
+    imageCredit: "Quelle: Akalın et al., Symmetry 2025",
+    pipelinesTitle: "Die Filter Schritt für Schritt",
     beforeLabel: "Original",
     afterLabel: "Gefiltert",
     publications: "Publikationen",

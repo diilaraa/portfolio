@@ -79,7 +79,8 @@ export const en: Dictionary = {
     result:
       "With the filter applied, the model classified the images far more accurately on average across seven types of color blindness: the F1 score rose from 33.95% to 90.31%.",
     resultSource: "Symmetry 2025 · test set · Filter Version 5",
-    imageCredit: "Image: Akalın et al., Symmetry 2025, Fig. 6 (CC BY 4.0)",
+    imageCredit: "Source: Akalın et al., Symmetry 2025",
+    pipelinesTitle: "The filters, step by step",
     beforeLabel: "Original",
     afterLabel: "Filtered",
     publications: "Publications",
