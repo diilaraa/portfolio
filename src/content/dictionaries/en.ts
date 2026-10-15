@@ -55,7 +55,6 @@ export const en: Dictionary = {
     techTitle: "Technologies I work with",
     greeting: "Hi, I'm ",
     greetingName: "Dilara Top",
-    scrollCue: "Scroll down",
     ctaWork: "View work",
     ctaResearch: "Read the research",
   },

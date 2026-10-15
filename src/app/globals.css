@@ -142,9 +142,6 @@ html[data-lens="achromatopsia"] body { filter: url(#cvd-achromatopsia); }
     opacity: clamp(0, calc(1 - var(--p) * 2.2), 1);
     translate: 0 calc(var(--p) * -3rem);
   }
-  .js .hero-intro__cue {
-    display: flex;
-  }
   .js .hero-intro__content {
     opacity: clamp(0, calc((var(--p) - 0.35) * 2.2), 1);
     translate: 0 calc((1 - var(--p)) * 2rem);

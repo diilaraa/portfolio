@@ -55,7 +55,6 @@ export const de: Dictionary = {
     techTitle: "Technologien, mit denen ich arbeite",
     greeting: "Hallo, ich bin ",
     greetingName: "Dilara Top",
-    scrollCue: "Nach unten scrollen",
     ctaWork: "Projekte ansehen",
     ctaResearch: "Forschung lesen",
   },

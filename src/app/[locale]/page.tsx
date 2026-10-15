@@ -30,9 +30,6 @@ export default async function HomePage() {
           <p className="hero-intro__greeting mb-10 font-display text-[clamp(2.25rem,6vw,5.5rem)] leading-none text-ink">
             {home.greeting}
             <span className="text-pink">{home.greetingName}</span>.
-            <span className="hero-intro__cue mt-5 hidden items-center justify-center gap-2 font-sans text-sm font-medium tracking-normal text-ink-muted">
-              {home.scrollCue} <span aria-hidden="true" className="animate-bounce">↓</span>
-            </span>
           </p>
 
           <div className="hero-intro__grid grid items-center gap-12 md:grid-cols-12">

@@ -52,7 +52,6 @@ export const tr = {
     techTitle: "Çalıştığım teknolojiler",
     greeting: "Merhaba, ben ",
     greetingName: "Dilara Top",
-    scrollCue: "Aşağı kaydırın",
     ctaWork: "Çalışmaları gör",
     ctaResearch: "Araştırmayı oku",
   },
