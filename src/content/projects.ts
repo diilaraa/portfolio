@@ -259,13 +259,21 @@ export const archive: ArchiveProject[] = [
     },
   },
   {
-    title: { tr: "Veritabanı Tasarımı ve Arayüz", en: "Database Design and Interface", de: "Datenbankdesign und Oberfläche" },
-    summary: {
-      tr: "ER diyagramı, iş kuralları, view, stored procedure ve trigger'lar; C# masaüstü arayüzü.",
-      en: "ER diagram, business rules, views, stored procedures, and triggers, with a C# desktop interface.",
-      de: "ER-Diagramm, Geschäftsregeln, Views, Stored Procedures und Trigger mit C#-Desktop-Oberfläche.",
+    title: {
+      tr: "Savorista — Restoran Veritabanı ve Masaüstü Arayüz",
+      en: "Savorista — Restaurant Database and Desktop App",
+      de: "Savorista — Restaurant-Datenbank und Desktop-Anwendung",
     },
-    stack: ["MSSQL", "C#"],
+    summary: {
+      tr: "Hayali bir restoran için iş kurallarından yola çıkarak ER diyagramı ve MSSQL veritabanı tasarlandı: müşteri, rezervasyon, masa, sipariş, menü ve ürün, adisyon, hesap ödemesi, personel ve görev tabloları. Müşteri–rezervasyon–ödeme görünümü, kategoriye göre ürün getiren stored procedure ve trigger'lar yazıldı. C# WinForms arayüzünde parametreli sorgularla giriş ekranı ve DataGridView ile veri görüntüleme var.",
+      en: "Starting from business rules, an ER diagram and MSSQL database were designed for a fictional restaurant: customers, reservations, tables, orders, menu and products, bills, payments, staff, and roles. It includes a customer–reservation–payment view, a stored procedure that returns products by category, and triggers. The C# WinForms app has a login screen using parameterized queries and shows data in a DataGridView.",
+      de: "Ausgehend von Geschäftsregeln wurden ein ER-Diagramm und eine MSSQL-Datenbank für ein fiktives Restaurant entworfen: Kunden, Reservierungen, Tische, Bestellungen, Menü und Produkte, Rechnungen, Zahlungen, Personal und Aufgaben. Dazu gehören eine Kunden-Reservierungs-Zahlungs-View, eine Stored Procedure für Produkte nach Kategorie und Trigger. Die C#-WinForms-Anwendung hat einen Login mit parametrisierten Abfragen und zeigt Daten in einem DataGridView.",
+    },
+    stack: ["MSSQL", "T-SQL", "C#", ".NET", "WinForms", "ADO.NET"],
+    link: {
+      label: { tr: "GitHub deposu", en: "GitHub repository", de: "GitHub-Repository" },
+      href: "https://github.com/diilaraa/Restaurant-Database",
+    },
   },
 ];
 
