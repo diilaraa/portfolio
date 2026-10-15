@@ -37,6 +37,9 @@ export type ArchiveProject = {
   title: Localized;
   summary: Localized;
   stack: string[];
+  /** Team or role note, e.g. "with Esma Kara". */
+  team?: Localized;
+  image?: ImageAsset;
 };
 
 export type Publication = {

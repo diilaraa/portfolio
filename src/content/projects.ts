@@ -163,20 +163,68 @@ export const archive: ArchiveProject[] = [
       de: "Dienstplansystem für pädiatrische Assistenzärzte",
     },
     summary: {
-      tr: "Yönetici paneli, takvim tabanlı nöbet takibi, randevu planlama ve acil duyurular. Code-First yaklaşımı.",
-      en: "Admin panel, calendar-based duty tracking, appointment scheduling, and emergency announcements. Code-First approach.",
-      de: "Admin-Bereich, kalenderbasierte Dienstplanung, Terminplanung und Notfallmeldungen. Code-First-Ansatz.",
+      tr: "Asistan, öğretim üyesi, bölüm, nöbet, randevu ve acil durum duyurularını yöneten web uygulaması. İş kurallarından 9 tabloluk veritabanı tasarlandı; Entity Framework Code-First ile kuruldu. Oturum tabanlı bir yetkilendirme filtresiyle yalnızca admin'in erişebildiği bir yönetim paneli ve takvim tabanlı nöbet takibi var.",
+      en: "A web application that manages residents, faculty, departments, duty shifts, appointments, and emergency announcements. A nine-table database was designed from business rules and built with Entity Framework Code-First. It includes an admin panel protected by a session-based authorization filter and calendar-based duty tracking.",
+      de: "Eine Webanwendung zur Verwaltung von Assistenzärzten, Lehrkräften, Abteilungen, Diensten, Terminen und Notfallmeldungen. Aus Geschäftsregeln wurde eine Datenbank mit neun Tabellen entworfen und mit Entity Framework Code-First umgesetzt. Ein Admin-Bereich ist über einen sitzungsbasierten Autorisierungsfilter geschützt; Dienste werden kalenderbasiert verfolgt.",
     },
-    stack: ["ASP.NET MVC", "Entity Framework", "MSSQL"],
+    stack: ["ASP.NET MVC", "Entity Framework", "C#", "MSSQL"],
+    image: {
+      src: "/images/archive/pediatric-duty-er.webp",
+      width: 1196,
+      height: 776,
+      alt: {
+        tr: "Pediatri yönetim sisteminin veritabanı diyagramı: Asistan, Bölüm, Öğretim Üyesi, Nöbet, Randevu, Görüşme, Admin ve Acil Durum tabloları.",
+        en: "Database diagram of the pediatric management system: Resident, Department, Faculty, Duty, Appointment, Meeting, Admin, and Emergency tables.",
+        de: "Datenbankdiagramm des Pädiatrie-Systems: Tabellen für Assistenzärzte, Abteilungen, Lehrkräfte, Dienste, Termine, Gespräche, Admin und Notfälle.",
+      },
+    },
   },
   {
-    title: { tr: "Veritabanı Tasarımı ve Arayüz", en: "Database Design and Interface", de: "Datenbankdesign und Oberfläche" },
-    summary: {
-      tr: "ER diyagramı, iş kuralları, view, stored procedure ve trigger'lar; C# masaüstü arayüzü.",
-      en: "ER diagram, business rules, views, stored procedures, and triggers, with a C# desktop interface.",
-      de: "ER-Diagramm, Geschäftsregeln, Views, Stored Procedures und Trigger mit C#-Desktop-Oberfläche.",
+    title: {
+      tr: "Otonom Araç Simülasyonu — Unity",
+      en: "Autonomous Vehicle Simulation — Unity",
+      de: "Simulation eines autonomen Fahrzeugs — Unity",
     },
-    stack: ["MSSQL", "C#"],
+    summary: {
+      tr: "Bir şehir haritasında hedefe en verimli rotayla ulaşan otonom araç. Grid tabanlı harita üzerinde Greedy, Uniform Cost Search ve A* karşılaştırıldı; dinamik trafik ışıkları, waypoint'lerle yürüyen yayalar, raycast sensörleri ve aracı yavaşlatan karlı yollar simüle edildi. 20 kişilik ekipte veri ve optimizasyon yöneticisiydim.",
+      en: "An autonomous vehicle that reaches its target on a city map by the most efficient route. Greedy, Uniform Cost Search, and A* were compared on a grid-based map, with dynamic traffic lights, pedestrians following waypoints, raycast sensors, and snowy roads that slow the car down. I was the data and optimization manager in a 20-person team.",
+      de: "Ein autonomes Fahrzeug, das auf einer Stadtkarte den effizientesten Weg zum Ziel findet. Auf einer Grid-Karte wurden Greedy, Uniform Cost Search und A* verglichen – mit dynamischen Ampeln, Fußgängern auf Wegpunkten, Raycast-Sensoren und verschneiten Straßen, die das Auto bremsen. Im 20-köpfigen Team war ich für Daten und Optimierung verantwortlich.",
+    },
+    stack: ["Unity", "C#", "A*", "UCS", "Greedy"],
+    image: {
+      src: "/images/archive/unity-autonomous-vehicle.webp",
+      width: 866,
+      height: 420,
+      alt: {
+        tr: "Unity simülasyonunda düşük poligonlu bir şehirde, yaya geçidine yaklaşan kırmızı otonom araç.",
+        en: "A red autonomous car approaching a crosswalk in a low-poly city in the Unity simulation.",
+        de: "Ein rotes autonomes Auto nähert sich in der Unity-Simulation einem Zebrastreifen in einer Low-Poly-Stadt.",
+      },
+    },
+  },
+  {
+    title: {
+      tr: "İnternet Reklamları Veri Analizi",
+      en: "Internet Advertisements Data Analysis",
+      de: "Datenanalyse von Internetwerbung",
+    },
+    summary: {
+      tr: "UCI Internet Advertisements veri setinde eksik değerlerin ortalama ve medyanla doldurulmasının karşılaştırılması, korelasyon analizi, histogram, kutu grafiği ve Q-Q grafikleriyle dağılım incelemesi; Shapiro-Wilk, Z ve T testleri.",
+      en: "On the UCI Internet Advertisements dataset: comparing mean and median imputation for missing values, correlation analysis, distribution checks with histograms, box plots, and Q-Q plots, and Shapiro-Wilk, Z, and T tests.",
+      de: "Am UCI-Datensatz Internet Advertisements: Vergleich von Mittelwert- und Median-Imputation, Korrelationsanalyse, Verteilungsprüfung mit Histogrammen, Boxplots und Q-Q-Plots sowie Shapiro-Wilk-, Z- und T-Tests.",
+    },
+    team: { tr: "Esma Kara ile", en: "With Esma Kara", de: "Mit Esma Kara" },
+    stack: ["Python", "pandas", "NumPy", "SciPy", "statsmodels", "seaborn"],
+    image: {
+      src: "/images/archive/internet-ads-correlation.webp",
+      width: 776,
+      height: 680,
+      alt: {
+        tr: "Yükseklik, genişlik, oran, local ve reklam durumu sütunları arasındaki korelasyon matrisi; en güçlü ilişki genişlik ile reklam durumu arasında (0,57).",
+        en: "Correlation matrix of height, width, ratio, local, and ad status; the strongest relation is between width and ad status (0.57).",
+        de: "Korrelationsmatrix von Höhe, Breite, Verhältnis, local und Werbestatus; der stärkste Zusammenhang besteht zwischen Breite und Werbestatus (0,57).",
+      },
+    },
   },
   {
     title: {
@@ -192,17 +240,13 @@ export const archive: ArchiveProject[] = [
     stack: ["Python", "scikit-learn"],
   },
   {
-    title: {
-      tr: "Otonom Araç Simülasyonu — Unity",
-      en: "Autonomous Vehicle Simulation — Unity",
-      de: "Simulation eines autonomen Fahrzeugs — Unity",
-    },
+    title: { tr: "Veritabanı Tasarımı ve Arayüz", en: "Database Design and Interface", de: "Datenbankdesign und Oberfläche" },
     summary: {
-      tr: "20 kişilik ekipte veri ve optimizasyon yöneticisi; Greedy, Uniform Cost ve A* ile hedefe en verimli rota.",
-      en: "Data and optimization manager in a 20-person team; Greedy, Uniform Cost, and A* search for the most efficient route.",
-      de: "Daten- und Optimierungsverantwortliche in einem 20-köpfigen Team; Greedy-, Uniform-Cost- und A*-Suche für die effizienteste Route.",
+      tr: "ER diyagramı, iş kuralları, view, stored procedure ve trigger'lar; C# masaüstü arayüzü.",
+      en: "ER diagram, business rules, views, stored procedures, and triggers, with a C# desktop interface.",
+      de: "ER-Diagramm, Geschäftsregeln, Views, Stored Procedures und Trigger mit C#-Desktop-Oberfläche.",
     },
-    stack: ["Unity", "C#", "A*"],
+    stack: ["MSSQL", "C#"],
   },
 ];
 

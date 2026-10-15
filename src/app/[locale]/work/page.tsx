@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getPages } from "@/lib/dictionary";
 import { pageMetadata } from "@/lib/seo";
 import { archive, projects } from "@/content/projects";
@@ -44,16 +45,31 @@ export default async function WorkPage() {
 
           <ul className="mt-10 grid gap-4 md:grid-cols-2">
             {archive.map((item) => (
-              <li key={item.title.en} className="rounded-2xl border border-line bg-paper p-6">
-                <h3 className="font-display text-h3 text-ink">{item.title[locale]}</h3>
-                <p className="mt-2 text-ink-muted">{item.summary[locale]}</p>
-                <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Stack">
-                  {item.stack.map((tech) => (
-                    <li key={tech} className="rounded-md bg-band-gray px-2 py-1 text-[0.75rem] text-ink">
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
+              <li key={item.title.en} className="flex flex-col overflow-hidden rounded-2xl border border-line bg-paper">
+                {item.image && (
+                  <div className="border-b border-line bg-band-gray">
+                    <Image
+                      src={item.image.src}
+                      width={item.image.width}
+                      height={item.image.height}
+                      alt={item.image.alt[locale]}
+                      sizes="(min-width: 768px) 38rem, 100vw"
+                      className="aspect-[16/9] h-auto w-full object-contain"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-display text-h3 text-ink">{item.title[locale]}</h3>
+                  {item.team && <p className="mt-1 text-sm font-medium text-pink">{item.team[locale]}</p>}
+                  <p className="mt-2 leading-relaxed text-ink-muted">{item.summary[locale]}</p>
+                  <ul className="mt-auto flex flex-wrap gap-1.5 pt-5" aria-label="Stack">
+                    {item.stack.map((tech) => (
+                      <li key={tech} className="rounded-md bg-band-gray px-2 py-1 text-[0.75rem] text-ink">
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </li>
             ))}
           </ul>
