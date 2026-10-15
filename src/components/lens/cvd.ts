@@ -39,7 +39,7 @@ export function toFeColorMatrix(type: LensType): string {
   return [...rows, "0 0 0 1 0"].join(" ");
 }
 
-/** Inline script that applies the stored lens before first paint (avoids a flash). */
-export const lensInitScript = `try{var v=localStorage.getItem("${LENS_STORAGE_KEY}");if(v&&${JSON.stringify(
+/** Inline script run before first paint: marks JS support (for reveal animations) and applies the stored lens. */
+export const lensInitScript = `document.documentElement.classList.add("js");try{var v=localStorage.getItem("${LENS_STORAGE_KEY}");if(v&&${JSON.stringify(
   lensTypes,
 )}.indexOf(v)>-1)document.documentElement.dataset.lens=v}catch(e){}`;

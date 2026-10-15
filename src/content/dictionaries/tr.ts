@@ -51,6 +51,65 @@ export const tr = {
     ctaWork: "Çalışmaları gör",
     ctaResearch: "Araştırmayı oku",
   },
+  layers: {
+    eyebrow: "Nasıl çalışırım",
+    title: "Tek bir sistem, üç katman.",
+    items: [
+      {
+        key: "business",
+        name: "İş",
+        lead: "İhtiyacı netleştirir; fonksiyonel analize, önceliklere ve ürün kararlarına dönüştürürüm.",
+        proof: ["Logo · iş analizi", "Mikro · ürün yönetimi", "Münih · muhasebe operasyonları"],
+      },
+      {
+        key: "integration",
+        name: "Entegrasyon",
+        lead: "Sistemlerin birbiriyle nasıl konuştuğunu anlarım: servisler, şemalar ve sözleşmeler.",
+        proof: ["REST ve SOAP", "UBL · XSD · Schematron · XSLT", "Postman ve SoapUI"],
+      },
+      {
+        key: "code",
+        name: "Kod ve veri",
+        lead: "Çözümü kurar, modeli eğitir ve sonucu ölçerim.",
+        proof: ["C# · React · Next.js · Flask", "YOLOv9 · scikit-learn", "Özgün OpenCV filtreleri"],
+      },
+    ] as { key: LayerKey; name: string; lead: string; proof: string[] }[],
+  },
+  work: {
+    eyebrow: "Seçili çalışmalar",
+    title: "Gerçek problemler, ölçülen sonuçlar.",
+    all: "Tüm çalışmalar",
+    readCase: "Vaka çalışmasını oku",
+  },
+  status: {
+    research: "Araştırma",
+    live: "Yayında",
+    "in-progress": "Devam ediyor",
+    competition: "Yarışma",
+  },
+  research: {
+    eyebrow: "Araştırma",
+    title: "Renk görme farklılıkları için filtre tasarımı.",
+    metricFrom: "%33,95",
+    metricTo: "%90,31",
+    metricLabel: "Ortalama F1 skoru",
+    metricNote:
+      "Orijinal görüntüler ile önerilen 5. filtre sürümünün karşılaştırması: yedi renk görme tipinin ortalaması, test seti, MobileNetV1 ile değerlendirme. Kaynak: Symmetry 2025, Tablo 8 (ortalama tablodan hesaplanmıştır).",
+    publications: "Yayınlar",
+    all: "Araştırma ve yayınlar",
+  },
+  experienceSnapshot: {
+    eyebrow: "Deneyim",
+    title: "Muhasebe kayıtlarından ürün kararlarına.",
+    all: "Tüm deneyim",
+  },
+  contactCta: {
+    title: "Birlikte bir sistemi daha anlaşılır kılalım.",
+    body: "İş analizi, ürün ve yazılım rolleri ile freelance web projeleri için bana ulaşabilirsiniz.",
+    email: "E-posta gönder",
+    cvTr: "CV (Türkçe)",
+    cvEn: "CV (İngilizce)",
+  },
   footer: {
     location: "Kocaeli, Türkiye",
     rights: "Tüm hakları saklıdır.",
@@ -60,3 +119,4 @@ export const tr = {
 
 export type Dictionary = typeof tr;
 export type HeroTone = "warm" | "cool" | "plain";
+export type LayerKey = "business" | "integration" | "code";

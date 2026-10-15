@@ -54,6 +54,65 @@ export const de: Dictionary = {
     ctaWork: "Projekte ansehen",
     ctaResearch: "Forschung lesen",
   },
+  layers: {
+    eyebrow: "Wie ich arbeite",
+    title: "Ein System, drei Ebenen.",
+    items: [
+      {
+        key: "business",
+        name: "Business",
+        lead: "Ich kläre den Bedarf und übersetze ihn in funktionale Analysen, Prioritäten und Produktentscheidungen.",
+        proof: ["Logo · Business-Analyse", "Mikro · Produktmanagement", "München · Buchhaltung"],
+      },
+      {
+        key: "integration",
+        name: "Integration",
+        lead: "Ich verstehe, wie Systeme miteinander sprechen: Services, Schemata und Schnittstellenverträge.",
+        proof: ["REST und SOAP", "UBL · XSD · Schematron · XSLT", "Postman und SoapUI"],
+      },
+      {
+        key: "code",
+        name: "Code & Daten",
+        lead: "Ich baue die Lösung, trainiere das Modell und messe das Ergebnis.",
+        proof: ["C# · React · Next.js · Flask", "YOLOv9 · scikit-learn", "Eigene OpenCV-Filter"],
+      },
+    ],
+  },
+  work: {
+    eyebrow: "Ausgewählte Projekte",
+    title: "Echte Probleme, gemessene Ergebnisse.",
+    all: "Alle Projekte",
+    readCase: "Fallstudie lesen",
+  },
+  status: {
+    research: "Forschung",
+    live: "Live",
+    "in-progress": "In Arbeit",
+    competition: "Wettbewerb",
+  },
+  research: {
+    eyebrow: "Forschung",
+    title: "Filterdesign für Farbsehschwächen.",
+    metricFrom: "33,95 %",
+    metricTo: "90,31 %",
+    metricLabel: "Mittlerer F1-Score",
+    metricNote:
+      "Originalbilder im Vergleich zur vorgeschlagenen Filterversion 5: Mittelwert über sieben Arten von Farbsehschwäche, Testdatensatz, bewertet mit MobileNetV1. Quelle: Symmetry 2025, Tabelle 8 (Mittelwert aus der Tabelle berechnet).",
+    publications: "Publikationen",
+    all: "Forschung und Publikationen",
+  },
+  experienceSnapshot: {
+    eyebrow: "Erfahrung",
+    title: "Von Buchungssätzen zu Produktentscheidungen.",
+    all: "Gesamte Erfahrung",
+  },
+  contactCta: {
+    title: "Machen wir ein System verständlicher.",
+    body: "Sprechen Sie mich an für Rollen in Business-Analyse, Produkt und Softwareentwicklung oder für freiberufliche Webprojekte.",
+    email: "E-Mail senden",
+    cvTr: "Lebenslauf (Türkisch)",
+    cvEn: "Lebenslauf (Englisch)",
+  },
   footer: {
     location: "Kocaeli, Türkei",
     rights: "Alle Rechte vorbehalten.",
