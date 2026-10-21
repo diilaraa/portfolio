@@ -18,7 +18,7 @@ export async function SiteHeader() {
       <div className="mx-auto flex h-[4.5rem] max-w-[77.5rem] items-center justify-between gap-6 px-5 md:px-10">
         <Link href={href(locale)} className="group flex items-center gap-2.5 text-ink">
           <Image
-            src="/images/dilara-avatar-head.webp"
+            src="/images/dilara-avatar-head-v2.webp"
             width={160}
             height={160}
             alt=""

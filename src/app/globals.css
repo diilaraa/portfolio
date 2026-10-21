@@ -117,9 +117,9 @@ html[data-lens="achromatopsia"] body { filter: url(#cvd-achromatopsia); }
   }
 }
 
-/* Light desk under the hero avatar. The avatar image already contains a short piece of the
-   desk (its bottom 8.4%); this strip continues it. During the intro it spans the whole hero,
-   then retracts to the avatar's width as --p goes to 1. */
+/* Black desk under the hero avatar. The avatar image keeps the laptop and hands but not the
+   desk surface; this strip draws it. It fades out towards both sides. During the intro it is
+   about a viewport wide, then shrinks to the avatar's width as --p goes to 1. */
 .hero-intro {
   overflow-x: clip;
 }
@@ -130,11 +130,12 @@ html[data-lens="achromatopsia"] body { filter: url(#cvd-achromatopsia); }
   content: "";
   position: absolute;
   bottom: 0;
-  height: 8.4%;
-  left: calc((1 - var(--p, 1)) * -100vw);
-  right: calc((1 - var(--p, 1)) * -100vw);
-  background: linear-gradient(to bottom, #d9cfc9 0, #e9e3df 8%, #ede7e3 100%);
-  box-shadow: 0 14px 28px -18px rgb(18 18 18 / 0.35);
+  height: 8.9%;
+  left: calc((1 - var(--p, 1)) * -30vw);
+  right: calc((1 - var(--p, 1)) * -30vw);
+  background: linear-gradient(to bottom, #3b3b40 0, #1d1d20 2px, #151517 40%, #0f0f11 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 78%, transparent 100%);
   pointer-events: none;
 }
 

@@ -72,9 +72,9 @@ export default async function HomePage() {
             <div className="hero-intro__avatar mx-auto w-full max-w-[20rem] md:col-span-5 md:max-w-[26rem]">
               <DraggableAvatar>
                 <Image
-                  src="/images/dilara-avatar-desk-3.webp"
+                  src="/images/dilara-avatar-black-desk.webp"
                   width={900}
-                  height={1107}
+                  height={1114}
                   alt={home.avatarAlt}
                   priority
                   sizes="(min-width: 768px) 26rem, 20rem"

@@ -42,7 +42,7 @@ export default async function AboutPage() {
           </div>
         </div>
         <div className="mx-auto w-full max-w-[18rem] md:col-span-5 md:max-w-[22rem]">
-          <Image src="/images/dilara-avatar.webp" width={900} height={1016} alt={dict.home.avatarAlt} className="h-auto w-full" priority />
+          <Image src="/images/dilara-avatar-v2.webp" width={900} height={1059} alt={dict.home.avatarAlt} className="h-auto w-full" priority />
         </div>
       </section>
 
