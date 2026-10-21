@@ -16,9 +16,9 @@ export const projects: Project[] = [
       de: "KI-gestütztes Entscheidungsunterstützungssystem für Mpox",
     },
     summary: {
-      tr: "Klinik veriyi, deri lezyonu görüntülerini ve epidemiyolojik veriyi tek bir web platformunda birleştiren araştırma prototipi. TÜBİTAK 2209-A destekli bitirme projesi.",
-      en: "A research prototype that brings clinical data, skin-lesion images, and epidemiological data into one web platform. Graduation project supported by TÜBİTAK 2209-A.",
-      de: "Ein Forschungsprototyp, der klinische Daten, Hautläsionsbilder und epidemiologische Daten in einer Webplattform zusammenführt. Abschlussprojekt, gefördert durch TÜBİTAK 2209-A.",
+      tr: "Klinik verileri, deri lezyonu görüntülerini ve epidemiyolojik bilgileri bir araya getiren çok modlu bir karar destek sistemi geliştirdik. TÜBİTAK 2209-A kapsamında yürütücülüğünü üstlendiğim bitirme projesinde, ekip arkadaşımla birlikte makine öğrenmesi ve görüntü analizi yöntemlerini bir web uygulamasında bütünleştirdik.",
+      en: "We built a multimodal decision support system that brings together clinical data, skin-lesion images, and epidemiological information. In this graduation project, which I led under TÜBİTAK 2209-A, my teammate and I integrated machine learning and image analysis methods into a single web application.",
+      de: "Wir haben ein multimodales Entscheidungsunterstützungssystem entwickelt, das klinische Daten, Hautläsionsbilder und epidemiologische Informationen zusammenführt. In diesem Abschlussprojekt, das ich im Rahmen von TÜBİTAK 2209-A geleitet habe, haben meine Teamkollegin und ich Methoden des maschinellen Lernens und der Bildanalyse in einer Webanwendung integriert.",
     },
     period: { tr: "Kasım 2024 – 2026", en: "Nov 2024 – 2026", de: "Nov. 2024 – 2026" },
     role: {
@@ -49,9 +49,9 @@ export const projects: Project[] = [
       de: "Bildverarbeitungsfilter für Farbsehschwächen",
     },
     summary: {
-      tr: "Yedi renk görme tipi için tasarlanan filtreler; etkileri MobileNet ile insan yargısından bağımsız ölçüldü. İki uluslararası hakemli dergide yayımlandı.",
-      en: "Filters designed for seven types of color vision deficiency, evaluated with MobileNet independently of human judgment. Published in two peer-reviewed journals.",
-      de: "Filter für sieben Arten von Farbsehschwäche, unabhängig vom menschlichen Urteil mit MobileNet bewertet. In zwei begutachteten Fachzeitschriften veröffentlicht.",
+      tr: "Yedi farklı renk görme tipi için özgün görüntü işleme filtrelerinin tasarımında çalıştım. Filtrelerin etkinliği MobileNet tabanlı modellerle değerlendirildi. Araştırma çalışmaları, iki uluslararası hakemli dergide yayımlanan iki ayrı makale ile sonuçlandı.",
+      en: "I worked on designing original image processing filters for seven types of color vision deficiency. The filters' effectiveness was evaluated with MobileNet-based models. The research resulted in two separate papers published in two international peer-reviewed journals.",
+      de: "Ich habe an eigenen Bildverarbeitungsfiltern für sieben Arten von Farbsehschwäche gearbeitet. Die Wirksamkeit der Filter wurde mit MobileNet-basierten Modellen bewertet. Die Forschung führte zu zwei Artikeln in zwei internationalen begutachteten Fachzeitschriften.",
     },
     period: { tr: "2025", en: "2025", de: "2025" },
     role: {
@@ -83,9 +83,9 @@ export const projects: Project[] = [
     status: "live",
     title: { tr: "ElectricMotor", en: "ElectricMotor", de: "ElectricMotor" },
     summary: {
-      tr: "Sharjah'taki bağımsız bir Tesla servis merkezi için tek başıma tasarlayıp geliştirdiğim ve yayına aldığım kurumsal web sitesi.",
-      en: "A business website I designed, built, and launched on my own for an independent Tesla service center in Sharjah.",
-      de: "Eine Unternehmenswebsite, die ich für ein unabhängiges Tesla-Servicezentrum in Sharjah allein gestaltet, entwickelt und veröffentlicht habe.",
+      tr: "Sharjah'ta hizmet veren bağımsız bir Tesla servis merkezi için web sitesini tasarladım, geliştirdim ve yayına aldım. Projeyi Next.js ve TypeScript kullanarak oluşturdum; dağıtım ve yayına alma süreçlerini de üstlendim.",
+      en: "I designed, built, and launched the website for an independent Tesla service center in Sharjah. I created the project with Next.js and TypeScript and also handled deployment and launch.",
+      de: "Ich habe die Website für ein unabhängiges Tesla-Servicezentrum in Sharjah gestaltet, entwickelt und veröffentlicht. Das Projekt habe ich mit Next.js und TypeScript umgesetzt und mich auch um Deployment und Launch gekümmert.",
     },
     period: { tr: "Ağustos 2026", en: "August 2026", de: "August 2026" },
     role: {
