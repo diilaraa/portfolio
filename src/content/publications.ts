@@ -26,9 +26,9 @@ export const publications: Publication[] = [
       de: "Methodik, Software, Validierung, Analyse, Untersuchung, Datenaufbereitung, Schreiben und Visualisierung (laut Beitragserklärung des Artikels).",
     },
     result: {
-      tr: "Beş aşamada geliştirdiğimiz hibrit filtreyle, renk körlüğü simülasyonu uygulanmış Ishihara görüntülerinde modelin ortalama F1 skoru %33,95'ten %90,31'e yükseldi. F1 skoru, modelin doğru tahmin oranını (kesinlik) ve hiçbir örneği gözden kaçırmamasını (duyarlılık) tek bir değerde birleştirir; bu artış, görüntülerin yedi renk görme tipinin hepsinde çok daha ayırt edilebilir hâle geldiğini gösteriyor.",
-      en: "With the hybrid filter we developed in five stages, the model's mean F1 score on Ishihara images simulated for color blindness rose from 33.95% to 90.31%. The F1 score combines how often the model's predictions are right (precision) and how few cases it misses (recall) in one number; the jump shows that the images became far easier to tell apart for all seven types of color vision deficiency.",
-      de: "Mit dem in fünf Stufen entwickelten hybriden Filter stieg der mittlere F1-Score des Modells auf farbenblind simulierten Ishihara-Bildern von 33,95 % auf 90,31 %. Der F1-Score vereint, wie oft die Vorhersagen stimmen (Precision) und wie wenige Fälle übersehen werden (Recall), in einem Wert; der Anstieg zeigt, dass die Bilder für alle sieben Arten von Farbsehschwäche deutlich besser unterscheidbar wurden.",
+      tr: "Beş aşamada geliştirdiğimiz hibrit filtre, en büyük iyileşmeyi kırmızı renk körlüğünde (protanopi) sağladı: modelin F1 skoru %5,52'den %91,84'e yükseldi. F1 skoru, modelin doğru tahmin oranını (kesinlik) ve hiçbir örneği gözden kaçırmamasını (duyarlılık) tek bir değerde birleştirir.",
+      en: "The hybrid filter we developed in five stages delivered its largest improvement for red color blindness (protanopia): the model's F1 score rose from 5.52% to 91.84%. The F1 score combines how often the model's predictions are right (precision) and how few cases it misses (recall) in one number.",
+      de: "Der in fünf Stufen entwickelte hybride Filter erzielte die größte Verbesserung bei Rotblindheit (Protanopie): Der F1-Score des Modells stieg von 5,52 % auf 91,84 %. Der F1-Score vereint, wie oft die Vorhersagen stimmen (Precision) und wie wenige Fälle übersehen werden (Recall), in einem Wert.",
     },
   },
   {
@@ -55,9 +55,9 @@ export const publications: Publication[] = [
       de: "Ein Artikel mit zwei Autorinnen gemeinsam mit Dr. Fatma Akalın; Entwicklung und Bewertung der Filter.",
     },
     result: {
-      tr: "3 aşamalı hibrit filtreyle, yedi renk körlüğü tipinin test setindeki ortalama F1 skoru %30,14'ten %87,71'e yükseldi. En büyük iyileşme kırmızı körlüğünde görüldü: F1 skoru %4'ten %85'e çıktı.",
-      en: "With the three-stage hybrid filter, the mean F1 score across seven types of color blindness on the test set rose from 30.14% to 87.71%. The biggest gain was for red blindness, where the F1 score went from 4% to 85%.",
-      de: "Mit dem dreistufigen hybriden Filter stieg der mittlere F1-Score über sieben Arten von Farbenblindheit im Testdatensatz von 30,14 % auf 87,71 %. Der größte Zuwachs zeigte sich bei Rotblindheit: Der F1-Score stieg von 4 % auf 85 %.",
+      tr: "3 aşamalı hibrit filtre, en büyük iyileşmeyi tam renk körlüğünde (monokromazi) sağladı: test setinde modelin F1 skoru %5'ten %90'a yükseldi.",
+      en: "The three-stage hybrid filter delivered its largest improvement for complete color blindness (monochromacy): on the test set, the model's F1 score rose from 5% to 90%.",
+      de: "Der dreistufige hybride Filter erzielte die größte Verbesserung bei vollständiger Farbenblindheit (Monochromasie): Im Testdatensatz stieg der F1-Score des Modells von 5 % auf 90 %.",
     },
   },
 ];

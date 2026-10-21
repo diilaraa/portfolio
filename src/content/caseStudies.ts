@@ -414,21 +414,21 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "metrics",
             items: [
-              { value: L("%33,95", "33.95%", "33,95 %"), label: L("Orijinal görüntüler · ortalama F1", "Original images · mean F1", "Originalbilder · mittlerer F1") },
-              { value: L("%90,31", "90.31%", "90,31 %"), label: L("5 aşamalı hibrit filtre · ortalama F1", "Five-stage hybrid filter · mean F1", "Fünfstufiger hybrider Filter · mittlerer F1") },
+              { value: L("%5,52", "5.52%", "5,52 %"), label: L("Kırmızı renk körlüğü · orijinal görüntü", "Red color blindness · original image", "Rotblindheit · Originalbild") },
+              { value: L("%91,84", "91.84%", "91,84 %"), label: L("Kırmızı renk körlüğü · 5 aşamalı hibrit filtre", "Red color blindness · five-stage hybrid filter", "Rotblindheit · fünfstufiger hybrider Filter") },
             ],
             note: L(
-              "Yedi renk görme tipinin ortalaması, test seti, MobileNetV1 ile değerlendirme. Ortalama, Symmetry 2025 makalesindeki Tablo 8'den hesaplanmıştır.",
-              "Mean across seven types of color vision deficiency, test set, evaluated with MobileNetV1. The mean is computed from Table 8 of the Symmetry 2025 paper.",
-              "Mittelwert über sieben Arten von Farbsehschwäche, Testdatensatz, bewertet mit MobileNetV1. Der Mittelwert ist aus Tabelle 8 des Symmetry-Artikels (2025) berechnet.",
+              "Modelin F1 skoru; en büyük iyileşme kırmızı renk körlüğünde (protanopi) elde edildi. Test seti, MobileNetV1 ile değerlendirme (Symmetry 2025, Tablo 8).",
+              "The model's F1 score; the largest improvement was for red color blindness (protanopia). Test set, evaluated with MobileNetV1 (Symmetry 2025, Table 8).",
+              "F1-Score des Modells; die größte Verbesserung zeigte sich bei Rotblindheit (Protanopie). Testdatensatz, bewertet mit MobileNetV1 (Symmetry 2025, Tabelle 8).",
             ),
           },
           {
             type: "p",
             text: L(
-              "Concurrency and Computation çalışmasındaki 3 aşamalı hibrit filtreyle de test setinde ortalama F1 skoru %30,14'ten %87,71'e yükseldi; en büyük iyileşme kırmızı körlüğünde (%4'ten %85'e) görüldü.",
-              "In the Concurrency and Computation study, the three-stage hybrid filter likewise raised the mean F1 score on the test set from 30.14% to 87.71%; the biggest gain was for red blindness (from 4% to 85%).",
-              "Auch in der Studie in Concurrency and Computation stieg mit dem dreistufigen hybriden Filter der mittlere F1-Score im Testdatensatz von 30,14 % auf 87,71 %; der größte Zuwachs zeigte sich bei Rotblindheit (von 4 % auf 85 %).",
+              "Concurrency and Computation çalışmasındaki 3 aşamalı hibrit filtre ise en büyük iyileşmeyi tam renk körlüğünde (monokromazi) sağladı: test setinde F1 skoru %5'ten %90'a yükseldi.",
+              "In the Concurrency and Computation study, the three-stage hybrid filter delivered its largest improvement for complete color blindness (monochromacy): on the test set the F1 score rose from 5% to 90%.",
+              "In der Studie in Concurrency and Computation erzielte der dreistufige hybride Filter die größte Verbesserung bei vollständiger Farbenblindheit (Monochromasie): Im Testdatensatz stieg der F1-Score von 5 % auf 90 %.",
             ),
           },
         ],
