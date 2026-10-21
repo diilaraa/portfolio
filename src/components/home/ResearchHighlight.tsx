@@ -83,13 +83,12 @@ function PlateFigure({ src, w, h, label }: { src: string; w: number; h: number; 
   );
 }
 
-/** The paper's result in the blue note style, with its source underneath. */
+/** The paper's result in the blue note style. */
 export function ResultPanel({ label, result, locale }: { label: string; result: Publication["result"]; locale: Locale }) {
   return (
     <div className="mt-5 rounded-xl border-l-4 border-blue bg-band-blue/60 px-5 py-4">
       <p className="text-label font-semibold text-blue">{label}</p>
-      <p className="mt-1 text-ink">{result.text[locale]}</p>
-      <p className="mt-2 text-sm text-ink-muted">{result.source[locale]}</p>
+      <p className="mt-1 leading-relaxed text-ink">{result[locale]}</p>
     </div>
   );
 }

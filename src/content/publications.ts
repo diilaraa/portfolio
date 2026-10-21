@@ -26,16 +26,9 @@ export const publications: Publication[] = [
       de: "Methodik, Software, Validierung, Analyse, Untersuchung, Datenaufbereitung, Schreiben und Visualisierung (laut Beitragserklärung des Artikels).",
     },
     result: {
-      text: {
-        tr: "Beş aşamada geliştirdiğimiz hibrit filtre, renk körü bir bireyin gördüğü görüntüleri çok daha ayırt edilebilir hâle getirdi. Yapay zekâ modelinin bu görüntüleri doğru tanıma başarısı (F1 skoru), yedi renk görme tipinin ortalamasında %33,95'ten %90,31'e çıktı.",
-        en: "The hybrid filter we developed in five stages made the images a color-blind person sees far easier to tell apart. The AI model's success at recognizing them correctly (F1 score) rose from 33.95% to 90.31% on average across seven types of color vision deficiency.",
-        de: "Der in fünf Stufen entwickelte hybride Filter machte die Bilder, die eine farbenblinde Person sieht, deutlich besser unterscheidbar. Die Erkennungsleistung des KI-Modells (F1-Score) stieg im Mittel über sieben Arten von Farbsehschwäche von 33,95 % auf 90,31 %.",
-      },
-      source: {
-        tr: "Ishihara test plakaları · MobileNetV1 · test seti ortalaması, makaledeki Tablo 8'den",
-        en: "Ishihara test plates · MobileNetV1 · test-set mean from Table 8 of the paper",
-        de: "Ishihara-Tafeln · MobileNetV1 · Mittelwert des Testdatensatzes aus Tabelle 8",
-      },
+      tr: "Beş aşamada geliştirdiğimiz hibrit filtreyle, renk körlüğü simülasyonu uygulanmış Ishihara görüntülerinde modelin ortalama F1 skoru %33,95'ten %90,31'e yükseldi. F1 skoru, modelin doğru tahmin oranını (kesinlik) ve hiçbir örneği gözden kaçırmamasını (duyarlılık) tek bir değerde birleştirir; bu artış, görüntülerin yedi renk görme tipinin hepsinde çok daha ayırt edilebilir hâle geldiğini gösteriyor.",
+      en: "With the hybrid filter we developed in five stages, the model's mean F1 score on Ishihara images simulated for color blindness rose from 33.95% to 90.31%. The F1 score combines how often the model's predictions are right (precision) and how few cases it misses (recall) in one number; the jump shows that the images became far easier to tell apart for all seven types of color vision deficiency.",
+      de: "Mit dem in fünf Stufen entwickelten hybriden Filter stieg der mittlere F1-Score des Modells auf farbenblind simulierten Ishihara-Bildern von 33,95 % auf 90,31 %. Der F1-Score vereint, wie oft die Vorhersagen stimmen (Precision) und wie wenige Fälle übersehen werden (Recall), in einem Wert; der Anstieg zeigt, dass die Bilder für alle sieben Arten von Farbsehschwäche deutlich besser unterscheidbar wurden.",
     },
   },
   {
@@ -62,16 +55,9 @@ export const publications: Publication[] = [
       de: "Ein Artikel mit zwei Autorinnen gemeinsam mit Dr. Fatma Akalın; Entwicklung und Bewertung der Filter.",
     },
     result: {
-      text: {
-        tr: "Daltonizasyon ve renk kaydırmayı birleştiren 3 aşamalı hibrit filtre, test edilen yedi renk körlüğü tipinin hepsinde görüntülerin daha doğru tanınmasını sağladı; yani filtre her tipte görsel algıyı iyileştirdi.",
-        en: "The three-stage hybrid filter, which combines daltonization with color shifting, made the images easier to recognize correctly for all seven types of color blindness tested; in other words, it improved visual perception for every type.",
-        de: "Der dreistufige hybride Filter, der Daltonisierung mit Farbverschiebung kombiniert, verbesserte die Erkennung der Bilder bei allen sieben getesteten Formen von Farbenblindheit – also die Wahrnehmung bei jeder Form.",
-      },
-      source: {
-        tr: "Ishihara test plakaları · MobileNetV2 · makalenin sonuçlarından",
-        en: "Ishihara test plates · MobileNetV2 · from the paper's results",
-        de: "Ishihara-Tafeln · MobileNetV2 · aus den Ergebnissen des Artikels",
-      },
+      tr: "3 aşamalı hibrit filtreyle, yedi renk körlüğü tipinin test setindeki ortalama F1 skoru %30,14'ten %87,71'e yükseldi. En büyük iyileşme kırmızı körlüğünde görüldü: F1 skoru %4'ten %85'e çıktı.",
+      en: "With the three-stage hybrid filter, the mean F1 score across seven types of color blindness on the test set rose from 30.14% to 87.71%. The biggest gain was for red blindness, where the F1 score went from 4% to 85%.",
+      de: "Mit dem dreistufigen hybriden Filter stieg der mittlere F1-Score über sieben Arten von Farbenblindheit im Testdatensatz von 30,14 % auf 87,71 %. Der größte Zuwachs zeigte sich bei Rotblindheit: Der F1-Score stieg von 4 % auf 85 %.",
     },
   },
 ];

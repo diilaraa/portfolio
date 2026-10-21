@@ -426,9 +426,9 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Concurrency and Computation çalışmasında da sınıflandırma sonuçları, önerilen filtrelerin yedi renk görme tipinin her birinde görsel algıyı iyileştirdiğini gösterdi.",
-              "In the Concurrency and Computation study, the classification results likewise showed that the proposed filters improve visual perception for each of the seven types.",
-              "Auch in der Studie in Concurrency and Computation zeigten die Klassifikationsergebnisse, dass die Filter die Wahrnehmung bei allen sieben Formen verbessern.",
+              "Concurrency and Computation çalışmasındaki 3 aşamalı hibrit filtreyle de test setinde ortalama F1 skoru %30,14'ten %87,71'e yükseldi; en büyük iyileşme kırmızı körlüğünde (%4'ten %85'e) görüldü.",
+              "In the Concurrency and Computation study, the three-stage hybrid filter likewise raised the mean F1 score on the test set from 30.14% to 87.71%; the biggest gain was for red blindness (from 4% to 85%).",
+              "Auch in der Studie in Concurrency and Computation stieg mit dem dreistufigen hybriden Filter der mittlere F1-Score im Testdatensatz von 30,14 % auf 87,71 %; der größte Zuwachs zeigte sich bei Rotblindheit (von 4 % auf 85 %).",
             ),
           },
         ],

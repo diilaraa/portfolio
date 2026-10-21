@@ -206,6 +206,7 @@ Lighthouse (mobil) Performans ≥ 95, Erişilebilirlik 100, SEO 100 · LCP < 2.0
 | 33.95% → 90.31% | Symmetry 2025, Tablo 8 | 7 CVD tipinde ortalama F1, **test seti**, orijinal vs. Filter V5, MobileNetV1 değerlendirmesi. Ortalama tablodan hesaplandı. |
 | F1 0.7666 → 0.8999 | Tez, Tablo 4.6–4.7 | 6 sınıf, 5-fold CV, YOLOv9, görüntü düzeyinde sınıflandırma |
 | Monkeypox F1 0.9086 | Tez, Tablo 4.8 | 5-fold ortalama |
+| CPE: F1 30.14% → 87.71% | CPE makalesinin hakem revizyonu sonrası el yazması (Revizyon/article_world_V2.docx), Tablo 4 | 7 tip ortalaması, test seti, MobileNet; en iyi yapılandırma (Pro colormap). Kırmızı körlüğü 0.04 → 0.85 |
 | Recall 0.90 (hasta) | Tez, Tablo 4.5 | Voting Classifier, eşik 0.64; sağlıklı sınıf recall 0.40 da belirtilir |
 
 Görseller: Symmetry (MDPI, açık erişim) ve tez görselleri kaynak gösterilerek kullanılır. CPE (Wiley) görselleri telif nedeniyle **kullanılmaz**; yalnızca künye ve kendi anlatımımız.
