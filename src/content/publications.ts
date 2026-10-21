@@ -26,9 +26,9 @@ export const publications: Publication[] = [
       de: "Methodik, Software, Validierung, Analyse, Untersuchung, Datenaufbereitung, Schreiben und Visualisierung (laut Beitragserklärung des Artikels).",
     },
     result: {
-      tr: "Sınıflandırma sonuçları, geliştirdiğimiz son filtrenin iki göz arasındaki renk algısı farkını belirgin biçimde azalttığını gösterdi. Böylece iki gözün renk uyarımı dengelendi ve algısal simetri sağlandı: renkler daha tutarlı ve ayırt edilebilir algılanıyor, renk körü bireylerin günlük hayatta karşılaştığı görsel zorluklar azalıyor.",
-      en: "The classification results showed that our final filter clearly reduces the difference in color perception between the two eyes. Color stimulation becomes more balanced and perceptual symmetry is achieved: colors are perceived more consistently and distinctly, easing the visual difficulties color-blind people face in daily life.",
-      de: "Die Klassifikationsergebnisse zeigten, dass unser finaler Filter den Unterschied in der Farbwahrnehmung zwischen beiden Augen deutlich verringert. Die Farbreizung wird ausgeglichener und es entsteht perzeptuelle Symmetrie: Farben werden konsistenter und unterscheidbarer wahrgenommen, was die Sehschwierigkeiten farbenblinder Menschen im Alltag verringert.",
+      tr: "Yedi farklı renk görme tipine yönelik geliştirilen filtreler, görüntülerin yapay zekâ modeli tarafından sınıflandırılmasını belirgin biçimde iyileştirdi. Özellikle beş aşamalı filtre tasarımı, tüm renk görme tiplerinde başarılı sonuçlar elde edilmesini sağladı.",
+      en: "The filters developed for seven types of color vision deficiency clearly improved how the AI model classified the images. The five-stage filter design in particular delivered successful results for every type of color vision deficiency.",
+      de: "Die für sieben Arten von Farbsehschwäche entwickelten Filter verbesserten die Klassifikation der Bilder durch das KI-Modell deutlich. Vor allem das fünfstufige Filterdesign erzielte bei allen Arten von Farbsehschwäche erfolgreiche Ergebnisse.",
     },
   },
   {
@@ -55,9 +55,9 @@ export const publications: Publication[] = [
       de: "Ein Artikel mit zwei Autorinnen gemeinsam mit Dr. Fatma Akalın; Entwicklung und Bewertung der Filter.",
     },
     result: {
-      tr: "Filtreyi Ishihara test plakalarına uyguladık; orijinal ve iyileştirilmiş görüntülerin renk körü bireylerce nasıl görüldüğünü simüle edip MobileNetV2 ile sınıflandırdık. Sonuçlar, 3 aşamalı filtrenin yedi renk körlüğü tipinin her birinde dijital görüntülerin algılanmasını iyileştirdiğini gösterdi.",
-      en: "We applied the filter to Ishihara test plates, simulated how the original and enhanced images appear to color-blind people, and classified them with MobileNetV2. The results showed that the three-stage filter improves the perception of digital images for each of the seven types of color blindness.",
-      de: "Wir wendeten den Filter auf Ishihara-Tafeln an, simulierten, wie Original- und verbesserte Bilder für farbenblinde Menschen wirken, und klassifizierten sie mit MobileNetV2. Die Ergebnisse zeigten, dass der dreistufige Filter die Wahrnehmung digitaler Bilder bei jeder der sieben Formen von Farbenblindheit verbessert.",
+      tr: "Üç aşamalı görüntü işleme filtresi, Ishihara test görüntülerinin yedi farklı renk görme tipine göre değerlendirilmesinde olumlu sonuçlar verdi. MobileNetV2 ile yapılan analizler, filtrelenmiş görüntülerin tüm tiplerde daha başarılı sınıflandırıldığını gösterdi.",
+      en: "The three-stage image processing filter produced positive results when Ishihara test images were evaluated for seven types of color vision deficiency. The MobileNetV2 analyses showed that the filtered images were classified more successfully for every type.",
+      de: "Der dreistufige Bildverarbeitungsfilter lieferte bei der Bewertung von Ishihara-Testbildern für sieben Arten von Farbsehschwäche positive Ergebnisse. Die Analysen mit MobileNetV2 zeigten, dass die gefilterten Bilder bei allen Arten erfolgreicher klassifiziert wurden.",
     },
   },
 ];

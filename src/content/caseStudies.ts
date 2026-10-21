@@ -414,17 +414,17 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Sınıflandırma sonuçları, beş aşamalı hibrit filtrenin iki göz arasındaki renk algısı farkını belirgin biçimde azalttığını gösterdi. İki gözün renk uyarımı dengelenerek algısal simetri sağlandı; renkler daha tutarlı ve ayırt edilebilir algılanıyor.",
-              "The classification results showed that the five-stage hybrid filter clearly reduces the difference in color perception between the two eyes. Color stimulation becomes more balanced and perceptual symmetry is achieved, so colors are perceived more consistently and distinctly.",
-              "Die Klassifikationsergebnisse zeigten, dass der fünfstufige hybride Filter den Unterschied in der Farbwahrnehmung zwischen beiden Augen deutlich verringert. Die Farbreizung wird ausgeglichener und es entsteht perzeptuelle Symmetrie; Farben werden konsistenter und unterscheidbarer wahrgenommen.",
+              "Yedi farklı renk görme tipine yönelik geliştirilen filtreler, görüntülerin yapay zekâ modeli tarafından sınıflandırılmasını belirgin biçimde iyileştirdi. Özellikle beş aşamalı filtre tasarımı, tüm renk görme tiplerinde başarılı sonuçlar elde edilmesini sağladı.",
+              "The filters developed for seven types of color vision deficiency clearly improved how the AI model classified the images. The five-stage filter design in particular delivered successful results for every type of color vision deficiency.",
+              "Die für sieben Arten von Farbsehschwäche entwickelten Filter verbesserten die Klassifikation der Bilder durch das KI-Modell deutlich. Vor allem das fünfstufige Filterdesign erzielte bei allen Arten von Farbsehschwäche erfolgreiche Ergebnisse.",
             ),
           },
           {
             type: "p",
             text: L(
-              "Concurrency and Computation çalışmasında da sonuçlar, 3 aşamalı filtrenin yedi renk körlüğü tipinin her birinde dijital görüntülerin algılanmasını iyileştirdiğini gösterdi.",
-              "In the Concurrency and Computation study, the results likewise showed that the three-stage filter improves the perception of digital images for each of the seven types of color blindness.",
-              "Auch in der Studie in Concurrency and Computation zeigten die Ergebnisse, dass der dreistufige Filter die Wahrnehmung digitaler Bilder bei jeder der sieben Formen von Farbenblindheit verbessert.",
+              "Üç aşamalı görüntü işleme filtresi, Ishihara test görüntülerinin yedi farklı renk görme tipine göre değerlendirilmesinde olumlu sonuçlar verdi. MobileNetV2 ile yapılan analizler, filtrelenmiş görüntülerin tüm tiplerde daha başarılı sınıflandırıldığını gösterdi.",
+              "The three-stage image processing filter produced positive results when Ishihara test images were evaluated for seven types of color vision deficiency. The MobileNetV2 analyses showed that the filtered images were classified more successfully for every type.",
+              "Der dreistufige Bildverarbeitungsfilter lieferte bei der Bewertung von Ishihara-Testbildern für sieben Arten von Farbsehschwäche positive Ergebnisse. Die Analysen mit MobileNetV2 zeigten, dass die gefilterten Bilder bei allen Arten erfolgreicher klassifiziert wurden.",
             ),
           },
         ],
