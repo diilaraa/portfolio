@@ -48,7 +48,7 @@ export const tr = {
       "2 uluslararası hakemli dergi yayını",
       "TÜBİTAK 2209-A",
     ],
-    avatarAlt: "Pembe başörtülü, dizüstü bilgisayarında çalışan Dilara'nın piksel sanatı avatarı.",
+    avatarAlt: "Dizüstü bilgisayarında çalışan, açık renk başörtülü ve lacivert kapüşonlu Dilara'nın üç boyutlu avatarı.",
     techTitle: "Çalıştığım teknolojiler",
     greeting: "Merhaba, ben ",
     greetingName: "Dilara Top",

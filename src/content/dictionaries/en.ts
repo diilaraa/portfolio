@@ -51,7 +51,7 @@ export const en: Dictionary = {
       "2 peer-reviewed journal papers",
       "TÜBİTAK 2209-A",
     ],
-    avatarAlt: "Pixel-art avatar of Dilara in a pink headscarf, working on a laptop.",
+    avatarAlt: "3D avatar of Dilara in a light headscarf and a navy hoodie, working on a laptop.",
     techTitle: "Technologies I work with",
     greeting: "Hi, I'm ",
     greetingName: "Dilara Top",

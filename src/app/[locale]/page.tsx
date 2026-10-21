@@ -70,24 +70,11 @@ export default async function HomePage() {
             </div>
 
             <div className="hero-intro__avatar mx-auto w-full max-w-[20rem] md:col-span-5 md:max-w-[26rem]">
-              <DraggableAvatar
-                held={
-                  <Image
-                    src="/images/avatar-happy.webp"
-                    width={647}
-                    height={843}
-                    alt=""
-                    loading="eager"
-                    sizes="(min-width: 768px) 26rem, 20rem"
-                    draggable={false}
-                    className="h-full w-full object-contain"
-                  />
-                }
-              >
+              <DraggableAvatar>
                 <Image
-                  src="/images/avatar.webp"
-                  width={647}
-                  height={843}
+                  src="/images/dilara-avatar.webp"
+                  width={900}
+                  height={1016}
                   alt={home.avatarAlt}
                   priority
                   sizes="(min-width: 768px) 26rem, 20rem"

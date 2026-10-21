@@ -3,12 +3,12 @@
 import { useRef } from "react";
 
 /**
- * Lets visitors grab the avatar and move it around; while held it swaps to the "held" pose,
+ * Lets visitors grab the avatar and move it around; if a "held" pose is given it swaps to it,
  * and on release it springs back home with a small wobble. Transforms are written straight
  * to the DOM so dragging never re-renders.
  * Touch keeps vertical page scrolling (pan-y), so only sideways drags move the avatar there.
  */
-export function DraggableAvatar({ children, held }: { children: React.ReactNode; held: React.ReactNode }) {
+export function DraggableAvatar({ children, held }: { children: React.ReactNode; held?: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
   const drag = useRef({ active: false, startX: 0, startY: 0, x: 0, y: 0, lastX: 0, lastT: 0, vx: 0 });
 
@@ -61,10 +61,12 @@ export function DraggableAvatar({ children, held }: { children: React.ReactNode;
       onDragStart={(event) => event.preventDefault()}
       className="group relative z-10 cursor-grab touch-pan-y select-none will-change-transform data-[dragging]:cursor-grabbing md:touch-none [&_img]:pointer-events-none"
     >
-      <div className="group-data-[dragging]:invisible">{children}</div>
-      <div aria-hidden="true" className="invisible absolute inset-0 group-data-[dragging]:visible">
-        {held}
-      </div>
+      <div className={held ? "group-data-[dragging]:invisible" : undefined}>{children}</div>
+      {held && (
+        <div aria-hidden="true" className="invisible absolute inset-0 group-data-[dragging]:visible">
+          {held}
+        </div>
+      )}
     </div>
   );
 }

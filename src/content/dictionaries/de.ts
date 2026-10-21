@@ -51,7 +51,7 @@ export const de: Dictionary = {
       "2 begutachtete Zeitschriftenartikel",
       "TÜBİTAK 2209-A",
     ],
-    avatarAlt: "Pixel-Art-Avatar von Dilara mit rosa Kopftuch am Laptop.",
+    avatarAlt: "3D-Avatar von Dilara mit hellem Kopftuch und dunkelblauem Hoodie am Laptop.",
     techTitle: "Technologien, mit denen ich arbeite",
     greeting: "Hallo, ich bin ",
     greetingName: "Dilara Top",
