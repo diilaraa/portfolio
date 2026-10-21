@@ -390,7 +390,7 @@ export const caseStudies: CaseStudy[] = [
               plate("sym-step-5", 148, 147, L("Fourier uzayında Prewitt", "Prewitt in the Fourier domain", "Prewitt im Fourier-Raum")),
               plate("sym-step-6", 147, 145, L("Kontrast ve parlaklık", "Contrast and brightness", "Kontrast und Helligkeit")),
             ],
-            caption: L("5. filtre sürümü — Symmetry 2025", "Filter Version 5 — Symmetry 2025", "Filterversion 5 — Symmetry 2025"),
+            caption: L("5 aşamalı hibrit filtre — Symmetry 2025", "Five-stage hybrid filter — Symmetry 2025", "Fünfstufiger hybrider Filter — Symmetry 2025"),
           },
           {
             type: "steps",
@@ -400,9 +400,9 @@ export const caseStudies: CaseStudy[] = [
               plate("cpe-step-2", 169, 168, L("Kaydırma filtresi ve doygunluk", "Shifting filter and saturation", "Verschiebungsfilter und Sättigung")),
             ],
             caption: L(
-              "Üç aşamalı filtre — Concurrency and Computation 2025",
-              "Three-stage filter — Concurrency and Computation 2025",
-              "Dreistufiger Filter — Concurrency and Computation 2025",
+              "3 aşamalı hibrit filtre — Concurrency and Computation 2025",
+              "Three-stage hybrid filter — Concurrency and Computation 2025",
+              "Dreistufiger hybrider Filter — Concurrency and Computation 2025",
             ),
           },
         ],
@@ -415,7 +415,7 @@ export const caseStudies: CaseStudy[] = [
             type: "metrics",
             items: [
               { value: L("%33,95", "33.95%", "33,95 %"), label: L("Orijinal görüntüler · ortalama F1", "Original images · mean F1", "Originalbilder · mittlerer F1") },
-              { value: L("%90,31", "90.31%", "90,31 %"), label: L("5. filtre sürümü · ortalama F1", "Filter Version 5 · mean F1", "Filterversion 5 · mittlerer F1") },
+              { value: L("%90,31", "90.31%", "90,31 %"), label: L("5 aşamalı hibrit filtre · ortalama F1", "Five-stage hybrid filter · mean F1", "Fünfstufiger hybrider Filter · mittlerer F1") },
             ],
             note: L(
               "Yedi renk görme tipinin ortalaması, test seti, MobileNetV1 ile değerlendirme. Ortalama, Symmetry 2025 makalesindeki Tablo 8'den hesaplanmıştır.",
