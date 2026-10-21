@@ -117,6 +117,27 @@ html[data-lens="achromatopsia"] body { filter: url(#cvd-achromatopsia); }
   }
 }
 
+/* Light desk under the hero avatar. The avatar image already contains a short piece of the
+   desk (its bottom 8.4%); this strip continues it. During the intro it spans the whole hero,
+   then retracts to the avatar's width as --p goes to 1. */
+.hero-intro {
+  overflow-x: clip;
+}
+.hero-intro__avatar {
+  position: relative;
+}
+.hero-intro__avatar::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 8.4%;
+  left: calc((1 - var(--p, 1)) * -100vw);
+  right: calc((1 - var(--p, 1)) * -100vw);
+  background: linear-gradient(to bottom, #d9cfc9 0, #e9e3df 8%, #ede7e3 100%);
+  box-shadow: 0 14px 28px -18px rgb(18 18 18 / 0.35);
+  pointer-events: none;
+}
+
 /* Hero intro (see HeroIntro.tsx): "Hi, I'm Dilara Top" with the avatar centred, which then
    slides right as the hero content settles in. Static layout on small screens, without JS,
    or with reduced motion. */
