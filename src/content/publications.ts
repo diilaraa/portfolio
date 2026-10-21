@@ -26,9 +26,9 @@ export const publications: Publication[] = [
       de: "Methodik, Software, Validierung, Analyse, Untersuchung, Datenaufbereitung, Schreiben und Visualisierung (laut Beitragserklärung des Artikels).",
     },
     result: {
-      tr: "Beş aşamada geliştirdiğimiz hibrit filtre, en büyük iyileşmeyi kırmızı renk körlüğünde (protanopi) sağladı: modelin F1 skoru %5,52'den %91,84'e yükseldi. F1 skoru, modelin doğru tahmin oranını (kesinlik) ve hiçbir örneği gözden kaçırmamasını (duyarlılık) tek bir değerde birleştirir.",
-      en: "The hybrid filter we developed in five stages delivered its largest improvement for red color blindness (protanopia): the model's F1 score rose from 5.52% to 91.84%. The F1 score combines how often the model's predictions are right (precision) and how few cases it misses (recall) in one number.",
-      de: "Der in fünf Stufen entwickelte hybride Filter erzielte die größte Verbesserung bei Rotblindheit (Protanopie): Der F1-Score des Modells stieg von 5,52 % auf 91,84 %. Der F1-Score vereint, wie oft die Vorhersagen stimmen (Precision) und wie wenige Fälle übersehen werden (Recall), in einem Wert.",
+      tr: "Beş aşamada geliştirdiğimiz hibrit filtre, yedi renk görme tipinin hepsinde görüntülerin modele göre çok daha ayırt edilebilir hâle gelmesini sağladı. En belirgin iyileşme, orijinal görüntülerin neredeyse hiç ayırt edilemediği kırmızı renk körlüğünde (protanopi) görüldü.",
+      en: "The hybrid filter we developed in five stages made the images much easier for the model to tell apart for all seven types of color vision deficiency. The clearest improvement was for red color blindness (protanopia), where the original images could hardly be distinguished at all.",
+      de: "Der in fünf Stufen entwickelte hybride Filter machte die Bilder für das Modell bei allen sieben Arten von Farbsehschwäche deutlich besser unterscheidbar. Die deutlichste Verbesserung zeigte sich bei Rotblindheit (Protanopie), bei der die Originalbilder kaum zu unterscheiden waren.",
     },
   },
   {
@@ -55,9 +55,9 @@ export const publications: Publication[] = [
       de: "Ein Artikel mit zwei Autorinnen gemeinsam mit Dr. Fatma Akalın; Entwicklung und Bewertung der Filter.",
     },
     result: {
-      tr: "3 aşamalı hibrit filtre, en büyük iyileşmeyi tam renk körlüğünde (monokromazi) sağladı: test setinde modelin F1 skoru %5'ten %90'a yükseldi.",
-      en: "The three-stage hybrid filter delivered its largest improvement for complete color blindness (monochromacy): on the test set, the model's F1 score rose from 5% to 90%.",
-      de: "Der dreistufige hybride Filter erzielte die größte Verbesserung bei vollständiger Farbenblindheit (Monochromasie): Im Testdatensatz stieg der F1-Score des Modells von 5 % auf 90 %.",
+      tr: "3 aşamalı hibrit filtre, yedi renk körlüğü tipinin her birinde görsel algıyı iyileştirdi. En belirgin iyileşme, orijinal görüntülerin neredeyse hiç ayırt edilemediği tam renk körlüğünde (monokromazi) görüldü.",
+      en: "The three-stage hybrid filter improved visual perception for each of the seven types of color blindness. The clearest improvement was for complete color blindness (monochromacy), where the original images could hardly be distinguished at all.",
+      de: "Der dreistufige hybride Filter verbesserte die Wahrnehmung bei jeder der sieben Formen von Farbenblindheit. Die deutlichste Verbesserung zeigte sich bei vollständiger Farbenblindheit (Monochromasie), bei der die Originalbilder kaum zu unterscheiden waren.",
     },
   },
 ];

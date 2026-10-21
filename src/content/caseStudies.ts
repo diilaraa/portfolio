@@ -412,23 +412,19 @@ export const caseStudies: CaseStudy[] = [
         title: L("Sonuçlar", "Results", "Ergebnisse"),
         blocks: [
           {
-            type: "metrics",
-            items: [
-              { value: L("%5,52", "5.52%", "5,52 %"), label: L("Kırmızı renk körlüğü · orijinal görüntü", "Red color blindness · original image", "Rotblindheit · Originalbild") },
-              { value: L("%91,84", "91.84%", "91,84 %"), label: L("Kırmızı renk körlüğü · 5 aşamalı hibrit filtre", "Red color blindness · five-stage hybrid filter", "Rotblindheit · fünfstufiger hybrider Filter") },
-            ],
-            note: L(
-              "Modelin F1 skoru; en büyük iyileşme kırmızı renk körlüğünde (protanopi) elde edildi. Test seti, MobileNetV1 ile değerlendirme (Symmetry 2025, Tablo 8).",
-              "The model's F1 score; the largest improvement was for red color blindness (protanopia). Test set, evaluated with MobileNetV1 (Symmetry 2025, Table 8).",
-              "F1-Score des Modells; die größte Verbesserung zeigte sich bei Rotblindheit (Protanopie). Testdatensatz, bewertet mit MobileNetV1 (Symmetry 2025, Tabelle 8).",
+            type: "p",
+            text: L(
+              "Beş aşamalı hibrit filtre, yedi renk görme tipinin hepsinde görüntülerin model tarafından çok daha doğru sınıflandırılmasını sağladı. En belirgin iyileşme, orijinal görüntülerin neredeyse hiç ayırt edilemediği kırmızı renk körlüğünde (protanopi) görüldü.",
+              "The five-stage hybrid filter let the model classify the images far more accurately for all seven types of color vision deficiency. The clearest improvement was for red color blindness (protanopia), where the original images could hardly be distinguished at all.",
+              "Der fünfstufige hybride Filter ermöglichte dem Modell bei allen sieben Arten von Farbsehschwäche eine deutlich genauere Klassifikation. Die deutlichste Verbesserung zeigte sich bei Rotblindheit (Protanopie), bei der die Originalbilder kaum zu unterscheiden waren.",
             ),
           },
           {
             type: "p",
             text: L(
-              "Concurrency and Computation çalışmasındaki 3 aşamalı hibrit filtre ise en büyük iyileşmeyi tam renk körlüğünde (monokromazi) sağladı: test setinde F1 skoru %5'ten %90'a yükseldi.",
-              "In the Concurrency and Computation study, the three-stage hybrid filter delivered its largest improvement for complete color blindness (monochromacy): on the test set the F1 score rose from 5% to 90%.",
-              "In der Studie in Concurrency and Computation erzielte der dreistufige hybride Filter die größte Verbesserung bei vollständiger Farbenblindheit (Monochromasie): Im Testdatensatz stieg der F1-Score von 5 % auf 90 %.",
+              "Concurrency and Computation çalışmasındaki 3 aşamalı hibrit filtre de yedi tipin her birinde görsel algıyı iyileştirdi; en belirgin iyileşme tam renk körlüğünde (monokromazi) görüldü.",
+              "In the Concurrency and Computation study, the three-stage hybrid filter likewise improved visual perception for each of the seven types; the clearest improvement was for complete color blindness (monochromacy).",
+              "Auch in der Studie in Concurrency and Computation verbesserte der dreistufige hybride Filter die Wahrnehmung bei jeder der sieben Formen; am deutlichsten bei vollständiger Farbenblindheit (Monochromasie).",
             ),
           },
         ],
