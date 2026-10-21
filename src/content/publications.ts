@@ -26,9 +26,9 @@ export const publications: Publication[] = [
       de: "Methodik, Software, Validierung, Analyse, Untersuchung, Datenaufbereitung, Schreiben und Visualisierung (laut Beitragserklärung des Artikels).",
     },
     result: {
-      tr: "Beş aşamada geliştirdiğimiz hibrit filtre, yedi renk görme tipinin hepsinde görüntülerin modele göre çok daha ayırt edilebilir hâle gelmesini sağladı. En belirgin iyileşme, orijinal görüntülerin neredeyse hiç ayırt edilemediği kırmızı renk körlüğünde (protanopi) görüldü.",
-      en: "The hybrid filter we developed in five stages made the images much easier for the model to tell apart for all seven types of color vision deficiency. The clearest improvement was for red color blindness (protanopia), where the original images could hardly be distinguished at all.",
-      de: "Der in fünf Stufen entwickelte hybride Filter machte die Bilder für das Modell bei allen sieben Arten von Farbsehschwäche deutlich besser unterscheidbar. Die deutlichste Verbesserung zeigte sich bei Rotblindheit (Protanopie), bei der die Originalbilder kaum zu unterscheiden waren.",
+      tr: "Sınıflandırma sonuçları, geliştirdiğimiz son filtrenin iki göz arasındaki renk algısı farkını belirgin biçimde azalttığını gösterdi. Böylece iki gözün renk uyarımı dengelendi ve algısal simetri sağlandı: renkler daha tutarlı ve ayırt edilebilir algılanıyor, renk körü bireylerin günlük hayatta karşılaştığı görsel zorluklar azalıyor.",
+      en: "The classification results showed that our final filter clearly reduces the difference in color perception between the two eyes. Color stimulation becomes more balanced and perceptual symmetry is achieved: colors are perceived more consistently and distinctly, easing the visual difficulties color-blind people face in daily life.",
+      de: "Die Klassifikationsergebnisse zeigten, dass unser finaler Filter den Unterschied in der Farbwahrnehmung zwischen beiden Augen deutlich verringert. Die Farbreizung wird ausgeglichener und es entsteht perzeptuelle Symmetrie: Farben werden konsistenter und unterscheidbarer wahrgenommen, was die Sehschwierigkeiten farbenblinder Menschen im Alltag verringert.",
     },
   },
   {
@@ -55,9 +55,9 @@ export const publications: Publication[] = [
       de: "Ein Artikel mit zwei Autorinnen gemeinsam mit Dr. Fatma Akalın; Entwicklung und Bewertung der Filter.",
     },
     result: {
-      tr: "3 aşamalı hibrit filtre, yedi renk körlüğü tipinin her birinde görsel algıyı iyileştirdi. En belirgin iyileşme, orijinal görüntülerin neredeyse hiç ayırt edilemediği tam renk körlüğünde (monokromazi) görüldü.",
-      en: "The three-stage hybrid filter improved visual perception for each of the seven types of color blindness. The clearest improvement was for complete color blindness (monochromacy), where the original images could hardly be distinguished at all.",
-      de: "Der dreistufige hybride Filter verbesserte die Wahrnehmung bei jeder der sieben Formen von Farbenblindheit. Die deutlichste Verbesserung zeigte sich bei vollständiger Farbenblindheit (Monochromasie), bei der die Originalbilder kaum zu unterscheiden waren.",
+      tr: "Filtreyi Ishihara test plakalarına uyguladık; orijinal ve iyileştirilmiş görüntülerin renk körü bireylerce nasıl görüldüğünü simüle edip MobileNetV2 ile sınıflandırdık. Sonuçlar, 3 aşamalı filtrenin yedi renk körlüğü tipinin her birinde dijital görüntülerin algılanmasını iyileştirdiğini gösterdi.",
+      en: "We applied the filter to Ishihara test plates, simulated how the original and enhanced images appear to color-blind people, and classified them with MobileNetV2. The results showed that the three-stage filter improves the perception of digital images for each of the seven types of color blindness.",
+      de: "Wir wendeten den Filter auf Ishihara-Tafeln an, simulierten, wie Original- und verbesserte Bilder für farbenblinde Menschen wirken, und klassifizierten sie mit MobileNetV2. Die Ergebnisse zeigten, dass der dreistufige Filter die Wahrnehmung digitaler Bilder bei jeder der sieben Formen von Farbenblindheit verbessert.",
     },
   },
 ];

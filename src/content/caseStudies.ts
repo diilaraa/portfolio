@@ -414,17 +414,17 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Beş aşamalı hibrit filtre, yedi renk görme tipinin hepsinde görüntülerin model tarafından çok daha doğru sınıflandırılmasını sağladı. En belirgin iyileşme, orijinal görüntülerin neredeyse hiç ayırt edilemediği kırmızı renk körlüğünde (protanopi) görüldü.",
-              "The five-stage hybrid filter let the model classify the images far more accurately for all seven types of color vision deficiency. The clearest improvement was for red color blindness (protanopia), where the original images could hardly be distinguished at all.",
-              "Der fünfstufige hybride Filter ermöglichte dem Modell bei allen sieben Arten von Farbsehschwäche eine deutlich genauere Klassifikation. Die deutlichste Verbesserung zeigte sich bei Rotblindheit (Protanopie), bei der die Originalbilder kaum zu unterscheiden waren.",
+              "Sınıflandırma sonuçları, beş aşamalı hibrit filtrenin iki göz arasındaki renk algısı farkını belirgin biçimde azalttığını gösterdi. İki gözün renk uyarımı dengelenerek algısal simetri sağlandı; renkler daha tutarlı ve ayırt edilebilir algılanıyor.",
+              "The classification results showed that the five-stage hybrid filter clearly reduces the difference in color perception between the two eyes. Color stimulation becomes more balanced and perceptual symmetry is achieved, so colors are perceived more consistently and distinctly.",
+              "Die Klassifikationsergebnisse zeigten, dass der fünfstufige hybride Filter den Unterschied in der Farbwahrnehmung zwischen beiden Augen deutlich verringert. Die Farbreizung wird ausgeglichener und es entsteht perzeptuelle Symmetrie; Farben werden konsistenter und unterscheidbarer wahrgenommen.",
             ),
           },
           {
             type: "p",
             text: L(
-              "Concurrency and Computation çalışmasındaki 3 aşamalı hibrit filtre de yedi tipin her birinde görsel algıyı iyileştirdi; en belirgin iyileşme tam renk körlüğünde (monokromazi) görüldü.",
-              "In the Concurrency and Computation study, the three-stage hybrid filter likewise improved visual perception for each of the seven types; the clearest improvement was for complete color blindness (monochromacy).",
-              "Auch in der Studie in Concurrency and Computation verbesserte der dreistufige hybride Filter die Wahrnehmung bei jeder der sieben Formen; am deutlichsten bei vollständiger Farbenblindheit (Monochromasie).",
+              "Concurrency and Computation çalışmasında da sonuçlar, 3 aşamalı filtrenin yedi renk körlüğü tipinin her birinde dijital görüntülerin algılanmasını iyileştirdiğini gösterdi.",
+              "In the Concurrency and Computation study, the results likewise showed that the three-stage filter improves the perception of digital images for each of the seven types of color blindness.",
+              "Auch in der Studie in Concurrency and Computation zeigten die Ergebnisse, dass der dreistufige Filter die Wahrnehmung digitaler Bilder bei jeder der sieben Formen von Farbenblindheit verbessert.",
             ),
           },
         ],
