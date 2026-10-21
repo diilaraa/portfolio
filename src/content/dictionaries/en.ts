@@ -75,13 +75,10 @@ export const en: Dictionary = {
     title: "Filter design for color vision deficiency.",
     aboutTitle: "What are these papers about?",
     about: [
-      "People with color blindness cannot tell certain colors apart in digital images; for example, they can't see the numbers on Ishihara test plates.",
-      "In these two papers we designed original image processing filters that make images easier for them to perceive. Instead of relying on human judgment, we measured whether the filters work with an AI model (MobileNet).",
+      "People with color blindness cannot tell certain colors apart in digital images; for example, they can't see the numbers on Ishihara test plates. This can also affect how certain details in digital images are perceived.",
+      "In our research we designed original filters that aim to make images easier to distinguish for different types of color vision. We used MobileNet models to evaluate the filters' effect.",
     ],
     resultLabel: "Result",
-    result:
-      "With the filter applied, the model classified the images far more accurately on average across seven types of color blindness: the F1 score rose from 33.95% to 90.31%.",
-    resultSource: "Symmetry 2025 · test set · Filter Version 5",
     imageCredit: "Source: Akalın et al., Symmetry 2025",
     beforeLabel: "Original",
     afterLabel: "Filtered",

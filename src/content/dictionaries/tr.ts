@@ -72,13 +72,10 @@ export const tr = {
     title: "Renk görme farklılıkları için filtre tasarımı.",
     aboutTitle: "Bu makaleler ne üzerine?",
     about: [
-      "Renk körlüğü olan kişiler, dijital görüntülerdeki bazı renkleri birbirinden ayırt edemez; örneğin Ishihara test plakalarındaki sayıları göremezler.",
-      "Bu iki makalede, görüntüleri bu kişilerin daha iyi algılayabileceği hale getiren özgün görüntü işleme filtreleri tasarladık. Filtrelerin işe yarayıp yaramadığını insan yorumuna bırakmadan, bir yapay zekâ modeliyle (MobileNet) ölçtük.",
+      "Renk körlüğü olan kişiler, dijital görüntülerdeki bazı renkleri birbirinden ayırt edemez; örneğin Ishihara test plakalarındaki sayıları göremezler. Bu durum, dijital görüntülerdeki belirli ayrıntıların algılanmasını da etkileyebilir.",
+      "Araştırmalarımızda, görüntülerin farklı renk görme tipleri için daha ayırt edilebilir hâle gelmesini amaçlayan özgün filtreler tasarladık. Filtrelerin etkisini değerlendirmek için MobileNet modellerinden yararlandık.",
     ],
     resultLabel: "Sonuç",
-    result:
-      "Filtre uygulandıktan sonra model, yedi renk körlüğü tipinin ortalamasında görüntüleri çok daha doğru sınıflandırdı: F1 skoru %33,95'ten %90,31'e yükseldi.",
-    resultSource: "Symmetry 2025 · test seti · 5. filtre sürümü",
     imageCredit: "Kaynak: Akalın vd., Symmetry 2025",
     beforeLabel: "Orijinal",
     afterLabel: "Filtreli",

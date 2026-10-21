@@ -19,7 +19,7 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
       action={{ href: href(locale, "/research"), label: copy.all }}
     >
       <div className="grid gap-6 lg:grid-cols-12 lg:gap-8">
-        <Reveal className={`${card} lg:col-span-6`}>
+        <Reveal className={`${card} lg:sticky lg:top-24 lg:col-span-6 lg:self-start`}>
           <h3 className="font-display text-h3 text-ink">{copy.aboutTitle}</h3>
           <div className="mt-4 grid gap-3 text-ink-muted">
             {copy.about.map((paragraph) => (
@@ -36,11 +36,6 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
             <figcaption className="mt-4 text-center text-[0.75rem] text-ink-muted">{copy.imageCredit}</figcaption>
           </figure>
 
-          <div className="mt-6 rounded-xl border-l-4 border-blue bg-band-blue/60 px-5 py-4">
-            <p className="text-label font-semibold text-blue">{copy.resultLabel}</p>
-            <p className="mt-1 text-ink">{copy.result}</p>
-            <p className="mt-2 text-sm text-ink-muted">{copy.resultSource}</p>
-          </div>
         </Reveal>
 
         <Reveal className="lg:col-span-6" delay={80}>
@@ -68,6 +63,7 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
                 >
                   doi:{pub.doi} <span aria-hidden="true">↗</span>
                 </a>
+                <ResultPanel label={copy.resultLabel} result={pub.result} locale={locale} />
               </li>
             ))}
           </ol>
@@ -83,6 +79,17 @@ function PlateFigure({ src, w, h, label }: { src: string; w: number; h: number; 
     <div className="flex w-[38%] max-w-32 flex-col items-center gap-2">
       <Image src={src} width={w} height={h} alt="" className="w-full rounded-lg" />
       <span className="text-sm font-medium text-ink">{label}</span>
+    </div>
+  );
+}
+
+/** The paper's result in the blue note style, with its source underneath. */
+export function ResultPanel({ label, result, locale }: { label: string; result: Publication["result"]; locale: Locale }) {
+  return (
+    <div className="mt-5 rounded-xl border-l-4 border-blue bg-band-blue/60 px-5 py-4">
+      <p className="text-label font-semibold text-blue">{label}</p>
+      <p className="mt-1 text-ink">{result.text[locale]}</p>
+      <p className="mt-2 text-sm text-ink-muted">{result.source[locale]}</p>
     </div>
   );
 }

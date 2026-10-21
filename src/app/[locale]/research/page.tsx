@@ -7,6 +7,7 @@ import { projects } from "@/content/projects";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import { ResultPanel } from "@/components/home/ResearchHighlight";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { locale, pages } = await getPages();
@@ -55,6 +56,10 @@ export default async function ResearchPage() {
                   </div>
                 ))}
               </dl>
+
+              <div className="max-w-[70ch]">
+                <ResultPanel label={dict.research.resultLabel} result={pub.result} locale={locale} />
+              </div>
 
               <a
                 href={`https://doi.org/${pub.doi}`}

@@ -25,6 +25,18 @@ export const publications: Publication[] = [
       en: "Methodology, software, validation, formal analysis, investigation, data curation, writing, and visualization (per the paper's author contribution statement).",
       de: "Methodik, Software, Validierung, Analyse, Untersuchung, Datenaufbereitung, Schreiben und Visualisierung (laut Beitragserklärung des Artikels).",
     },
+    result: {
+      text: {
+        tr: "5. filtre sürümüyle, yedi renk görme tipinin ortalamasında F1 skoru %33,95'ten %90,31'e yükseldi.",
+        en: "With Filter Version 5, the mean F1 score across seven types of color vision deficiency rose from 33.95% to 90.31%.",
+        de: "Mit Filterversion 5 stieg der mittlere F1-Score über sieben Arten von Farbsehschwäche von 33,95 % auf 90,31 %.",
+      },
+      source: {
+        tr: "Test seti · MobileNetV1 · ortalama, makaledeki Tablo 8'den hesaplanmıştır",
+        en: "Test set · MobileNetV1 · mean computed from Table 8 of the paper",
+        de: "Testdatensatz · MobileNetV1 · Mittelwert aus Tabelle 8 des Artikels berechnet",
+      },
+    },
   },
   {
     id: "cpe-2025",
@@ -48,6 +60,18 @@ export const publications: Publication[] = [
       tr: "Dr. Öğr. Üyesi Fatma Akalın ile birlikte iki yazarlı çalışma; filtrelerin geliştirilmesi ve değerlendirilmesi.",
       en: "A two-author paper with Asst. Prof. Fatma Akalın; developing and evaluating the filters.",
       de: "Ein Artikel mit zwei Autorinnen gemeinsam mit Dr. Fatma Akalın; Entwicklung und Bewertung der Filter.",
+    },
+    result: {
+      text: {
+        tr: "Sınıflandırma sonuçları, önerilen filtrelerin yedi renk körlüğü tipinin her birinde görsel algıyı iyileştirdiğini gösterdi.",
+        en: "The classification results showed that the proposed filters improve visual perception for each of the seven types of color blindness.",
+        de: "Die Klassifikationsergebnisse zeigten, dass die vorgeschlagenen Filter die Wahrnehmung bei jeder der sieben Formen von Farbenblindheit verbessern.",
+      },
+      source: {
+        tr: "Ishihara plakaları · MobileNetV2 · makalenin özetinden",
+        en: "Ishihara plates · MobileNetV2 · from the paper's abstract",
+        de: "Ishihara-Tafeln · MobileNetV2 · aus der Zusammenfassung des Artikels",
+      },
     },
   },
 ];

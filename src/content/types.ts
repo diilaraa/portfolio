@@ -56,6 +56,8 @@ export type Publication = {
   aim: Localized;
   method: Localized;
   contribution: Localized;
+  /** The paper's own result, with where it comes from. */
+  result: { text: Localized; source: Localized };
 };
 
 export type ExperienceItem = {

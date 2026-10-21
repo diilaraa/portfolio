@@ -75,13 +75,10 @@ export const de: Dictionary = {
     title: "Filterdesign für Farbsehschwächen.",
     aboutTitle: "Worum geht es in den Artikeln?",
     about: [
-      "Menschen mit Farbenblindheit können bestimmte Farben in digitalen Bildern nicht unterscheiden; zum Beispiel erkennen sie die Zahlen auf Ishihara-Tafeln nicht.",
-      "In diesen beiden Artikeln haben wir eigene Bildverarbeitungsfilter entwickelt, die Bilder für sie besser wahrnehmbar machen. Ob die Filter wirken, haben wir nicht per menschlichem Urteil, sondern mit einem KI-Modell (MobileNet) gemessen.",
+      "Menschen mit Farbenblindheit können bestimmte Farben in digitalen Bildern nicht unterscheiden; zum Beispiel erkennen sie die Zahlen auf Ishihara-Tafeln nicht. Das kann auch die Wahrnehmung bestimmter Details in digitalen Bildern beeinträchtigen.",
+      "In unserer Forschung haben wir eigene Filter entworfen, die Bilder für verschiedene Formen des Farbsehens besser unterscheidbar machen sollen. Zur Bewertung der Filterwirkung haben wir MobileNet-Modelle eingesetzt.",
     ],
     resultLabel: "Ergebnis",
-    result:
-      "Mit Filter klassifizierte das Modell die Bilder im Mittel über sieben Arten von Farbenblindheit deutlich genauer: Der F1-Score stieg von 33,95 % auf 90,31 %.",
-    resultSource: "Symmetry 2025 · Testdatensatz · Filterversion 5",
     imageCredit: "Quelle: Akalın et al., Symmetry 2025",
     beforeLabel: "Original",
     afterLabel: "Gefiltert",
