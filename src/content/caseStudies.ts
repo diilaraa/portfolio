@@ -567,7 +567,6 @@ export const caseStudies: CaseStudy[] = [
   /* ───────────────────────────── Dokar Zemin ───────────────────────────── */
   {
     slug: "dokar-zemin",
-    updated: L("Ekim 2026", "October 2026", "Oktober 2026"),
     sections: [
       {
         id: "context",
@@ -576,9 +575,9 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Dokar Zemin; fore kazık, ankraj ve deep soil mixing uygulamaları yapan bir zemin iyileştirme firması. Firma için yeni bir kurumsal web sitesi tasarlıyorum; mevcut yayındaki site benim çalışmam değil.",
-              "Dokar Zemin is a ground improvement company working with bored piles, anchors, and deep soil mixing. I'm designing a new corporate website for them; the site currently online is not my work.",
-              "Dokar Zemin ist ein Unternehmen für Baugrundverbesserung (Bohrpfähle, Anker, Deep Soil Mixing). Ich gestalte eine neue Unternehmenswebsite; die derzeit veröffentlichte Seite stammt nicht von mir.",
+              "Dokar Zemin; fore kazık, ankraj ve deep soil mixing uygulamaları yapan bir zemin iyileştirme firması. Firmanın kurumsal web sitesini tasarladım, geliştirdim ve dokarzemin.com.tr adresinde yayına aldım. Site Türkçe ve İngilizce olarak hizmet veriyor.",
+              "Dokar Zemin is a ground improvement company working with bored piles, anchors, and deep soil mixing. I designed and built their corporate website and launched it at dokarzemin.com.tr. The site is available in Turkish and English.",
+              "Dokar Zemin ist ein Unternehmen für Baugrundverbesserung (Bohrpfähle, Anker, Deep Soil Mixing). Ich habe die Unternehmenswebsite gestaltet, entwickelt und unter dokarzemin.com.tr veröffentlicht. Die Seite ist auf Türkisch und Englisch verfügbar.",
             ),
           },
           {
@@ -592,7 +591,7 @@ export const caseStudies: CaseStudy[] = [
                 "Dokar Zemin home page design: the headline \"Zemin İyileştirme Sistemleri\" over piling rigs on a site, with two buttons.",
                 "Dokar-Zemin-Startseitendesign: die Überschrift „Zemin İyileştirme Sistemleri“ über Bohrgeräten auf einer Baustelle, mit zwei Buttons.",
               ),
-              caption: L("Ana sayfa tasarımı (taslak)", "Home page design (draft)", "Startseitendesign (Entwurf)"),
+              caption: L("Ana sayfa", "Home page", "Startseite"),
             },
           },
         ],
@@ -607,21 +606,21 @@ export const caseStudies: CaseStudy[] = [
               [
                 "Modern ve premium bir görsel dil; marka kimliğinin dijitale aktarılması.",
                 "Bilgi mimarisi: kurumsal, faaliyet alanları, projeler, makine parkı, referanslar, galeri ve iletişim.",
-                "Dil seçicili gezinme.",
+                "Türkçe ve İngilizce için dil seçicili gezinme.",
                 "Hosting ve yayına alma seçimi; güvenlik, istikrar ve bakım kolaylığı.",
                 "SEO ve performans.",
               ],
               [
                 "A modern, premium visual language that carries the brand identity online.",
                 "Information architecture: company, fields of activity, projects, machine park, references, gallery, and contact.",
-                "Navigation with a language switcher.",
+                "Navigation with a language switcher for Turkish and English.",
                 "Choice of hosting and deployment; security, stability, and ease of maintenance.",
                 "SEO and performance.",
               ],
               [
                 "Eine moderne, hochwertige Bildsprache, die die Markenidentität digital überträgt.",
                 "Informationsarchitektur: Unternehmen, Tätigkeitsbereiche, Projekte, Maschinenpark, Referenzen, Galerie und Kontakt.",
-                "Navigation mit Sprachumschalter.",
+                "Navigation mit Sprachumschalter für Türkisch und Englisch.",
                 "Wahl von Hosting und Deployment; Sicherheit, Stabilität und Wartbarkeit.",
                 "SEO und Performance.",
               ],

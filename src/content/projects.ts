@@ -108,16 +108,21 @@ export const projects: Project[] = [
   },
   {
     slug: "dokar-zemin",
+    featured: true,
     category: "web",
-    status: "in-progress",
+    status: "live",
     title: { tr: "Dokar Zemin", en: "Dokar Zemin", de: "Dokar Zemin" },
     summary: {
-      tr: "Fore kazık, ankraj ve deep soil mixing uygulayan bir zemin iyileştirme firması için yeni kurumsal web sitesi tasarımı. Devam ediyor.",
-      en: "A new corporate website design for a ground improvement company working with bored piles, anchors, and deep soil mixing. In progress.",
-      de: "Neues Corporate-Website-Design für ein Baugrundverbesserungsunternehmen (Bohrpfähle, Anker, Deep Soil Mixing). In Arbeit.",
+      tr: "Fore kazık, ankraj ve deep soil mixing uygulamaları yapan bir zemin iyileştirme firmasının Türkçe ve İngilizce kurumsal web sitesini tasarladım, geliştirdim ve yayına aldım.",
+      en: "I designed, built, and launched the Turkish and English corporate website of a ground improvement company working with bored piles, anchors, and deep soil mixing.",
+      de: "Ich habe die türkisch- und englischsprachige Unternehmenswebsite eines Baugrundverbesserungsunternehmens (Bohrpfähle, Anker, Deep Soil Mixing) gestaltet, entwickelt und veröffentlicht.",
     },
-    period: { tr: "2026 · devam ediyor", en: "2026 · ongoing", de: "2026 · laufend" },
-    role: { tr: "Tasarım ve geliştirme", en: "Design and development", de: "Design und Entwicklung" },
+    period: { tr: "2026", en: "2026", de: "2026" },
+    role: {
+      tr: "Tasarım, geliştirme ve yayına alma",
+      en: "Design, development, and launch",
+      de: "Design, Entwicklung und Launch",
+    },
     stack: ["Web design", "Information architecture", "SEO"],
     cover: {
       src: "/images/work/dokar-zemin/homepage.webp",
@@ -130,6 +135,7 @@ export const projects: Project[] = [
         de: "Dokar-Zemin-Startseitendesign: die Überschrift \"Zemin İyileştirme Sistemleri\" (Baugrundverbesserung) über Bohrgeräten.",
       },
     },
+    links: [{ label: { tr: "Canlı site", en: "Live site", de: "Live-Website" }, href: "https://dokarzemin.com.tr/" }],
   },
   {
     slug: "teknofest-blood-cell",

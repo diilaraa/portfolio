@@ -28,7 +28,7 @@ Site dilleri: **Türkçe (varsayılan)**, İngilizce ve Almanca — üçü de il
 /work/mpox-decision-support    ★ Amiral case study (tez + TÜBİTAK 2209-A)
 /work/cvd-image-filters        ★ Araştırma projesi (2 yayın)
 /work/electricmotor            Canlı müşteri sitesi
-/work/dokar-zemin              Devam ediyor (status: in-progress)
+/work/dokar-zemin              Canlı (status: live) — dokarzemin.com.tr
 /work/teknofest-blood-cell     Yarışma projesi (yarı final)
 /research                 Research & Publications
 /experience               Experience (stajlar + iş deneyimi, zaman çizelgesi)
@@ -74,7 +74,7 @@ Sol dar sütunda yapışkan içindekiler + meta; sağda 68ch okuma genişliği.
 
 **ElectricMotor:** Brief → bilgi mimarisi → tasarım kararları → teknik yaklaşım (Next.js, TS, responsive, SEO/sitemap, güvenlik başlıkları) → canlıya alma (Vercel, Ağustos 2026). E-ticaret/ödeme/müşteri DB *yok* — açıkça yazılmaz da, ima da edilmez.
 
-**Dokar Zemin:** Zemin iyileştirme firması (fore kazık, ankraj, deep soil mixing) için kurumsal site — *epoksi zemin kaplama değil*. Tasarım tamamen Dilara'ya ait. "In progress" rozeti, ana ekran görseli, hedefler (marka, mimari, hosting kararı, SEO/performans), "Last updated" tarihi. Canlı dokarzemin.com.tr bağlantısı **verilmez** (mevcut site onun işi değil).
+**Dokar Zemin:** Zemin iyileştirme firması (fore kazık, ankraj, deep soil mixing) için kurumsal site — *epoksi zemin kaplama değil*. Tasarım tamamen Dilara'ya ait. "Live" rozeti, ana ekran görseli, odak noktaları (marka, mimari, hosting kararı, SEO/performans). Ekim 2026'da Dilara siteyi kendisinin geliştirip yayına aldığını doğruladı; dokarzemin.com.tr bağlantısı verilir ve proje seçilen çalışmalarda yer alır.
 
 ### 3.3 Research
 Her yayın için kart: resmi başlık · yazarlar (adınız vurgulu) · dergi/cilt/sayı/tarih · amaç · yöntem · katkınız · DOI butonu · BibTeX kopyala. Altta "Research threads": özgün filtre tasarımı üç projede (CVD, Mpox, TEKNOFEST).
