@@ -27,7 +27,7 @@ export const dePages: PagesCopy = {
     title: "Forschung und Publikationen",
     description: "Zwei begutachtete Zeitschriftenartikel über Bildverarbeitungsfilter für Farbsehschwächen.",
     intro:
-      "Meine Forschung verbindet ein Ziel: mit Bildverarbeitung ein Problem sichtbarer zu machen – digitale Bilder für Menschen mit Farbenblindheit, Hautläsionen und Blutzellbilder.",
+      "Meine Forschung verbindet ein Ziel: mit Bildverarbeitung ein Problem sichtbarer zu machen – digitale Bilder für Menschen mit Farbsehschwächen, Hautläsionen und Blutzellbilder.",
     aim: "Ziel",
     method: "Methode",
     contribution: "Mein Beitrag",

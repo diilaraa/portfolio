@@ -20,20 +20,22 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
     >
       <div className="grid gap-6 lg:grid-cols-12 lg:gap-8">
         <Reveal className={`${card} lg:sticky lg:top-24 lg:col-span-6 lg:self-start`}>
-          <h3 className="font-display text-h3 text-ink">{copy.aboutTitle}</h3>
-          <div className="mt-4 grid gap-3 text-ink-muted">
+          <div className="grid gap-3 leading-relaxed text-ink-muted">
             {copy.about.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
 
           <figure className="mt-8 rounded-xl bg-band-blue p-5">
-            <div className="flex items-center justify-center gap-5">
+            <div className="flex items-center justify-center gap-4 md:gap-6">
               <PlateFigure src="/images/work/cvd-image-filters/compare-before.webp" w={278} h={278} label={copy.beforeLabel} />
               <span aria-hidden="true" className="text-h3 text-ink-muted">→</span>
               <PlateFigure src="/images/work/cvd-image-filters/compare-after.webp" w={279} h={279} label={copy.afterLabel} />
             </div>
-            <figcaption className="mt-4 text-center text-[0.75rem] text-ink-muted">{copy.imageCredit}</figcaption>
+            <figcaption className="mt-5 text-center text-sm text-ink">
+              {copy.imageCaption}
+              <span className="mt-1 block text-[0.75rem] text-ink-muted">{copy.imageCredit}</span>
+            </figcaption>
           </figure>
 
         </Reveal>
@@ -76,8 +78,8 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
 /** Decorative: the comparison is described in the surrounding text, so images carry empty alt. */
 function PlateFigure({ src, w, h, label }: { src: string; w: number; h: number; label: string }) {
   return (
-    <div className="flex w-[38%] max-w-32 flex-col items-center gap-2">
-      <Image src={src} width={w} height={h} alt="" className="w-full rounded-lg" />
+    <div className="flex w-[42%] max-w-48 flex-col items-center gap-2">
+      <Image src={src} width={w} height={h} alt="" sizes="12rem" className="w-full rounded-lg" />
       <span className="text-sm font-medium text-ink">{label}</span>
     </div>
   );

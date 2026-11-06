@@ -49,9 +49,9 @@ export const projects: Project[] = [
       de: "Bildverarbeitungsfilter für Farbsehschwächen",
     },
     summary: {
-      tr: "Yedi farklı renk görme tipi için özgün görüntü işleme filtrelerinin tasarımında çalıştım. Filtrelerin etkinliği MobileNet tabanlı modellerle değerlendirildi. Araştırma çalışmaları, iki uluslararası hakemli dergide yayımlanan iki ayrı makale ile sonuçlandı.",
-      en: "I worked on designing original image processing filters for seven types of color vision deficiency. The filters' effectiveness was evaluated with MobileNet-based models. The research resulted in two separate papers published in two international peer-reviewed journals.",
-      de: "Ich habe an eigenen Bildverarbeitungsfiltern für sieben Arten von Farbsehschwäche gearbeitet. Die Wirksamkeit der Filter wurde mit MobileNet-basierten Modellen bewertet. Die Forschung führte zu zwei Artikeln in zwei internationalen begutachteten Fachzeitschriften.",
+      tr: "Yedi farklı renk görme tipine yönelik özgün görüntü işleme filtreleri tasarladım. Filtrelerin etkinliğini MobileNet tabanlı modellerle değerlendirdik. Araştırma bulguları, iki uluslararası hakemli dergide yayımlanan makalelere dönüştü.",
+      en: "I designed original image processing filters for seven types of color vision deficiency. We evaluated the filters' effectiveness with MobileNet-based models. The findings became papers published in two international peer-reviewed journals.",
+      de: "Ich habe eigene Bildverarbeitungsfilter für sieben Arten von Farbsehschwäche entworfen. Die Wirksamkeit der Filter haben wir mit MobileNet-basierten Modellen bewertet. Aus den Ergebnissen entstanden Artikel in zwei internationalen begutachteten Fachzeitschriften.",
     },
     period: { tr: "2025", en: "2025", de: "2025" },
     role: {
@@ -83,9 +83,9 @@ export const projects: Project[] = [
     status: "live",
     title: { tr: "ElectricMotor", en: "ElectricMotor", de: "ElectricMotor" },
     summary: {
-      tr: "Sharjah'ta hizmet veren bağımsız bir Tesla servis merkezi için web sitesini tasarladım, geliştirdim ve yayına aldım. Projeyi Next.js ve TypeScript kullanarak oluşturdum; dağıtım ve yayına alma süreçlerini de üstlendim.",
-      en: "I designed, built, and launched the website for an independent Tesla service center in Sharjah. I created the project with Next.js and TypeScript and also handled deployment and launch.",
-      de: "Ich habe die Website für ein unabhängiges Tesla-Servicezentrum in Sharjah gestaltet, entwickelt und veröffentlicht. Das Projekt habe ich mit Next.js und TypeScript umgesetzt und mich auch um Deployment und Launch gekümmert.",
+      tr: "Sharjah'ta hizmet veren bağımsız bir Tesla servis merkezi için kurumsal web sitesini tasarladım, geliştirdim ve yayına aldım. Next.js ve TypeScript kullanarak geliştirdiğim projenin tüm teknik süreçlerini üstlendim.",
+      en: "I designed, built, and launched the corporate website for an independent Tesla service center in Sharjah. I built it with Next.js and TypeScript and handled every technical part of the project.",
+      de: "Ich habe die Unternehmenswebsite für ein unabhängiges Tesla-Servicezentrum in Sharjah gestaltet, entwickelt und veröffentlicht. Das Projekt habe ich mit Next.js und TypeScript umgesetzt und alle technischen Schritte selbst übernommen.",
     },
     period: { tr: "Ağustos 2026", en: "August 2026", de: "August 2026" },
     role: {
@@ -113,9 +113,9 @@ export const projects: Project[] = [
     status: "live",
     title: { tr: "Dokar Zemin", en: "Dokar Zemin", de: "Dokar Zemin" },
     summary: {
-      tr: "Fore kazık, ankraj ve deep soil mixing uygulamaları yapan bir zemin iyileştirme firmasının Türkçe ve İngilizce kurumsal web sitesini tasarladım, geliştirdim ve yayına aldım.",
-      en: "I designed, built, and launched the Turkish and English corporate website of a ground improvement company working with bored piles, anchors, and deep soil mixing.",
-      de: "Ich habe die türkisch- und englischsprachige Unternehmenswebsite eines Baugrundverbesserungsunternehmens (Bohrpfähle, Anker, Deep Soil Mixing) gestaltet, entwickelt und veröffentlicht.",
+      tr: "Zemin iyileştirme ve temel mühendisliği alanında faaliyet gösteren Dokar Zemin için Türkçe ve İngilizce kurumsal web sitesini tasarladım, geliştirdim ve yayına aldım.",
+      en: "I designed, built, and launched the Turkish and English corporate website for Dokar Zemin, a company working in ground improvement and foundation engineering.",
+      de: "Für Dokar Zemin, ein Unternehmen für Baugrundverbesserung und Grundbau, habe ich die türkisch- und englischsprachige Unternehmenswebsite gestaltet, entwickelt und veröffentlicht.",
     },
     period: { tr: "2026", en: "2026", de: "2026" },
     role: {

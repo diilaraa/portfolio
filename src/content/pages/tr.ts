@@ -26,7 +26,7 @@ export const trPages = {
     title: "Araştırma ve yayınlar",
     description: "Renk görme farklılıkları için görüntü işleme filtreleri üzerine iki uluslararası hakemli dergi yayını.",
     intro:
-      "Araştırmalarımın ortak noktası, görüntü işleme ile bir problemi daha görünür hale getirmek: renk körlüğü olan bireyler için dijital görüntüler, dermatolojik lezyonlar ve kan hücresi görüntüleri.",
+      "Araştırmalarımın ortak noktası, görüntü işleme ile bir problemi daha görünür hale getirmek: renk görme farklılıkları yaşayan bireyler için dijital görüntüler, dermatolojik lezyonlar ve kan hücresi görüntüleri.",
     aim: "Amaç",
     method: "Yöntem",
     contribution: "Katkım",

@@ -27,7 +27,7 @@ export const enPages: PagesCopy = {
     title: "Research and publications",
     description: "Two peer-reviewed journal papers on image processing filters for color vision deficiency.",
     intro:
-      "What ties my research together is using image processing to make a problem more visible: digital images for people with color blindness, skin lesions, and blood cell images.",
+      "What ties my research together is using image processing to make a problem more visible: digital images for people with color vision deficiency, skin lesions, and blood cell images.",
     aim: "Aim",
     method: "Method",
     contribution: "My contribution",

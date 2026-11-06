@@ -26,9 +26,9 @@ export const publications: Publication[] = [
       de: "Methodik, Software, Validierung, Analyse, Untersuchung, Datenaufbereitung, Schreiben und Visualisierung (laut Beitragserklärung des Artikels).",
     },
     result: {
-      tr: "Yedi farklı renk görme tipine yönelik geliştirilen filtreler, görüntülerin yapay zekâ modeli tarafından sınıflandırılmasını belirgin biçimde iyileştirdi. Özellikle beş aşamalı filtre tasarımı, tüm renk görme tiplerinde başarılı sonuçlar elde edilmesini sağladı.",
-      en: "The filters developed for seven types of color vision deficiency clearly improved how the AI model classified the images. The five-stage filter design in particular delivered successful results for every type of color vision deficiency.",
-      de: "Die für sieben Arten von Farbsehschwäche entwickelten Filter verbesserten die Klassifikation der Bilder durch das KI-Modell deutlich. Vor allem das fünfstufige Filterdesign erzielte bei allen Arten von Farbsehschwäche erfolgreiche Ergebnisse.",
+      tr: "Geliştirilen hibrit filtreler, yedi farklı renk görme tipine yönelik görüntülerin MobileNetV1 tarafından sınıflandırılmasında belirgin bir performans artışı sağladı.",
+      en: "The hybrid filters we developed clearly improved how MobileNetV1 classified the images for all seven types of color vision deficiency.",
+      de: "Die entwickelten hybriden Filter steigerten die Klassifikationsleistung von MobileNetV1 bei Bildern für sieben Arten von Farbsehschwäche deutlich.",
     },
   },
   {
@@ -55,9 +55,9 @@ export const publications: Publication[] = [
       de: "Ein Artikel mit zwei Autorinnen gemeinsam mit Dr. Fatma Akalın; Entwicklung und Bewertung der Filter.",
     },
     result: {
-      tr: "Üç aşamalı görüntü işleme filtresi, Ishihara test görüntülerinin yedi farklı renk görme tipine göre değerlendirilmesinde olumlu sonuçlar verdi. MobileNetV2 ile yapılan analizler, filtrelenmiş görüntülerin tüm tiplerde daha başarılı sınıflandırıldığını gösterdi.",
-      en: "The three-stage image processing filter produced positive results when Ishihara test images were evaluated for seven types of color vision deficiency. The MobileNetV2 analyses showed that the filtered images were classified more successfully for every type.",
-      de: "Der dreistufige Bildverarbeitungsfilter lieferte bei der Bewertung von Ishihara-Testbildern für sieben Arten von Farbsehschwäche positive Ergebnisse. Die Analysen mit MobileNetV2 zeigten, dass die gefilterten Bilder bei allen Arten erfolgreicher klassifiziert wurden.",
+      tr: "Üç aşamalı hibrit filtre yaklaşımı, yedi renk görme tipinin tamamında MobileNetV2 ile yapılan sınıflandırma değerlendirmelerinde iyileşme sağladı.",
+      en: "The three-stage hybrid filter approach improved the MobileNetV2 classification results for all seven types of color vision deficiency.",
+      de: "Der dreistufige hybride Filteransatz verbesserte die Klassifikationsergebnisse mit MobileNetV2 bei allen sieben Arten von Farbsehschwäche.",
     },
   },
 ];
