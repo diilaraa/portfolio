@@ -21,11 +21,9 @@ export function ExperienceSnapshot({ locale, copy, items }: Props) {
             <CompanyLogo item={item} />
             <span>
               <span className="block font-display text-h3 text-ink">{item.company}</span>
-              <span className="block text-sm text-ink-muted">
-                {item.role[locale]} · {item.location[locale]}
-              </span>
+              <span className="block text-sm text-ink-muted">{item.location[locale]}</span>
             </span>
-            <span className="col-span-2 text-ink md:col-span-1">{item.snapshot[locale]}</span>
+            <span className="col-span-2 font-medium text-ink md:col-span-1">{item.role[locale]}</span>
             <span className="col-span-2 w-fit rounded-md bg-band-blue px-2 py-1 text-[0.75rem] font-medium text-ink md:col-span-1 md:justify-self-end">
               {item.period[locale]}
             </span>
