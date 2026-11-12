@@ -12,6 +12,8 @@ export const trPages = {
     back: "Tüm çalışmalar",
     contents: "İçindekiler",
     role: "Rol",
+    team: "Ekip",
+    advisor: "Akademik Danışman",
     period: "Dönem",
     stack: "Teknolojiler",
     status: "Durum",

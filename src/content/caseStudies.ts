@@ -331,32 +331,6 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
       },
-      {
-        id: "contribution",
-        title: L("Katkım ve süreç", "My role and process", "Meine Rolle und der Ablauf"),
-        blocks: [
-          {
-            type: "list",
-            items: LL(
-              [
-                "TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı'na Kasım 2024'te başvurduk; proje Nisan 2025'te desteklenmeye hak kazandı. Projenin yürütücüsüyüm.",
-                "Bitirme çalışmasını Hayrunnisa Yılmaz ile birlikte, Dr. Öğr. Üyesi Fatma Akalın danışmanlığında yürüttük.",
-                "Python, scikit-learn, OpenCV, YOLOv9, Flask, Jinja2 ve Plotly ile modelleri eğittik, değerlendirdik ve tek bir web uygulamasında birleştirdik.",
-              ],
-              [
-                "We applied to the TÜBİTAK 2209-A University Students Research Projects Support Program in November 2024; the project was accepted for support in April 2025. I am the project lead.",
-                "I carried out the graduation project together with Hayrunnisa Yılmaz, supervised by Asst. Prof. Fatma Akalın.",
-                "With Python, scikit-learn, OpenCV, YOLOv9, Flask, Jinja2, and Plotly we trained and evaluated the models and brought them together in one web application.",
-              ],
-              [
-                "Im November 2024 haben wir uns beim TÜBİTAK-2209-A-Programm zur Förderung studentischer Forschungsprojekte beworben; im April 2025 wurde das Projekt zur Förderung angenommen. Ich leite das Projekt.",
-                "Die Abschlussarbeit habe ich gemeinsam mit Hayrunnisa Yılmaz unter Betreuung von Dr. Fatma Akalın durchgeführt.",
-                "Mit Python, scikit-learn, OpenCV, YOLOv9, Flask, Jinja2 und Plotly haben wir die Modelle trainiert, bewertet und in einer Webanwendung zusammengeführt.",
-              ],
-            ),
-          },
-        ],
-      },
     ],
   },
 

@@ -81,9 +81,11 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/wor
 
       <div className="mx-auto grid w-full max-w-[77.5rem] gap-12 px-5 py-14 md:px-10 md:py-20 lg:grid-cols-12">
         <aside className="lg:col-span-4">
-          <div className="grid gap-8 lg:sticky lg:top-24">
+          <div className="grid gap-8 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:overscroll-contain lg:pb-4">
             <dl className="grid gap-4 rounded-2xl border border-line bg-band-gray p-6">
               <Meta label={copy.role}>{project.role[locale]}</Meta>
+              {project.team && <Meta label={copy.team}>{project.team[locale]}</Meta>}
+              {project.advisor && <Meta label={copy.advisor}>{project.advisor[locale]}</Meta>}
               <Meta label={copy.period}>{project.period[locale]}</Meta>
               <Meta label={copy.stack}>
                 <TechList items={project.stack} tone="paper" className="mt-1" />

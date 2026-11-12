@@ -13,6 +13,8 @@ export const enPages: PagesCopy = {
     back: "All work",
     contents: "Contents",
     role: "Role",
+    team: "Team",
+    advisor: "Academic Advisor",
     period: "Period",
     stack: "Stack",
     status: "Status",

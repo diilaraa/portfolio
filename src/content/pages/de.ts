@@ -13,6 +13,8 @@ export const dePages: PagesCopy = {
     back: "Alle Projekte",
     contents: "Inhalt",
     role: "Rolle",
+    team: "Team",
+    advisor: "Akademische Betreuung",
     period: "Zeitraum",
     stack: "Technologien",
     status: "Status",

@@ -28,6 +28,9 @@ export type Project = {
   status: ProjectStatus;
   period: Localized;
   role: Localized;
+  /** Teammates, shown in the case study side panel. */
+  team?: Localized;
+  advisor?: Localized;
   stack: string[];
   /** Omitted when no real project image exists yet; never substitute another project's image. */
   cover?: ImageAsset;

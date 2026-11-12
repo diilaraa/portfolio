@@ -21,10 +21,12 @@ export const projects: Project[] = [
       de: "Wir haben ein multimodales Entscheidungsunterstützungssystem entwickelt, das klinische Daten, Hautläsionsbilder und epidemiologische Informationen zusammenführt. In diesem Abschlussprojekt, das ich im Rahmen von TÜBİTAK 2209-A geleitet habe, haben meine Teamkollegin und ich Methoden des maschinellen Lernens und der Bildanalyse in einer Webanwendung integriert.",
     },
     period: { tr: "Kasım 2024 – 2026", en: "Nov 2024 – 2026", de: "Nov. 2024 – 2026" },
-    role: {
-      tr: "Proje yürütücüsü · Hayrunnisa Yılmaz ile birlikte",
-      en: "Project lead · with Hayrunnisa Yılmaz",
-      de: "Projektleitung · mit Hayrunnisa Yılmaz",
+    role: { tr: "Proje Yürütücüsü", en: "Project Lead", de: "Projektleitung" },
+    team: { tr: "Hayrunnisa Yılmaz", en: "Hayrunnisa Yılmaz", de: "Hayrunnisa Yılmaz" },
+    advisor: {
+      tr: "Dr. Öğr. Üyesi Fatma Akalın",
+      en: "Asst. Prof. Fatma Akalın",
+      de: "Dr. Fatma Akalın",
     },
     stack: ["Python", "scikit-learn", "YOLOv9", "OpenCV", "Flask", "Jinja2", "Plotly"],
     cover: {
