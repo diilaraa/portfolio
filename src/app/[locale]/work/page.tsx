@@ -18,7 +18,7 @@ export default async function WorkPage() {
 
   return (
     <>
-      <PageHeader title={pages.work.title} intro={pages.work.intro} />
+      <PageHeader title={pages.work.title} intro={pages.work.intro} wideIntro />
 
       <section aria-label={pages.work.title} className="bg-band-gray py-[clamp(3.5rem,8vw,6rem)]">
         <div className="mx-auto grid w-full max-w-[77.5rem] gap-8 px-5 md:gap-10 md:px-10">
