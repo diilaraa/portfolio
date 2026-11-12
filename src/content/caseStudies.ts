@@ -111,17 +111,29 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Klinik analiz modülünde, farklı kaynaklardan elde edilen iki veri seti üzerinde çalıştık: Kaggle'dan alınan 25.000 gözlemli Monkey-Pox Patients veri seti ve GitHub'dan alınan 211 gözlemli MonkeyPoxDetection veri seti.",
-              "In the clinical analysis module we worked with two datasets from different sources: the Monkey-Pox Patients dataset from Kaggle with 25,000 observations and the MonkeyPoxDetection dataset from GitHub with 211 observations.",
-              "Im klinischen Analysemodul haben wir mit zwei Datensätzen aus verschiedenen Quellen gearbeitet: dem Monkey-Pox-Patients-Datensatz von Kaggle mit 25.000 Beobachtungen und dem MonkeyPoxDetection-Datensatz von GitHub mit 211 Beobachtungen.",
+              "Klinik analiz modülünde, farklı kaynaklardan elde edilen iki veri seti üzerinde çalıştık:",
+              "In the clinical analysis module we worked with two datasets from different sources:",
+              "Im klinischen Analysemodul haben wir mit zwei Datensätzen aus verschiedenen Quellen gearbeitet:",
             ),
           },
           {
-            type: "p",
-            text: L(
-              "Veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi.",
-              "We ran exploratory data analysis (EDA) on the datasets and cleaned the data.",
-              "Auf den Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt.",
+            type: "list",
+            items: LL(
+              [
+                "Kaggle'dan alınan 25.000 gözlemli Monkey-Pox Patients veri seti.",
+                "GitHub'dan alınan 211 gözlemli MonkeyPoxDetection veri seti.",
+                "Veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi.",
+              ],
+              [
+                "The Monkey-Pox Patients dataset from Kaggle, with 25,000 observations.",
+                "The MonkeyPoxDetection dataset from GitHub, with 211 observations.",
+                "We ran exploratory data analysis (EDA) on the datasets and cleaned the data.",
+              ],
+              [
+                "Der Monkey-Pox-Patients-Datensatz von Kaggle mit 25.000 Beobachtungen.",
+                "Der MonkeyPoxDetection-Datensatz von GitHub mit 211 Beobachtungen.",
+                "Auf den Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt.",
+              ],
             ),
           },
           {
@@ -150,30 +162,25 @@ export const caseStudies: CaseStudy[] = [
             ),
           },
           {
-            type: "p",
-            text: L(
-              "Modeller, 0,64 karar eşiğiyle değerlendirildi. Stacking modeli 0,79 F1 skoruna, Weighted Voting modeli ise 0,91 F1 skoruna ulaştı. Voting modeli hasta sınıfında 0,90 recall değeri elde etti.",
-              "The models were evaluated with a 0.64 decision threshold. The stacking model reached an F1 score of 0.79 and the weighted voting model 0.91. The voting model achieved a recall of 0.90 for the patient class.",
-              "Die Modelle wurden mit einem Entscheidungsschwellenwert von 0,64 bewertet. Das Stacking-Modell erreichte einen F1-Wert von 0,79, das Weighted-Voting-Modell 0,91. Das Voting-Modell erzielte für die Klasse „erkrankt“ einen Recall von 0,90.",
-            ),
-          },
-          {
             type: "list",
             items: LL(
               [
-                "Semptom yoksa model çalıştırılmadan negatif karar verilir.",
-                "Deri lezyonu olmadan en fazla 3 genel semptom varsa olasılık %15 ile sınırlanır.",
-                "Diğer durumlarda model, optimize edilmiş eşikle karar verir.",
+                "Modeller, 0,64 karar eşiğiyle değerlendirildi.",
+                "Stacking modeli 0,79 F1 skoruna ulaştı.",
+                "Weighted Voting modeli 0,91 F1 skoruna ulaştı.",
+                "Voting modeli hasta sınıfında 0,90 recall değeri elde etti.",
               ],
               [
-                "With no symptoms, the decision is negative without running the model.",
-                "Without skin lesions and with at most three general symptoms, the probability is capped at 15%.",
-                "In all other cases the model decides with the optimized threshold.",
+                "The models were evaluated with a 0.64 decision threshold.",
+                "The stacking model reached an F1 score of 0.79.",
+                "The weighted voting model reached an F1 score of 0.91.",
+                "The voting model achieved a recall of 0.90 for the patient class.",
               ],
               [
-                "Ohne Symptome fällt die Entscheidung negativ aus, ohne dass das Modell läuft.",
-                "Ohne Hautläsion und mit höchstens drei allgemeinen Symptomen wird die Wahrscheinlichkeit auf 15 % begrenzt.",
-                "In allen anderen Fällen entscheidet das Modell mit dem optimierten Schwellenwert.",
+                "Die Modelle wurden mit einem Entscheidungsschwellenwert von 0,64 bewertet.",
+                "Das Stacking-Modell erreichte einen F1-Wert von 0,79.",
+                "Das Weighted-Voting-Modell erreichte einen F1-Wert von 0,91.",
+                "Das Voting-Modell erzielte für die Klasse „erkrankt“ einen Recall von 0,90.",
               ],
             ),
           },
@@ -198,19 +205,26 @@ export const caseStudies: CaseStudy[] = [
         title: L("Görüntü analizi modülü", "Image analysis module", "Bildanalysemodul"),
         blocks: [
           {
-            type: "p",
-            text: L(
-              "Görüntü analizi için iki farklı kaynaktan elde edilen deri lezyonu görüntülerini bir araya getirerek altı sınıflı bir veri seti oluşturduk: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD ve Measles.",
-              "For image analysis we combined skin-lesion images from two different sources into a six-class dataset: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, and Measles.",
-              "Für die Bildanalyse haben wir Hautläsionsbilder aus zwei Quellen zu einem Datensatz mit sechs Klassen zusammengeführt: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD und Measles.",
-            ),
-          },
-          {
-            type: "p",
-            text: L(
-              "Veri setini beş katlı çapraz doğrulama yaklaşımına göre düzenledik. Görüntülerde önceden tanımlanmış lezyon sınırları bulunmadığından, her görüntüyü bütünüyle kapsayan bir sınırlayıcı kutuyla etiketledik. Böylece modelin performansını görüntü düzeyinde precision, recall ve F1 metrikleriyle değerlendirdik.",
-              "We organized the dataset for five-fold cross-validation. Since the images had no predefined lesion boundaries, we labeled each image with a bounding box covering the whole image, and evaluated the model at image level with precision, recall, and F1.",
-              "Den Datensatz haben wir für eine fünffache Kreuzvalidierung aufbereitet. Da die Bilder keine vordefinierten Läsionsgrenzen hatten, haben wir jedes Bild mit einer Bounding Box über das gesamte Bild annotiert und das Modell auf Bildebene mit Precision, Recall und F1 bewertet.",
+            type: "list",
+            items: LL(
+              [
+                "İki farklı kaynaktan elde edilen deri lezyonu görüntülerini bir araya getirerek altı sınıflı bir veri seti oluşturduk: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD ve Measles.",
+                "Veri setini beş katlı çapraz doğrulama yaklaşımına göre düzenledik.",
+                "Görüntülerde önceden tanımlanmış lezyon sınırları bulunmadığından, her görüntüyü bütünüyle kapsayan bir sınırlayıcı kutuyla etiketledik.",
+                "Böylece modelin performansını görüntü düzeyinde precision, recall ve F1 metrikleriyle değerlendirdik.",
+              ],
+              [
+                "We combined skin-lesion images from two different sources into a six-class dataset: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, and Measles.",
+                "We organized the dataset for five-fold cross-validation.",
+                "Since the images had no predefined lesion boundaries, we labeled each image with a bounding box covering the whole image.",
+                "This let us evaluate the model at image level with precision, recall, and F1.",
+              ],
+              [
+                "Wir haben Hautläsionsbilder aus zwei Quellen zu einem Datensatz mit sechs Klassen zusammengeführt: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD und Measles.",
+                "Den Datensatz haben wir für eine fünffache Kreuzvalidierung aufbereitet.",
+                "Da die Bilder keine vordefinierten Läsionsgrenzen hatten, haben wir jedes Bild mit einer Bounding Box über das gesamte Bild annotiert.",
+                "So haben wir das Modell auf Bildebene mit Precision, Recall und F1 bewertet.",
+              ],
             ),
           },
         ],
@@ -220,11 +234,20 @@ export const caseStudies: CaseStudy[] = [
         title: L("Görüntü işleme filtresi", "Image processing filter", "Bildverarbeitungsfilter"),
         blocks: [
           {
-            type: "p",
-            text: L(
-              "Lezyon görüntülerindeki ayırt edici özellikleri belirginleştirmek amacıyla özgün bir görüntü işleme filtresi geliştirdik. Model eğitiminden ve tahmin aşamasından önce görüntülere uygulanan bu filtreyi farklı model yapılandırmalarıyla karşılaştırarak katkısını değerlendirdik.",
-              "We developed an original image processing filter to bring out the distinguishing features in lesion images. The filter is applied to the images before training and before prediction, and we assessed its contribution by comparing different model configurations.",
-              "Wir haben einen eigenen Bildverarbeitungsfilter entwickelt, der die unterscheidenden Merkmale in Läsionsbildern hervorhebt. Der Filter wird vor dem Training und vor der Vorhersage angewendet; seinen Beitrag haben wir durch den Vergleich verschiedener Modellkonfigurationen bewertet.",
+            type: "list",
+            items: LL(
+              [
+                "Lezyon görüntülerindeki ayırt edici özellikleri belirginleştirmek amacıyla özgün bir görüntü işleme filtresi geliştirdik.",
+                "Model eğitiminden ve tahmin aşamasından önce görüntülere uygulanan bu filtreyi farklı model yapılandırmalarıyla karşılaştırarak katkısını değerlendirdik.",
+              ],
+              [
+                "We developed an original image processing filter to bring out the distinguishing features in lesion images.",
+                "The filter is applied before training and before prediction; we assessed its contribution by comparing different model configurations.",
+              ],
+              [
+                "Wir haben einen eigenen Bildverarbeitungsfilter entwickelt, der die unterscheidenden Merkmale in Läsionsbildern hervorhebt.",
+                "Der Filter wird vor dem Training und vor der Vorhersage angewendet; seinen Beitrag haben wir durch den Vergleich verschiedener Modellkonfigurationen bewertet.",
+              ],
             ),
           },
           {
@@ -248,11 +271,23 @@ export const caseStudies: CaseStudy[] = [
         title: L("Model eğitimi ve optimizasyon", "Model training and optimization", "Modelltraining und Optimierung"),
         blocks: [
           {
-            type: "p",
-            text: L(
-              "YOLOv9 modelini beş katlı çapraz doğrulama kapsamında beş ayrı model olarak eğittik. Eğitim sürecinde AdamW ve MuSGD optimizasyon algoritmalarını karşılaştırdık; en iyi sonucu MuSGD ile gerçekleştirilen eğitim ve ardından uygulanan ince ayar aşamasında elde ettik.",
-              "We trained YOLOv9 as five separate models within five-fold cross-validation. During training we compared the AdamW and MuSGD optimizers; the best result came from training with MuSGD followed by a fine-tuning stage.",
-              "Wir haben YOLOv9 im Rahmen der fünffachen Kreuzvalidierung als fünf separate Modelle trainiert. Dabei haben wir die Optimierer AdamW und MuSGD verglichen; das beste Ergebnis lieferte das Training mit MuSGD und die anschließende Feinabstimmung.",
+            type: "list",
+            items: LL(
+              [
+                "YOLOv9 modelini beş katlı çapraz doğrulama kapsamında beş ayrı model olarak eğittik.",
+                "Eğitim sürecinde AdamW ve MuSGD optimizasyon algoritmalarını karşılaştırdık.",
+                "En iyi sonucu MuSGD ile gerçekleştirilen eğitim ve ardından uygulanan ince ayar aşamasında elde ettik.",
+              ],
+              [
+                "We trained YOLOv9 as five separate models within five-fold cross-validation.",
+                "During training we compared the AdamW and MuSGD optimizers.",
+                "The best result came from training with MuSGD followed by a fine-tuning stage.",
+              ],
+              [
+                "Wir haben YOLOv9 im Rahmen der fünffachen Kreuzvalidierung als fünf separate Modelle trainiert.",
+                "Beim Training haben wir die Optimierer AdamW und MuSGD verglichen.",
+                "Das beste Ergebnis lieferte das Training mit MuSGD und die anschließende Feinabstimmung.",
+              ],
             ),
           },
         ],
@@ -309,14 +344,6 @@ export const caseStudies: CaseStudy[] = [
         id: "dashboard",
         title: L("Epidemiyoloji paneli", "Epidemiology dashboard", "Epidemiologie-Dashboard"),
         blocks: [
-          {
-            type: "p",
-            text: L(
-              "65.000'i aşkın kayıt içeren zaman serisi verisini ülke ve zaman bazında gösteren interaktif grafikleri Plotly ile hazırladık.",
-              "We built interactive Plotly charts that show time-series data with more than 65,000 records by country and over time.",
-              "Mit Plotly haben wir interaktive Diagramme erstellt, die Zeitreihendaten mit mehr als 65.000 Einträgen nach Land und Zeit zeigen.",
-            ),
-          },
           {
             type: "image",
             image: mpoxImg(
