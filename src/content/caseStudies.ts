@@ -165,21 +165,18 @@ export const caseStudies: CaseStudy[] = [
             type: "list",
             items: LL(
               [
-                "Modeller, 0,64 karar eşiğiyle değerlendirildi.",
                 "Stacking modeli 0,79 F1 skoruna ulaştı.",
-                "Weighted Voting modeli 0,91 F1 skoruna ulaştı.",
+                "Weighted Voting modeli 0,64 karar eşiğiyle 0,91 F1 skoruna ulaştı.",
                 "Voting modeli hasta sınıfında 0,90 recall değeri elde etti.",
               ],
               [
-                "The models were evaluated with a 0.64 decision threshold.",
                 "The stacking model reached an F1 score of 0.79.",
-                "The weighted voting model reached an F1 score of 0.91.",
+                "With a 0.64 decision threshold, the weighted voting model reached an F1 score of 0.91.",
                 "The voting model achieved a recall of 0.90 for the patient class.",
               ],
               [
-                "Die Modelle wurden mit einem Entscheidungsschwellenwert von 0,64 bewertet.",
                 "Das Stacking-Modell erreichte einen F1-Wert von 0,79.",
-                "Das Weighted-Voting-Modell erreichte einen F1-Wert von 0,91.",
+                "Das Weighted-Voting-Modell erreichte mit einem Entscheidungsschwellenwert von 0,64 einen F1-Wert von 0,91.",
                 "Das Voting-Modell erzielte für die Klasse „erkrankt“ einen Recall von 0,90.",
               ],
             ),
