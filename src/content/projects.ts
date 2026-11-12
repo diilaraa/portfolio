@@ -28,7 +28,7 @@ export const projects: Project[] = [
       en: "Asst. Prof. Fatma Akalın",
       de: "Dr. Fatma Akalın",
     },
-    stack: ["Python", "scikit-learn", "YOLOv9", "OpenCV", "Flask", "Jinja2", "HTML & CSS", "Plotly"],
+    stack: ["Python", "NumPy", "Pandas", "scikit-learn", "YOLOv9", "OpenCV", "Flask", "Jinja2", "HTML & CSS", "Matplotlib", "Plotly"],
     cover: {
       src: "/images/work/mpox-decision-support/web-app-home.webp",
       width: 881,
