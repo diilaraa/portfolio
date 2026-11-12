@@ -105,37 +105,42 @@ export const caseStudies: CaseStudy[] = [
         ],
       },
       {
-        id: "architecture",
-        title: L("Teknik mimari", "Technical architecture", "Technische Architektur"),
+        id: "clinical",
+        title: L("Klinik veri tahmin modülü", "Clinical prediction module", "Klinisches Vorhersagemodul"),
         blocks: [
           {
             type: "p",
             text: L(
-              "Uygulama Flask üzerinde dört route ile çalışıyor: ana sayfa, epidemiyoloji paneli, klinik analiz ve görüntü analizi. Sonuçlar Jinja2 şablonlarıyla dinamik HTML olarak sunuluyor.",
-              "The app runs on Flask with four routes: home, epidemiology dashboard, clinical analysis, and image analysis. Results are rendered as dynamic HTML with Jinja2 templates.",
-              "Die Anwendung läuft auf Flask mit vier Routen: Startseite, Epidemiologie-Dashboard, klinische Analyse und Bildanalyse. Ergebnisse werden mit Jinja2-Templates als dynamisches HTML ausgegeben.",
+              "Klinik veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi. Analiz, ateş ve döküntü gibi semptomların sağlıklı bireylerde de sık görüldüğünü; bu yüzden tek bir semptoma dayalı kararın yetersiz olduğunu gösterdi.",
+              "We ran exploratory data analysis (EDA) on the clinical datasets and cleaned the data. The analysis showed that symptoms such as fever and rash are also common in healthy people, so a single symptom is not enough to decide.",
+              "Auf den klinischen Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt. Sie zeigte, dass Symptome wie Fieber und Ausschlag auch bei Gesunden häufig sind – ein einzelnes Symptom reicht für eine Entscheidung nicht aus.",
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "Risk değerlendirmesi için SVM, Lojistik Regresyon, CatBoost, XGBoost, Naive Bayes ve Random Forest modellerini ağırlıklı bir Voting Classifier'da birleştirdik. Model, 0,64 karar eşiğiyle hasta sınıfında 0,90 recall ve 0,91 F1'e ulaştı; sağlıklı sınıfta recall 0,40 oldu.",
+              "For the risk assessment we combined SVM, Logistic Regression, CatBoost, XGBoost, Naive Bayes, and Random Forest in a weighted Voting Classifier. With a 0.64 decision threshold it reached 0.90 recall and 0.91 F1 for the patient class; recall for the healthy class was 0.40.",
+              "Für die Risikoeinschätzung haben wir SVM, logistische Regression, CatBoost, XGBoost, Naive Bayes und Random Forest in einem gewichteten Voting Classifier kombiniert. Mit Schwellenwert 0,64 erreichte er für die Klasse „erkrankt“ einen Recall von 0,90 und F1 von 0,91; für die Klasse „gesund“ lag der Recall bei 0,40.",
             ),
           },
           {
             type: "list",
             items: LL(
               [
-                "Başlangıçta yükleme: iki klinik model joblib ile, beş YOLOv9 ağırlığı (fold1–fold5) ensemble olarak belleğe alınır; böylece her istekte yeniden yükleme maliyeti olmaz.",
-                "Kural motoru: semptom yoksa model çalışmadan negatif karar; deri lezyonu olmadan en fazla 3 genel semptom varsa olasılık %15 ile sınırlanır; aksi halde model, optimize edilmiş eşikle karar verir.",
-                "Görüntü akışı: yüklenen görüntü UUID ile kaydedilir, özgün filtreden geçer ve beş modele sunulur. %45 güven eşiğini aşan tespitler arasında çoğunluk oyu kazanır.",
-                "Epidemiyoloji paneli: Plotly grafikleri HTML parçacığı olarak şablona aktarılır.",
+                "Semptom yoksa model çalıştırılmadan negatif karar verilir.",
+                "Deri lezyonu olmadan en fazla 3 genel semptom varsa olasılık %15 ile sınırlanır.",
+                "Diğer durumlarda model, optimize edilmiş eşikle karar verir.",
               ],
               [
-                "Loaded at startup: two clinical models via joblib and five YOLOv9 weights (fold1–fold5) as an ensemble, so no request pays the loading cost.",
-                "Rule engine: no symptoms means a negative decision without running the model; without skin lesions and with at most three general symptoms the probability is capped at 15%; otherwise the model decides with an optimized threshold.",
-                "Image flow: the uploaded image is saved under a UUID, passed through the original filter, and sent to all five models. Among detections above a 45% confidence threshold, the majority vote wins.",
-                "Epidemiology dashboard: Plotly charts are embedded into the template as HTML fragments.",
+                "With no symptoms, the decision is negative without running the model.",
+                "Without skin lesions and with at most three general symptoms, the probability is capped at 15%.",
+                "In all other cases the model decides with the optimized threshold.",
               ],
               [
-                "Beim Start geladen: zwei klinische Modelle über joblib und fünf YOLOv9-Gewichte (fold1–fold5) als Ensemble – keine Anfrage trägt die Ladekosten.",
-                "Regel-Engine: Ohne Symptome fällt eine negative Entscheidung ohne Modell; ohne Hautläsion und mit höchstens drei allgemeinen Symptomen wird die Wahrscheinlichkeit auf 15 % begrenzt; sonst entscheidet das Modell mit optimiertem Schwellenwert.",
-                "Bildablauf: Das hochgeladene Bild wird unter einer UUID gespeichert, durch den eigenen Filter geführt und an alle fünf Modelle gegeben. Unter den Erkennungen über 45 % Konfidenz gewinnt die Mehrheit.",
-                "Epidemiologie-Dashboard: Plotly-Diagramme werden als HTML-Fragmente in das Template eingebettet.",
+                "Ohne Symptome fällt die Entscheidung negativ aus, ohne dass das Modell läuft.",
+                "Ohne Hautläsion und mit höchstens drei allgemeinen Symptomen wird die Wahrscheinlichkeit auf 15 % begrenzt.",
+                "In allen anderen Fällen entscheidet das Modell mit dem optimierten Schwellenwert.",
               ],
             ),
           },
@@ -156,35 +161,64 @@ export const caseStudies: CaseStudy[] = [
         ],
       },
       {
-        id: "data",
-        title: L("Veri ve işleme süreci", "Data and processing", "Daten und Verarbeitung"),
+        id: "image-analysis",
+        title: L("Görüntü analizi modülü", "Image analysis module", "Bildanalysemodul"),
         blocks: [
           {
             type: "list",
             items: LL(
               [
-                "Klinik veri: MonkeyPoxDetection (GitHub) ve Monkey-Pox PATIENTS Dataset (Kaggle). Keşifçi veri analizinde ateş ve döküntü gibi semptomların sağlıklı bireylerde de sık görüldüğü, bu yüzden tek semptoma dayalı kararın yetersiz olduğu görüldü.",
                 "Görüntü verisi: MSLD v2.0 ve MSID veri setleri birleştirildi; altı sınıf (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) 5 katlı çapraz doğrulama yapısında düzenlendi.",
-                "Etiketleme: veri setlerinde lezyon koordinatı olmadığı için her görüntü tamamını kapsayan tek bir kutu ile etiketlendi. Bu yüzden değerlendirme, görüntü düzeyinde sınıflandırma metrikleriyle (precision, recall, F1) yapıldı.",
+                "Etiketleme: veri setlerinde lezyon koordinatı olmadığı için her görüntü, tamamını kapsayan tek bir kutu ile etiketlendi. Bu yüzden değerlendirme, görüntü düzeyinde sınıflandırma metrikleriyle (precision, recall, F1) yapıldı.",
               ],
               [
-                "Clinical data: MonkeyPoxDetection (GitHub) and the Monkey-Pox PATIENTS Dataset (Kaggle). Exploratory analysis showed that symptoms such as fever and rash are also common in healthy people, so a single symptom is not enough to decide.",
                 "Image data: the MSLD v2.0 and MSID datasets were merged and organized into six classes (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) with 5-fold cross-validation.",
                 "Labeling: the datasets have no lesion coordinates, so each image was labeled with a single box covering the whole image. Evaluation therefore uses image-level classification metrics (precision, recall, F1).",
               ],
               [
-                "Klinische Daten: MonkeyPoxDetection (GitHub) und der Monkey-Pox PATIENTS Dataset (Kaggle). Die explorative Analyse zeigte, dass Symptome wie Fieber und Ausschlag auch bei Gesunden häufig sind – ein einzelnes Symptom reicht für eine Entscheidung nicht aus.",
                 "Bilddaten: Die Datensätze MSLD v2.0 und MSID wurden zusammengeführt und in sechs Klassen (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) mit 5-facher Kreuzvalidierung organisiert.",
                 "Annotation: Die Datensätze enthalten keine Läsionskoordinaten, daher wurde jedes Bild mit einer Box über das ganze Bild annotiert. Bewertet wird deshalb mit Klassifikationsmetriken auf Bildebene (Precision, Recall, F1).",
               ],
             ),
           },
+        ],
+      },
+      {
+        id: "filter",
+        title: L("Görüntü işleme filtresi", "Image processing filter", "Bildverarbeitungsfilter"),
+        blocks: [
           {
             type: "p",
             text: L(
-              "Özgün görüntü işleme filtresi, lezyonları model için daha belirgin hale getirmek üzere tasarlandı: görüntü CIELAB renk uzayına çevrilir; yalnızca parlaklık (L) kanalına db1 dalgacığıyla iki boyutlu ayrık dalgacık dönüşümü uygulanır, detay katsayıları güçlendirilerek ters dönüşümle birleştirilir, ardından CLAHE ile yerel kontrast dengelenir. Renk kanalları korunur.",
-              "The original image processing filter was designed to make lesions more distinct for the model: the image is converted to CIELAB; a 2D discrete wavelet transform (db1) is applied to the lightness (L) channel only, the detail coefficients are amplified and recombined with the inverse transform, and CLAHE then balances local contrast. Color channels are preserved.",
-              "Der eigene Bildverarbeitungsfilter soll Läsionen für das Modell deutlicher machen: Das Bild wird nach CIELAB umgewandelt; nur auf den Helligkeitskanal (L) wird eine 2D-Wavelet-Transformation (db1) angewendet, die Detailkoeffizienten werden verstärkt und per Rücktransformation zusammengeführt, danach gleicht CLAHE den lokalen Kontrast aus. Die Farbkanäle bleiben erhalten.",
+              "Lezyonları model için daha belirgin hâle getirmek amacıyla özgün bir görüntü işleme filtresi tasarladık. Görüntüler, modele verilmeden önce bu filtreden geçiriliyor.",
+              "We designed an original image processing filter to make lesions more distinct for the model. Images pass through this filter before they reach the model.",
+              "Wir haben einen eigenen Bildverarbeitungsfilter entworfen, der Läsionen für das Modell deutlicher macht. Die Bilder durchlaufen diesen Filter, bevor sie das Modell erreichen.",
+            ),
+          },
+        ],
+      },
+      {
+        id: "training",
+        title: L("Model eğitimi ve optimizasyon", "Model training and optimization", "Modelltraining und Optimierung"),
+        blocks: [
+          {
+            type: "list",
+            items: LL(
+              [
+                "YOLOv9, 5 katlı çapraz doğrulamanın her katında ayrı eğitildi; beş model ağırlığı (fold1–fold5) birlikte, bir topluluk (ensemble) olarak kullanılıyor.",
+                "AdamW ve MuSGD optimizasyon algoritmaları karşılaştırıldı; en iyi sonuç MuSGD ve ardından yapılan ince ayar (fine-tuning) ile elde edildi.",
+                "Tahmin sırasında görüntü filtreden geçirilip beş modele sunuluyor; %45 güven eşiğini aşan tespitler arasında çoğunluk oyu kazanıyor.",
+              ],
+              [
+                "YOLOv9 was trained separately on each fold of the 5-fold cross-validation; the five model weights (fold1–fold5) are used together as an ensemble.",
+                "The AdamW and MuSGD optimizers were compared; the best result came from MuSGD followed by fine-tuning.",
+                "At prediction time the image passes through the filter and goes to all five models; among detections above a 45% confidence threshold, the majority vote wins.",
+              ],
+              [
+                "YOLOv9 wurde auf jedem Fold der 5-fachen Kreuzvalidierung separat trainiert; die fünf Modellgewichte (fold1–fold5) werden gemeinsam als Ensemble genutzt.",
+                "Die Optimierer AdamW und MuSGD wurden verglichen; das beste Ergebnis lieferte MuSGD mit anschließender Feinabstimmung.",
+                "Bei der Vorhersage durchläuft das Bild den Filter und geht an alle fünf Modelle; unter den Erkennungen über 45 % Konfidenz gewinnt die Mehrheit.",
+              ],
             ),
           },
         ],
@@ -235,20 +269,20 @@ export const caseStudies: CaseStudy[] = [
               L("Genel karmaşıklık matrisi (%)", "Overall confusion matrix (%)", "Gesamt-Konfusionsmatrix (%)"),
             ),
           },
-          {
-            type: "p",
-            text: L(
-              "Klinik modülde ağırlıklı bir Voting Classifier (SVM, Lojistik Regresyon, CatBoost, XGBoost, Naive Bayes, Random Forest) 0,64 karar eşiğiyle hasta sınıfında 0,90 recall ve 0,91 F1'e ulaştı. Sağlıklı sınıfta ise recall 0,40'ta kaldı; veri setindeki sınıf dengesizliği bu modelin en önemli sınırı.",
-              "In the clinical module, a weighted Voting Classifier (SVM, Logistic Regression, CatBoost, XGBoost, Naive Bayes, Random Forest) with a 0.64 decision threshold reached 0.90 recall and 0.91 F1 for the patient class. For the healthy class, recall stayed at 0.40; class imbalance in the data is this model's main limitation.",
-              "Im klinischen Modul erreichte ein gewichteter Voting Classifier (SVM, logistische Regression, CatBoost, XGBoost, Naive Bayes, Random Forest) mit Schwellenwert 0,64 für die Klasse „erkrankt“ einen Recall von 0,90 und F1 von 0,91. Für die Klasse „gesund“ blieb der Recall bei 0,40 – das Klassenungleichgewicht ist die wichtigste Grenze dieses Modells.",
-            ),
-          },
         ],
       },
       {
         id: "dashboard",
         title: L("Epidemiyoloji paneli", "Epidemiology dashboard", "Epidemiologie-Dashboard"),
         blocks: [
+          {
+            type: "p",
+            text: L(
+              "65.000'i aşkın kayıt içeren zaman serisi verisini ülke ve zaman bazında gösteren interaktif grafikleri Plotly ile hazırladık.",
+              "We built interactive Plotly charts that show time-series data with more than 65,000 records by country and over time.",
+              "Mit Plotly haben wir interaktive Diagramme erstellt, die Zeitreihendaten mit mehr als 65.000 Einträgen nach Land und Zeit zeigen.",
+            ),
+          },
           {
             type: "image",
             image: mpoxImg(
@@ -261,35 +295,6 @@ export const caseStudies: CaseStudy[] = [
                 "Globales Mpox-Epidemiologie-Dashboard: interaktive Weltkarte bestätigter und Verdachtsfälle, Länder mit den meisten Fällen und tägliche Fallzeitreihe.",
               ),
               L("Küresel epidemiyoloji paneli", "Global epidemiology dashboard", "Globales Epidemiologie-Dashboard"),
-            ),
-          },
-        ],
-      },
-      {
-        id: "limitations",
-        title: L("Sınırlılıklar", "Limitations", "Grenzen"),
-        blocks: [
-          {
-            type: "list",
-            items: LL(
-              [
-                "Tüm modeller kamuya açık veri setleriyle eğitildi; gerçek hastane verisiyle prospektif bir doğrulama yapılmadı.",
-                "Görüntü veri setleri; aydınlatma, kamera kalitesi ve cilt tonu çeşitliliği açısından gerçek klinik ortamı tam temsil etmeyebilir.",
-                "Tam görüntü etiketleme nedeniyle model lezyonun yerini değil, görüntünün sınıfını tahmin ediyor.",
-                "Klinik modelde sınıf dengesizliği, sağlıklı bireyleri ayırt etme başarısını sınırlıyor.",
-              ],
-              [
-                "All models were trained on public datasets; there has been no prospective validation with real hospital data.",
-                "The image datasets may not fully represent real clinical settings in lighting, camera quality, and skin-tone diversity.",
-                "Because of whole-image labeling, the model predicts the image's class, not the lesion's location.",
-                "Class imbalance in the clinical model limits how well it recognizes healthy people.",
-              ],
-              [
-                "Alle Modelle wurden mit öffentlichen Datensätzen trainiert; eine prospektive Validierung mit echten Klinikdaten gab es nicht.",
-                "Die Bilddatensätze bilden reale klinische Bedingungen bei Beleuchtung, Kameraqualität und Hauttönen möglicherweise nicht vollständig ab.",
-                "Wegen der Ganzbild-Annotation sagt das Modell die Klasse des Bildes vorher, nicht die Position der Läsion.",
-                "Das Klassenungleichgewicht im klinischen Modell begrenzt die Erkennung gesunder Personen.",
-              ],
             ),
           },
         ],
