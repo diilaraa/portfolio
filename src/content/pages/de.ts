@@ -3,9 +3,9 @@ import type { PagesCopy } from "./tr";
 export const dePages: PagesCopy = {
   work: {
     title: "Projekte",
-    description: "Forschungsprojekte, eine für ein echtes Unternehmen veröffentlichte Website und laufende Designarbeiten.",
+    description: "Forschungsprojekte und für echte Unternehmen veröffentlichte Websites.",
     intro:
-      "Jedes Projekt beginnt mit derselben Frage: Wer hat welches Problem? Hier finden Sie meine Forschungs-, Produkt- und Webprojekte: was ich gemacht habe und wie ich das Ergebnis gemessen habe.",
+      "Hier finden Sie die Forschungs-, Produktentwicklungs- und Webprojekte, an denen ich beteiligt war, und meine Beiträge dazu.",
     archiveTitle: "Archiv",
     archiveIntro: "Kleinere Studien- und Teamprojekte, die meine technische Grundlage gebildet haben.",
   },

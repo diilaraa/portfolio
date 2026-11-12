@@ -2,9 +2,9 @@
 export const trPages = {
   work: {
     title: "Çalışmalar",
-    description: "Araştırma projeleri, gerçek bir işletme için yayına alınmış web sitesi ve devam eden tasarım çalışmaları.",
+    description: "Araştırma projeleri ve gerçek işletmeler için yayına alınmış web siteleri.",
     intro:
-      "Her projede aynı soruyla başlıyorum: Kimin, hangi problemi var? Aşağıda araştırma, ürün ve web projelerimi; ne yaptığımı ve sonucunu nasıl ölçtüğümü bulabilirsiniz.",
+      "Aşağıda araştırma, ürün geliştirme ve web projelerinde yer aldığım çalışmaları ve bu süreçlerdeki katkılarımı inceleyebilirsiniz.",
     archiveTitle: "Arşiv",
     archiveIntro: "Ders ve ekip projelerinden, teknik temelimi oluşturan daha küçük çalışmalar.",
   },

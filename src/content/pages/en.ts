@@ -3,9 +3,9 @@ import type { PagesCopy } from "./tr";
 export const enPages: PagesCopy = {
   work: {
     title: "Work",
-    description: "Research projects, a website launched for a real business, and ongoing design work.",
+    description: "Research projects and websites launched for real businesses.",
     intro:
-      "Every project starts with the same question: who has which problem? Below are my research, product, and web projects: what I did and how I measured the result.",
+      "Below you can explore the research, product development, and web projects I have worked on, and what I contributed to each.",
     archiveTitle: "Archive",
     archiveIntro: "Smaller course and team projects that built my technical foundation.",
   },
