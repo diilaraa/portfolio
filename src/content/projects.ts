@@ -62,9 +62,9 @@ export const projects: Project[] = [
       de: "Entwicklung eigener Filter · Experimentelle Bewertung · Wissenschaftliches Schreiben",
     },
     team: {
-      tr: "Esma Kara, Nilgün Özkan Aksoy",
-      en: "Esma Kara, Nilgün Özkan Aksoy",
-      de: "Esma Kara, Nilgün Özkan Aksoy",
+      tr: "Nilgün Özkan Aksoy, Esma Kara (Symmetry makalesi)",
+      en: "Nilgün Özkan Aksoy, Esma Kara (Symmetry paper)",
+      de: "Nilgün Özkan Aksoy, Esma Kara (Symmetry-Artikel)",
     },
     advisor: {
       tr: "Dr. Öğr. Üyesi Fatma Akalın",
