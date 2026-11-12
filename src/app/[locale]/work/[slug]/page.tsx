@@ -57,7 +57,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/wor
         <h1 className="mt-5 max-w-[22ch] font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.04] text-ink text-balance">
           {project.title[locale]}
         </h1>
-        <p className="mt-5 max-w-[62ch] text-[1.125rem] leading-relaxed text-ink-muted">{project.summary[locale]}</p>
+        <p className="mt-5 text-[1.125rem] leading-relaxed text-ink-muted">{project.summary[locale]}</p>
 
         {notice && (
           <p className="mt-6 max-w-[62ch] rounded-xl border-l-4 border-pink bg-band-pink px-5 py-4 text-[0.9375rem] text-ink">
