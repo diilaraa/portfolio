@@ -1,6 +1,8 @@
 import Image from "next/image";
 import type { Block } from "@/content/caseStudies";
 import type { Locale } from "@/lib/i18n";
+import { publications } from "@/content/publications";
+import { PublicationCard } from "@/components/research/PublicationCard";
 
 /** Renders one case-study content block in the editorial reading column. */
 export function CaseBlock({ block, locale }: { block: Block; locale: Locale }) {
@@ -91,18 +93,34 @@ export function CaseBlock({ block, locale }: { block: Block; locale: Locale }) {
     case "steps":
       return (
         <figure className="rounded-2xl border border-line bg-paper p-5">
-          <ol className="grid grid-cols-[repeat(auto-fill,minmax(6.5rem,1fr))] gap-4">
+          {block.title && <p className="mb-4 font-display text-h3 text-ink">{block.title[locale]}</p>}
+          {/* One filter shown as a flow of stages, so no numbering: arrows lead from one stage to the next. */}
+          <ol className="flex gap-4 overflow-x-auto pb-1">
             {block.items.map((step, i) => (
-              <li key={step.src} className="flex flex-col items-center text-center">
+              <li key={step.src} className="relative flex min-w-[5.25rem] max-w-[9rem] flex-1 flex-col items-center text-center">
                 <Image src={step.src} width={step.width} height={step.height} alt="" className="aspect-square w-full rounded-lg object-cover" />
-                <span className="mt-2 text-[0.8125rem] leading-snug text-ink">
-                  <span className="font-semibold text-blue">{i + 1}.</span> {step.label[locale]}
-                </span>
+                {i < block.items.length - 1 && (
+                  <span aria-hidden="true" className="absolute -right-[0.85rem] top-[calc(50%-1.6rem)] text-xs text-ink-muted">
+                    →
+                  </span>
+                )}
+                <span className="mt-2 text-[0.75rem] leading-snug text-ink">{step.label[locale]}</span>
               </li>
             ))}
           </ol>
           {block.caption && <figcaption className="mt-4 text-sm text-ink-muted">{block.caption[locale]}</figcaption>}
         </figure>
+      );
+
+    case "publications":
+      return (
+        <ul className="grid gap-4">
+          {publications.map((pub) => (
+            <li key={pub.id}>
+              <PublicationCard pub={pub} locale={locale} />
+            </li>
+          ))}
+        </ul>
       );
 
     case "callout":

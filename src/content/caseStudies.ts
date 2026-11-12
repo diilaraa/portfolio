@@ -13,8 +13,10 @@ export type Block =
   | { type: "metrics"; items: { value: string | Localized; label: Localized }[]; note?: Localized }
   | { type: "table"; caption: Localized; head: Localized<string[]>; rows: { label: Localized; values: string[]; highlight?: boolean }[] }
   | { type: "image"; image: Img }
-  | { type: "steps"; items: { src: string; width: number; height: number; label: Localized }[]; caption?: Localized }
-  | { type: "callout"; text: Localized };
+  | { type: "steps"; title?: Localized; items: { src: string; width: number; height: number; label: Localized }[]; caption?: Localized }
+  | { type: "callout"; text: Localized }
+  /** Cards for the published papers (from publications.ts). */
+  | { type: "publications" };
 
 export type CaseSection = { id: string; title: Localized; blocks: Block[] };
 
@@ -345,9 +347,17 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Renk görme farklılığı olan bireyler, dijital görüntülerdeki bazı renkleri birbirinden ayırt edemez; örneğin Ishihara test plakalarındaki sayıları göremezler. Bir filtrenin işe yarayıp yaramadığını ölçmek de çoğu zaman insan yorumuna bırakılır.",
-              "People with color vision deficiency cannot tell certain colors apart in digital images; for example, they can't see the numbers on Ishihara test plates. Whether a filter helps is also often left to human judgment.",
-              "Menschen mit Farbsehschwäche können bestimmte Farben in digitalen Bildern nicht unterscheiden; zum Beispiel erkennen sie die Zahlen auf Ishihara-Tafeln nicht. Ob ein Filter hilft, wird zudem oft dem menschlichen Urteil überlassen.",
+              "Renk görme farklılıkları yaşayan bireyler, dijital görüntülerdeki bazı renkleri ve renk kombinasyonlarını ayırt etmekte zorlanabilir. Özellikle birbirine yakın renk tonları, görüntü içerisindeki bazı detayların algılanmasını güçleştirebilir.",
+              "People with color vision deficiency can find it hard to tell some colors and color combinations apart in digital images. Similar shades in particular can make certain details in an image harder to perceive.",
+              "Menschen mit Farbsehschwächen fällt es oft schwer, bestimmte Farben und Farbkombinationen in digitalen Bildern zu unterscheiden. Vor allem ähnliche Farbtöne können die Wahrnehmung einzelner Bilddetails erschweren.",
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "Bu çalışmalarda, farklı renk görme tipleri için dijital görüntülerin daha ayırt edilebilir hâle getirilmesini amaçlayan görüntü işleme filtreleri geliştirmeye odaklandık.",
+              "In these studies we focused on developing image processing filters that aim to make digital images easier to distinguish for different types of color vision.",
+              "In diesen Studien haben wir uns auf Bildverarbeitungsfilter konzentriert, die digitale Bilder für verschiedene Formen des Farbsehens besser unterscheidbar machen sollen.",
             ),
           },
         ],
@@ -359,28 +369,36 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "İki çalışmada, görüntüleri yedi farklı renk görme tipi için daha algılanabilir hale getiren özgün filtreler tasarladık. Değerlendirme insandan bağımsızdır: orijinal ve filtrelenmiş görüntülerin, ilgili renk görme tipine sahip bir bireye nasıl göründüğü simüle edilir; bu simülasyon çıktıları MobileNet transfer öğrenme modeliyle sınıflandırılır.",
-              "In two studies we designed original filters that make images easier to perceive for seven types of color vision deficiency. The evaluation is independent of human judgment: we simulate how the original and filtered images appear to a person with each type, and classify these simulations with a MobileNet transfer learning model.",
-              "In zwei Studien haben wir eigene Filter entworfen, die Bilder für sieben Arten von Farbsehschwäche besser wahrnehmbar machen. Die Bewertung ist unabhängig vom menschlichen Urteil: Wir simulieren, wie Original- und gefilterte Bilder für die jeweilige Form wirken, und klassifizieren diese Simulationen mit einem MobileNet-Transfer-Learning-Modell.",
+              "İki ayrı araştırma kapsamında, Ishihara test görüntülerini yedi farklı renk görme tipine yönelik olarak işleyen özgün hibrit filtreler tasarladık.",
+              "In two separate studies we designed original hybrid filters that process Ishihara test images for seven types of color vision deficiency.",
+              "In zwei separaten Studien haben wir eigene hybride Filter entworfen, die Ishihara-Testbilder für sieben Arten von Farbsehschwäche verarbeiten.",
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "Filtrelerde Daltonization algoritmasını farklı görüntü işleme teknikleriyle birleştirdik. Geliştirilen yöntemleri, renk görme farklılıklarını simüle eden görüntüler üzerinde MobileNetV1 ve MobileNetV2 transfer öğrenme modelleriyle değerlendirdik.",
+              "The filters combine the daltonization algorithm with other image processing techniques. We evaluated the methods with MobileNetV1 and MobileNetV2 transfer learning models on images that simulate color vision deficiency.",
+              "Die Filter kombinieren den Daltonisierungsalgorithmus mit weiteren Bildverarbeitungstechniken. Bewertet haben wir die Methoden mit den Transfer-Learning-Modellen MobileNetV1 und MobileNetV2 an Bildern, die Farbsehschwächen simulieren.",
             ),
           },
           {
             type: "list",
             items: LL(
               [
-                "Veri: Kaggle'daki Ishihara Blind Test Cards veri seti.",
-                "Symmetry çalışması: beş filtre sürümü; daltonizasyon (RGB → LMS) ve normalizasyon, doygunluk ve renk tonu kaydırma, Fourier tabanlı yaklaşım ve kanal bazlı Prewitt kenar tespiti adım adım birleştirildi. Değerlendirme MobileNetV1 ile.",
-                "Concurrency and Computation çalışması: üç aşamalı özgün filtre; değerlendirme MobileNetV2 ile.",
+                "Veri seti: Kaggle Ishihara Blind Test Cards",
+                "Symmetry çalışması: Daltonization, normalizasyon, renk düzenleme ve frekans uzayında kenar belirginleştirme tekniklerini birleştiren beş aşamalı filtre yaklaşımı. MobileNetV1 ile değerlendirildi.",
+                "Concurrency and Computation çalışması: Daltonization ve renk kaydırma yöntemlerini birleştiren üç aşamalı hibrit filtre yaklaşımı. MobileNetV2 ile değerlendirildi.",
               ],
               [
-                "Data: the Ishihara Blind Test Cards dataset on Kaggle.",
-                "Symmetry study: five filter versions that combine, step by step, daltonization (RGB → LMS) with normalization, saturation and hue shifting, a Fourier-based approach, and per-channel Prewitt edge detection. Evaluated with MobileNetV1.",
-                "Concurrency and Computation study: a three-stage original filter, evaluated with MobileNetV2.",
+                "Dataset: Kaggle Ishihara Blind Test Cards",
+                "Symmetry study: a five-stage filter approach combining daltonization, normalization, color adjustment, and edge enhancement in the frequency domain. Evaluated with MobileNetV1.",
+                "Concurrency and Computation study: a three-stage hybrid filter approach combining daltonization and color shifting. Evaluated with MobileNetV2.",
               ],
               [
-                "Daten: der Datensatz Ishihara Blind Test Cards auf Kaggle.",
-                "Symmetry-Studie: fünf Filterversionen, die schrittweise Daltonisierung (RGB → LMS) mit Normalisierung, Sättigungs- und Farbtonverschiebung, einen Fourier-basierten Ansatz und kanalweise Prewitt-Kantenerkennung kombinieren. Bewertet mit MobileNetV1.",
-                "Studie in Concurrency and Computation: ein dreistufiger eigener Filter, bewertet mit MobileNetV2.",
+                "Datensatz: Kaggle Ishihara Blind Test Cards",
+                "Symmetry-Studie: ein fünfstufiger Filteransatz aus Daltonisierung, Normalisierung, Farbanpassung und Kantenverstärkung im Frequenzraum. Bewertet mit MobileNetV1.",
+                "Studie in Concurrency and Computation: ein dreistufiger hybrider Filteransatz aus Daltonisierung und Farbverschiebung. Bewertet mit MobileNetV2.",
               ],
             ),
           },
@@ -391,7 +409,16 @@ export const caseStudies: CaseStudy[] = [
         title: L("Filtreler", "The filters", "Die Filter"),
         blocks: [
           {
+            type: "p",
+            text: L(
+              "İki araştırmada geliştirilen filtrelerin aşamalarını aşağıdaki görsellerde karşılaştırmalı olarak inceleyebilirsiniz.",
+              "The images below compare the stages of the filters developed in the two studies.",
+              "Die folgenden Bilder vergleichen die Stufen der in beiden Studien entwickelten Filter.",
+            ),
+          },
+          {
             type: "steps",
+            title: L("Beş aşamalı hibrit filtre — Symmetry (2025)", "Five-stage hybrid filter — Symmetry (2025)", "Fünfstufiger hybrider Filter — Symmetry (2025)"),
             items: [
               plate("sym-step-0", 148, 148, L("Orijinal", "Original", "Original")),
               plate("sym-step-1", 155, 154, L("Daltonizasyon ve normalizasyon", "Daltonization and normalization", "Daltonisierung und Normalisierung")),
@@ -401,19 +428,28 @@ export const caseStudies: CaseStudy[] = [
               plate("sym-step-5", 148, 147, L("Fourier uzayında Prewitt", "Prewitt in the Fourier domain", "Prewitt im Fourier-Raum")),
               plate("sym-step-6", 147, 145, L("Kontrast ve parlaklık", "Contrast and brightness", "Kontrast und Helligkeit")),
             ],
-            caption: L("5 aşamalı hibrit filtre — Symmetry 2025", "Five-stage hybrid filter — Symmetry 2025", "Fünfstufiger hybrider Filter — Symmetry 2025"),
+            caption: L(
+              "Orijinal görüntü ve filtre geliştirme sürecindeki aşamalar.",
+              "The original image and the stages of the filter's development.",
+              "Das Originalbild und die Stufen der Filterentwicklung.",
+            ),
           },
           {
             type: "steps",
+            title: L(
+              "Üç aşamalı hibrit filtre — Concurrency and Computation (2025)",
+              "Three-stage hybrid filter — Concurrency and Computation (2025)",
+              "Dreistufiger hybrider Filter — Concurrency and Computation (2025)",
+            ),
             items: [
               plate("cpe-step-0", 161, 162, L("Orijinal", "Original", "Original")),
               plate("cpe-step-1", 162, 162, L("Normalizasyon ve daltonizasyon", "Normalization and daltonization", "Normalisierung und Daltonisierung")),
               plate("cpe-step-2", 169, 168, L("Kaydırma filtresi ve doygunluk", "Shifting filter and saturation", "Verschiebungsfilter und Sättigung")),
             ],
             caption: L(
-              "3 aşamalı hibrit filtre — Concurrency and Computation 2025",
-              "Three-stage hybrid filter — Concurrency and Computation 2025",
-              "Dreistufiger hybrider Filter — Concurrency and Computation 2025",
+              "Orijinal görüntü ve üç aşamalı filtre uygulamasının çıktıları.",
+              "The original image and the outputs of the three-stage filter.",
+              "Das Originalbild und die Ergebnisse des dreistufigen Filters.",
             ),
           },
         ],
@@ -425,19 +461,28 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Geliştirilen hibrit filtreler, yedi farklı renk görme tipine yönelik görüntülerin MobileNetV1 tarafından sınıflandırılmasında belirgin bir performans artışı sağladı.",
-              "The hybrid filters we developed clearly improved how MobileNetV1 classified the images for all seven types of color vision deficiency.",
-              "Die entwickelten hybriden Filter steigerten die Klassifikationsleistung von MobileNetV1 bei Bildern für sieben Arten von Farbsehschwäche deutlich.",
+              "Beş aşamalı hibrit filtre yaklaşımı, MobileNetV1 ile yapılan değerlendirmelerde sınıflandırma F1 skorunu %33,95'ten %90,31'e yükseltti.",
+              "In the MobileNetV1 evaluations, the five-stage hybrid filter approach raised the classification F1 score from 33.95% to 90.31%.",
+              "In den Bewertungen mit MobileNetV1 steigerte der fünfstufige hybride Filteransatz den F1-Wert der Klassifikation von 33,95 % auf 90,31 %.",
             ),
           },
           {
             type: "p",
             text: L(
-              "Üç aşamalı hibrit filtre yaklaşımı, yedi renk görme tipinin tamamında MobileNetV2 ile yapılan sınıflandırma değerlendirmelerinde iyileşme sağladı.",
-              "The three-stage hybrid filter approach improved the MobileNetV2 classification results for all seven types of color vision deficiency.",
-              "Der dreistufige hybride Filteransatz verbesserte die Klassifikationsergebnisse mit MobileNetV2 bei allen sieben Arten von Farbsehschwäche.",
+              "Üç aşamalı hibrit filtre yaklaşımı ise MobileNetV2 ile yapılan değerlendirmelerde yedi renk görme tipinin tamamında sınıflandırma performansını artırdı.",
+              "The three-stage hybrid filter approach, in turn, increased classification performance for all seven types of color vision deficiency in the MobileNetV2 evaluations.",
+              "Der dreistufige hybride Filteransatz wiederum steigerte in den Bewertungen mit MobileNetV2 die Klassifikationsleistung bei allen sieben Arten von Farbsehschwäche.",
             ),
           },
+          {
+            type: "p",
+            text: L(
+              "Bu sonuçlar, geliştirilen filtrelerin simüle edilmiş görüntüler üzerindeki sınıflandırma başarısına katkısını ortaya koydu.",
+              "These results showed how the filters contributed to classification success on simulated images.",
+              "Diese Ergebnisse zeigten den Beitrag der Filter zum Klassifikationserfolg auf simulierten Bildern.",
+            ),
+          },
+          { type: "publications" },
         ],
       },
       {
@@ -447,9 +492,25 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Symmetry makalesindeki yazar katkı beyanına göre yöntem, yazılım, doğrulama, analiz, araştırma, veri düzenleme, yazım ve görselleştirmede yer aldım. Concurrency and Computation makalesini Dr. Öğr. Üyesi Fatma Akalın ile birlikte yazdık.",
-              "According to the author contribution statement of the Symmetry paper, I worked on methodology, software, validation, formal analysis, investigation, data curation, writing, and visualization. I co-authored the Concurrency and Computation paper with Asst. Prof. Fatma Akalın.",
-              "Laut Beitragserklärung des Symmetry-Artikels war ich an Methodik, Software, Validierung, Analyse, Untersuchung, Datenaufbereitung, Schreiben und Visualisierung beteiligt. Den Artikel in Concurrency and Computation habe ich gemeinsam mit Dr. Fatma Akalın verfasst.",
+              "Symmetry çalışmasında özgün filtre yöntemlerinin geliştirilmesi, yazılımın uygulanması, deneysel analizler, veri düzenleme ve sonuçların görselleştirilmesi süreçlerinde aktif rol aldım.",
+              "In the Symmetry study I took an active part in developing the original filter methods, implementing the software, the experimental analyses, data curation, and visualizing the results.",
+              "In der Symmetry-Studie war ich aktiv an der Entwicklung der eigenen Filtermethoden, der Softwareumsetzung, den experimentellen Analysen, der Datenaufbereitung und der Visualisierung der Ergebnisse beteiligt.",
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "Concurrency and Computation çalışmasını Dr. Öğr. Üyesi Fatma Akalın ile birlikte yürüttüm ve makalenin hazırlanmasına katkı sağladım.",
+              "I carried out the Concurrency and Computation study together with Asst. Prof. Fatma Akalın and contributed to preparing the paper.",
+              "Die Studie in Concurrency and Computation habe ich gemeinsam mit Dr. Fatma Akalın durchgeführt und zur Erstellung des Artikels beigetragen.",
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "Her iki araştırma da 2025 yılında uluslararası hakemli dergilerde yayımlandı.",
+              "Both studies were published in international peer-reviewed journals in 2025.",
+              "Beide Studien wurden 2025 in internationalen begutachteten Fachzeitschriften veröffentlicht.",
             ),
           },
         ],

@@ -4,6 +4,7 @@ import type { Publication } from "@/content/types";
 import { href, type Locale } from "@/lib/i18n";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import { PublicationCard } from "@/components/research/PublicationCard";
 
 type Props = { locale: Locale; copy: Dictionary["research"]; publications: Publication[] };
 
@@ -44,27 +45,8 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
           <h3 className="sr-only">{copy.publications}</h3>
           <ol className="grid h-full gap-6">
             {publications.map((pub) => (
-              <li key={pub.id} className={`${card} flex flex-col`}>
-                <p className="text-label font-medium text-ink-muted">
-                  <span className="text-ink">{pub.journal}</span> · {pub.details} · {pub.date[locale]}
-                </p>
-                <p className="mt-3 font-display text-h3 leading-snug text-ink">{pub.title}</p>
-                <p className="mt-2 text-sm text-ink-muted">
-                  {pub.authors.map((author, i) => (
-                    <span key={author}>
-                      {i > 0 && ", "}
-                      {author === "Dilara Top" ? <strong className="font-semibold text-ink">{author}</strong> : author}
-                    </span>
-                  ))}
-                </p>
-                <a
-                  href={`https://doi.org/${pub.doi}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex h-9 w-fit items-center gap-2 rounded-full bg-blue px-4 text-[0.8125rem] text-paper transition-colors duration-200 hover:bg-ink"
-                >
-                  doi:{pub.doi} <span aria-hidden="true">↗</span>
-                </a>
+              <li key={pub.id} className="flex">
+                <PublicationCard pub={pub} locale={locale} className="w-full" />
               </li>
             ))}
           </ol>

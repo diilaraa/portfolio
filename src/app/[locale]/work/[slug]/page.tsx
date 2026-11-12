@@ -124,13 +124,13 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/wor
           </div>
         </aside>
 
-        <div className="grid gap-14 lg:col-span-8 lg:max-w-[46rem]">
+        <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] gap-14 lg:col-span-8 lg:max-w-[46rem]">
           {study.sections.map((section) => (
             <section key={section.id} id={section.id} aria-labelledby={`${section.id}-title`} className="scroll-mt-24">
               <h2 id={`${section.id}-title`} className="font-display text-h2 text-ink">
                 {section.title[locale]}
               </h2>
-              <div className="mt-6 grid gap-6">
+              <div className="mt-6 grid grid-cols-[minmax(0,1fr)] gap-6">
                 {section.blocks.map((block, i) => (
                   <CaseBlock key={i} block={block} locale={locale} />
                 ))}

@@ -51,15 +51,15 @@ export const projects: Project[] = [
       de: "Bildverarbeitungsfilter für Farbsehschwächen",
     },
     summary: {
-      tr: "Yedi farklı renk görme tipine yönelik özgün görüntü işleme filtreleri tasarladım. Filtrelerin etkinliğini MobileNet tabanlı modellerle değerlendirdik. Araştırma bulguları, iki uluslararası hakemli dergide yayımlanan makalelere dönüştü.",
-      en: "I designed original image processing filters for seven types of color vision deficiency. We evaluated the filters' effectiveness with MobileNet-based models. The findings became papers published in two international peer-reviewed journals.",
-      de: "Ich habe eigene Bildverarbeitungsfilter für sieben Arten von Farbsehschwäche entworfen. Die Wirksamkeit der Filter haben wir mit MobileNet-basierten Modellen bewertet. Aus den Ergebnissen entstanden Artikel in zwei internationalen begutachteten Fachzeitschriften.",
+      tr: "Yedi farklı renk görme tipine yönelik özgün görüntü işleme filtreleri tasarladım. Filtrelerin geliştirilmesi, uygulanması ve değerlendirilmesi süreçlerinde görev aldım. Araştırma bulguları, iki uluslararası hakemli dergide yayımlanan makalelere dönüştü.",
+      en: "I designed original image processing filters for seven types of color vision deficiency and worked on developing, applying, and evaluating them. The findings became papers published in two international peer-reviewed journals.",
+      de: "Ich habe eigene Bildverarbeitungsfilter für sieben Arten von Farbsehschwäche entworfen und an ihrer Entwicklung, Anwendung und Bewertung mitgearbeitet. Aus den Ergebnissen entstanden Artikel in zwei internationalen begutachteten Fachzeitschriften.",
     },
     period: { tr: "2025", en: "2025", de: "2025" },
     role: {
-      tr: "Yöntem, yazılım, analiz ve görselleştirme",
-      en: "Methodology, software, analysis, and visualization",
-      de: "Methodik, Software, Analyse und Visualisierung",
+      tr: "Araştırmacı · Yöntem geliştirme, yazılım ve analiz",
+      en: "Researcher · Method development, software, and analysis",
+      de: "Forscherin · Methodenentwicklung, Software und Analyse",
     },
     stack: ["Python", "OpenCV", "NumPy", "MobileNetV1", "MobileNetV2"],
     cover: {
