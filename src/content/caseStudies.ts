@@ -111,29 +111,9 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Klinik analiz modülünde, farklı kaynaklardan elde edilen iki veri seti üzerinde çalıştık:",
-              "In the clinical analysis module we worked with two datasets from different sources:",
-              "Im klinischen Analysemodul haben wir mit zwei Datensätzen aus verschiedenen Quellen gearbeitet:",
-            ),
-          },
-          {
-            type: "list",
-            items: LL(
-              [
-                "Kaggle'dan alınan 25.000 gözlemli Monkey-Pox Patients veri seti.",
-                "GitHub'dan alınan 211 gözlemli MonkeyPoxDetection veri seti.",
-                "Veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi.",
-              ],
-              [
-                "The Monkey-Pox Patients dataset from Kaggle, with 25,000 observations.",
-                "The MonkeyPoxDetection dataset from GitHub, with 211 observations.",
-                "We ran exploratory data analysis (EDA) on the datasets and cleaned the data.",
-              ],
-              [
-                "Der Monkey-Pox-Patients-Datensatz von Kaggle mit 25.000 Beobachtungen.",
-                "Der MonkeyPoxDetection-Datensatz von GitHub mit 211 Beobachtungen.",
-                "Auf den Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt.",
-              ],
+              "Klinik analiz modülünde, farklı kaynaklardan elde edilen iki veri seti üzerinde çalıştık. Veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi.",
+              "In the clinical analysis module we worked with two datasets from different sources. We ran exploratory data analysis (EDA) on the datasets and cleaned the data.",
+              "Im klinischen Analysemodul haben wir mit zwei Datensätzen aus verschiedenen Quellen gearbeitet. Auf den Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt.",
             ),
           },
           {
