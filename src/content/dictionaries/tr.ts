@@ -72,7 +72,7 @@ export const tr = {
     title: "Renk görme farklılıkları için özgün görüntü işleme filtreleri",
     about: [
       "Renk görme farklılıkları yaşayan kişiler, bazı renkleri ve renk kontrastlarını ayırt etmekte zorlanabilir. Araştırmalarımızda, dijital görüntülerin farklı renk görme tipleri için daha ayırt edilebilir hâle gelmesini amaçlayan özgün hibrit filtreler geliştirdik.",
-      "Daltonization algoritmasını farklı görüntü işleme teknikleriyle birleştirerek geliştirdiğimiz filtrelerin etkinliğini MobileNetV1 ve MobileNetV2 modelleriyle değerlendirdik.",
+      "Geliştirdiğimiz filtrelerin etkinliğini derin öğrenme modelleriyle değerlendirdik.",
     ],
     resultLabel: "Araştırma sonucu",
     imageCaption: "Ishihara test plakası: orijinal görüntü ve özgün filtreyle işlenmiş hâli.",

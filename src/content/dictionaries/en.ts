@@ -75,7 +75,7 @@ export const en: Dictionary = {
     title: "Original image processing filters for color vision deficiency",
     about: [
       "People with color vision deficiency can find it hard to tell some colors and color contrasts apart. In our research we developed original hybrid filters that aim to make digital images easier to distinguish for different types of color vision.",
-      "We combined the daltonization algorithm with other image processing techniques and evaluated the filters' effectiveness with MobileNetV1 and MobileNetV2 models.",
+      "We evaluated the effectiveness of our filters with deep learning models.",
     ],
     resultLabel: "Research result",
     imageCaption: "Ishihara test plate: the original image and the same plate processed with our filter.",

@@ -75,7 +75,7 @@ export const de: Dictionary = {
     title: "Eigene Bildverarbeitungsfilter für Farbsehschwächen",
     about: [
       "Menschen mit Farbsehschwächen fällt es oft schwer, bestimmte Farben und Farbkontraste zu unterscheiden. In unserer Forschung haben wir eigene hybride Filter entwickelt, die digitale Bilder für verschiedene Formen des Farbsehens besser unterscheidbar machen sollen.",
-      "Dazu haben wir den Daltonisierungsalgorithmus mit weiteren Bildverarbeitungstechniken kombiniert und die Wirksamkeit der Filter mit den Modellen MobileNetV1 und MobileNetV2 bewertet.",
+      "Die Wirksamkeit unserer Filter haben wir mit Deep-Learning-Modellen bewertet.",
     ],
     resultLabel: "Forschungsergebnis",
     imageCaption: "Ishihara-Tafel: das Originalbild und dieselbe Tafel nach unserem Filter.",

@@ -65,7 +65,6 @@ export function ResearchHighlight({ locale, copy, publications }: Props) {
                 >
                   doi:{pub.doi} <span aria-hidden="true">↗</span>
                 </a>
-                <ResultPanel label={copy.resultLabel} result={pub.result} locale={locale} />
               </li>
             ))}
           </ol>
