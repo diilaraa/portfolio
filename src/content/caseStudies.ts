@@ -111,17 +111,50 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Klinik veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi. Analiz, ateş ve döküntü gibi semptomların sağlıklı bireylerde de sık görüldüğünü; bu yüzden tek bir semptoma dayalı kararın yetersiz olduğunu gösterdi.",
-              "We ran exploratory data analysis (EDA) on the clinical datasets and cleaned the data. The analysis showed that symptoms such as fever and rash are also common in healthy people, so a single symptom is not enough to decide.",
-              "Auf den klinischen Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt. Sie zeigte, dass Symptome wie Fieber und Ausschlag auch bei Gesunden häufig sind – ein einzelnes Symptom reicht für eine Entscheidung nicht aus.",
+              "Klinik analiz modülünde, farklı kaynaklardan elde edilen iki veri seti üzerinde çalıştık: Kaggle'dan alınan 25.000 gözlemli Monkey-Pox Patients veri seti ve GitHub'dan alınan 211 gözlemli MonkeyPoxDetection veri seti.",
+              "In the clinical analysis module we worked with two datasets from different sources: the Monkey-Pox Patients dataset from Kaggle with 25,000 observations and the MonkeyPoxDetection dataset from GitHub with 211 observations.",
+              "Im klinischen Analysemodul haben wir mit zwei Datensätzen aus verschiedenen Quellen gearbeitet: dem Monkey-Pox-Patients-Datensatz von Kaggle mit 25.000 Beobachtungen und dem MonkeyPoxDetection-Datensatz von GitHub mit 211 Beobachtungen.",
             ),
           },
           {
             type: "p",
             text: L(
-              "Risk değerlendirmesi için SVM, Lojistik Regresyon, CatBoost, XGBoost, Naive Bayes ve Random Forest modellerini ağırlıklı bir Voting Classifier'da birleştirdik. Model, 0,64 karar eşiğiyle hasta sınıfında 0,90 recall ve 0,91 F1'e ulaştı; sağlıklı sınıfta recall 0,40 oldu.",
-              "For the risk assessment we combined SVM, Logistic Regression, CatBoost, XGBoost, Naive Bayes, and Random Forest in a weighted Voting Classifier. With a 0.64 decision threshold it reached 0.90 recall and 0.91 F1 for the patient class; recall for the healthy class was 0.40.",
-              "Für die Risikoeinschätzung haben wir SVM, logistische Regression, CatBoost, XGBoost, Naive Bayes und Random Forest in einem gewichteten Voting Classifier kombiniert. Mit Schwellenwert 0,64 erreichte er für die Klasse „erkrankt“ einen Recall von 0,90 und F1 von 0,91; für die Klasse „gesund“ lag der Recall bei 0,40.",
+              "Veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi. Analiz, ateş ve döküntü gibi semptomların sağlıklı bireylerde de sık görüldüğünü; bu yüzden tek bir semptoma dayalı kararın yetersiz olduğunu gösterdi.",
+              "We ran exploratory data analysis (EDA) on the datasets and cleaned the data. The analysis showed that symptoms such as fever and rash are also common in healthy people, so a single symptom is not enough to decide.",
+              "Auf den Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt. Sie zeigte, dass Symptome wie Fieber und Ausschlag auch bei Gesunden häufig sind – ein einzelnes Symptom reicht für eine Entscheidung nicht aus.",
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "İki veri seti için farklı topluluk öğrenmesi yaklaşımları geliştirdik:",
+              "We developed a different ensemble learning approach for each dataset:",
+              "Für die beiden Datensätze haben wir unterschiedliche Ensemble-Ansätze entwickelt:",
+            ),
+          },
+          {
+            type: "list",
+            items: LL(
+              [
+                "Stacking Ensemble: SVM ve Random Forest modellerinin çıktıları, Gradient Boosting meta-öğrenicisiyle birleştirildi.",
+                "Weighted Voting Classifier: SVM, Lojistik Regresyon, CatBoost, XGBoost, Naive Bayes ve Random Forest modelleri ağırlıklı oylama yöntemiyle bir araya getirildi.",
+              ],
+              [
+                "Stacking Ensemble: the outputs of SVM and Random Forest models were combined by a Gradient Boosting meta-learner.",
+                "Weighted Voting Classifier: SVM, Logistic Regression, CatBoost, XGBoost, Naive Bayes, and Random Forest models were combined by weighted voting.",
+              ],
+              [
+                "Stacking Ensemble: Die Ausgaben von SVM- und Random-Forest-Modellen wurden durch einen Gradient-Boosting-Meta-Learner kombiniert.",
+                "Weighted Voting Classifier: SVM, logistische Regression, CatBoost, XGBoost, Naive Bayes und Random Forest wurden per gewichteter Abstimmung zusammengeführt.",
+              ],
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "Modeller, 0,64 karar eşiğiyle değerlendirildi. Stacking modeli 0,79 F1 skoruna, Weighted Voting modeli ise 0,91 F1 skoruna ulaştı. Voting modeli hasta sınıfında 0,90 recall değeri elde etti.",
+              "The models were evaluated with a 0.64 decision threshold. The stacking model reached an F1 score of 0.79 and the weighted voting model 0.91. The voting model achieved a recall of 0.90 for the patient class.",
+              "Die Modelle wurden mit einem Entscheidungsschwellenwert von 0,64 bewertet. Das Stacking-Modell erreichte einen F1-Wert von 0,79, das Weighted-Voting-Modell 0,91. Das Voting-Modell erzielte für die Klasse „erkrankt“ einen Recall von 0,90.",
             ),
           },
           {
@@ -165,20 +198,19 @@ export const caseStudies: CaseStudy[] = [
         title: L("Görüntü analizi modülü", "Image analysis module", "Bildanalysemodul"),
         blocks: [
           {
-            type: "list",
-            items: LL(
-              [
-                "Görüntü verisi: iki açık lezyon görüntü veri seti birleştirildi; altı sınıf (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) 5 katlı çapraz doğrulama yapısında düzenlendi.",
-                "Etiketleme: veri setlerinde lezyon koordinatı olmadığı için her görüntü, tamamını kapsayan tek bir kutu ile etiketlendi. Bu yüzden değerlendirme, görüntü düzeyinde sınıflandırma metrikleriyle (precision, recall, F1) yapıldı.",
-              ],
-              [
-                "Image data: two public skin-lesion image datasets were merged and organized into six classes (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) with 5-fold cross-validation.",
-                "Labeling: the datasets have no lesion coordinates, so each image was labeled with a single box covering the whole image. Evaluation therefore uses image-level classification metrics (precision, recall, F1).",
-              ],
-              [
-                "Bilddaten: Zwei öffentliche Datensätze mit Hautläsionsbildern wurden zusammengeführt und in sechs Klassen (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) mit 5-facher Kreuzvalidierung organisiert.",
-                "Annotation: Die Datensätze enthalten keine Läsionskoordinaten, daher wurde jedes Bild mit einer Box über das ganze Bild annotiert. Bewertet wird deshalb mit Klassifikationsmetriken auf Bildebene (Precision, Recall, F1).",
-              ],
+            type: "p",
+            text: L(
+              "Görüntü analizi için iki farklı kaynaktan elde edilen deri lezyonu görüntülerini bir araya getirerek altı sınıflı bir veri seti oluşturduk: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD ve Measles.",
+              "For image analysis we combined skin-lesion images from two different sources into a six-class dataset: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, and Measles.",
+              "Für die Bildanalyse haben wir Hautläsionsbilder aus zwei Quellen zu einem Datensatz mit sechs Klassen zusammengeführt: Monkeypox, Healthy, Cowpox, Chickenpox, HFMD und Measles.",
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "Veri setini beş katlı çapraz doğrulama yaklaşımına göre düzenledik. Görüntülerde önceden tanımlanmış lezyon sınırları bulunmadığından, her görüntüyü bütünüyle kapsayan bir sınırlayıcı kutuyla etiketledik. Böylece modelin performansını görüntü düzeyinde precision, recall ve F1 metrikleriyle değerlendirdik.",
+              "We organized the dataset for five-fold cross-validation. Since the images had no predefined lesion boundaries, we labeled each image with a bounding box covering the whole image, and evaluated the model at image level with precision, recall, and F1.",
+              "Den Datensatz haben wir für eine fünffache Kreuzvalidierung aufbereitet. Da die Bilder keine vordefinierten Läsionsgrenzen hatten, haben wir jedes Bild mit einer Bounding Box über das gesamte Bild annotiert und das Modell auf Bildebene mit Precision, Recall und F1 bewertet.",
             ),
           },
         ],
@@ -190,9 +222,23 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Lezyonları model için daha belirgin hâle getirmek amacıyla özgün bir görüntü işleme filtresi tasarladık. Görüntüler, modele verilmeden önce bu filtreden geçiriliyor.",
-              "We designed an original image processing filter to make lesions more distinct for the model. Images pass through this filter before they reach the model.",
-              "Wir haben einen eigenen Bildverarbeitungsfilter entworfen, der Läsionen für das Modell deutlicher macht. Die Bilder durchlaufen diesen Filter, bevor sie das Modell erreichen.",
+              "Lezyon görüntülerindeki ayırt edici özellikleri belirginleştirmek amacıyla özgün bir görüntü işleme filtresi geliştirdik. Model eğitiminden ve tahmin aşamasından önce görüntülere uygulanan bu filtreyi farklı model yapılandırmalarıyla karşılaştırarak katkısını değerlendirdik.",
+              "We developed an original image processing filter to bring out the distinguishing features in lesion images. The filter is applied to the images before training and before prediction, and we assessed its contribution by comparing different model configurations.",
+              "Wir haben einen eigenen Bildverarbeitungsfilter entwickelt, der die unterscheidenden Merkmale in Läsionsbildern hervorhebt. Der Filter wird vor dem Training und vor der Vorhersage angewendet; seinen Beitrag haben wir durch den Vergleich verschiedener Modellkonfigurationen bewertet.",
+            ),
+          },
+          {
+            type: "image",
+            image: mpoxImg(
+              "filter-pipeline.webp",
+              1851,
+              679,
+              L(
+                "Özgün filtrenin adımları: orijinal görüntü, BGR'den Lab renk uzayına dönüşüm ve L kanalının ayrılması, db1 dalgacığıyla 2B ayrık dalgacık dönüşümü (LL, LH, HL, HH), LH, HL ve HH bileşenlerinin IDWT ile sentezlenerek keskinleştirilmesi, adaptif histogram eşitleme ve L kanalının renk kanallarıyla birleştirilmesiyle iyileştirilmiş görüntü.",
+                "Steps of the original filter: original image, BGR to Lab conversion and isolation of the L channel, a 2D discrete wavelet transform with db1 (LL, LH, HL, HH), sharpening by synthesizing the LH, HL, and HH components with IDWT, adaptive histogram equalization, and the enhanced image after merging the L channel with the color channels.",
+                "Schritte des eigenen Filters: Originalbild, Umwandlung von BGR nach Lab und Isolierung des L-Kanals, 2D-Wavelet-Transformation mit db1 (LL, LH, HL, HH), Schärfung durch Synthese der Komponenten LH, HL und HH per IDWT, adaptiver Histogrammausgleich und das verbesserte Bild nach Zusammenführung des L-Kanals mit den Farbkanälen.",
+              ),
+              L("Özgün görüntü işleme filtresinin adımları", "Steps of the original image processing filter", "Schritte des eigenen Bildverarbeitungsfilters"),
             ),
           },
         ],
@@ -202,23 +248,11 @@ export const caseStudies: CaseStudy[] = [
         title: L("Model eğitimi ve optimizasyon", "Model training and optimization", "Modelltraining und Optimierung"),
         blocks: [
           {
-            type: "list",
-            items: LL(
-              [
-                "YOLOv9, 5 katlı çapraz doğrulamanın her katında ayrı eğitildi; beş model ağırlığı (fold1–fold5) birlikte, bir topluluk (ensemble) olarak kullanılıyor.",
-                "AdamW ve MuSGD optimizasyon algoritmaları karşılaştırıldı; en iyi sonuç MuSGD ve ardından yapılan ince ayar (fine-tuning) ile elde edildi.",
-                "Tahmin sırasında görüntü filtreden geçirilip beş modele sunuluyor; %45 güven eşiğini aşan tespitler arasında çoğunluk oyu kazanıyor.",
-              ],
-              [
-                "YOLOv9 was trained separately on each fold of the 5-fold cross-validation; the five model weights (fold1–fold5) are used together as an ensemble.",
-                "The AdamW and MuSGD optimizers were compared; the best result came from MuSGD followed by fine-tuning.",
-                "At prediction time the image passes through the filter and goes to all five models; among detections above a 45% confidence threshold, the majority vote wins.",
-              ],
-              [
-                "YOLOv9 wurde auf jedem Fold der 5-fachen Kreuzvalidierung separat trainiert; die fünf Modellgewichte (fold1–fold5) werden gemeinsam als Ensemble genutzt.",
-                "Die Optimierer AdamW und MuSGD wurden verglichen; das beste Ergebnis lieferte MuSGD mit anschließender Feinabstimmung.",
-                "Bei der Vorhersage durchläuft das Bild den Filter und geht an alle fünf Modelle; unter den Erkennungen über 45 % Konfidenz gewinnt die Mehrheit.",
-              ],
+            type: "p",
+            text: L(
+              "YOLOv9 modelini beş katlı çapraz doğrulama kapsamında beş ayrı model olarak eğittik. Eğitim sürecinde AdamW ve MuSGD optimizasyon algoritmalarını karşılaştırdık; en iyi sonucu MuSGD ile gerçekleştirilen eğitim ve ardından uygulanan ince ayar aşamasında elde ettik.",
+              "We trained YOLOv9 as five separate models within five-fold cross-validation. During training we compared the AdamW and MuSGD optimizers; the best result came from training with MuSGD followed by a fine-tuning stage.",
+              "Wir haben YOLOv9 im Rahmen der fünffachen Kreuzvalidierung als fünf separate Modelle trainiert. Dabei haben wir die Optimierer AdamW und MuSGD verglichen; das beste Ergebnis lieferte das Training mit MuSGD und die anschließende Feinabstimmung.",
             ),
           },
         ],
@@ -230,9 +264,9 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "table",
             caption: L(
-              "Görüntü modülü: altı sınıf, 5 katlı çapraz doğrulama ortalamaları (Tez, Tablo 4.6–4.7)",
-              "Image module: six classes, 5-fold cross-validation averages (thesis, Tables 4.6–4.7)",
-              "Bildmodul: sechs Klassen, Mittelwerte der 5-fachen Kreuzvalidierung (Abschlussarbeit, Tab. 4.6–4.7)",
+              "Görüntü modülü: altı sınıf, 5 katlı çapraz doğrulama ortalamaları",
+              "Image module: six classes, 5-fold cross-validation averages",
+              "Bildmodul: sechs Klassen, Mittelwerte der 5-fachen Kreuzvalidierung",
             ),
             head: LL(["Yapılandırma", "Precision", "Recall", "F1"], ["Configuration", "Precision", "Recall", "F1"], ["Konfiguration", "Precision", "Recall", "F1"]),
             rows: [
@@ -250,9 +284,9 @@ export const caseStudies: CaseStudy[] = [
               { value: "0.8106", label: L("En düşük: Cowpox F1", "Lowest: Cowpox F1", "Niedrigster: Cowpox F1") },
             ],
             note: L(
-              "Sınıf bazlı değerler 5 katlı ortalamadır (Tez, Tablo 4.8). Cowpox, Monkeypox ve Chickenpox ile benzerliği nedeniyle en zor ayrışan sınıf oldu.",
-              "Per-class values are 5-fold averages (thesis, Table 4.8). Cowpox was the hardest class to separate because of its similarity to Monkeypox and Chickenpox.",
-              "Klassenwerte sind Mittelwerte über 5 Folds (Abschlussarbeit, Tab. 4.8). Cowpox war wegen der Ähnlichkeit zu Monkeypox und Chickenpox am schwersten zu trennen.",
+              "Sınıf bazlı değerler 5 katlı ortalamadır. Cowpox, Monkeypox ve Chickenpox ile benzerliği nedeniyle en zor ayrışan sınıf oldu.",
+              "Per-class values are 5-fold averages. Cowpox was the hardest class to separate because of its similarity to Monkeypox and Chickenpox.",
+              "Klassenwerte sind Mittelwerte über 5 Folds. Cowpox war wegen der Ähnlichkeit zu Monkeypox und Chickenpox am schwersten zu trennen.",
             ),
           },
           {
@@ -295,6 +329,20 @@ export const caseStudies: CaseStudy[] = [
                 "Globales Mpox-Epidemiologie-Dashboard: interaktive Weltkarte bestätigter und Verdachtsfälle, Länder mit den meisten Fällen und tägliche Fallzeitreihe.",
               ),
               L("Küresel epidemiyoloji paneli", "Global epidemiology dashboard", "Globales Epidemiologie-Dashboard"),
+            ),
+          },
+          {
+            type: "image",
+            image: mpoxImg(
+              "epidemiology-charts.webp",
+              1878,
+              991,
+              L(
+                "Epidemiyoloji panelindeki altı grafik: doğrulanmış ve şüpheli vakaların koroplet haritası, en çok vaka görülen 10 ülkenin pasta grafiği, küresel günlük vaka eğilimi, ilk 10 ülkenin günlük vaka karşılaştırması, ithal ve yerel vakaları gösteren bulaş dinamikleri ve hastaneye yatış oranına göre hastalık şiddeti dağılımı.",
+                "Six charts from the epidemiology dashboard: a choropleth map of confirmed and suspected cases, a pie chart of the 10 countries with the most cases, the global daily case trend, a daily case comparison of the top 10 countries, transmission dynamics of imported versus local cases, and disease severity by hospitalization rate.",
+                "Sechs Diagramme des Epidemiologie-Dashboards: Choroplethenkarte bestätigter und Verdachtsfälle, Kreisdiagramm der 10 Länder mit den meisten Fällen, globaler täglicher Fallverlauf, Vergleich der täglichen Fälle der Top-10-Länder, Übertragungsdynamik importierter und lokaler Fälle sowie Krankheitsschwere nach Hospitalisierungsrate.",
+              ),
+              L("Epidemiyoloji grafikleri", "Epidemiology charts", "Epidemiologie-Diagramme"),
             ),
           },
         ],
