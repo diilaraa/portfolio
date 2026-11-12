@@ -57,9 +57,9 @@ export const projects: Project[] = [
     },
     period: { tr: "2025", en: "2025", de: "2025" },
     role: {
-      tr: "Araştırmacı · Yöntem geliştirme, yazılım ve analiz",
-      en: "Researcher · Method development, software, and analysis",
-      de: "Forscherin · Methodenentwicklung, Software und Analyse",
+      tr: "Özgün filtre geliştirme · Deneysel değerlendirme · Akademik yazım",
+      en: "Original filter development · Experimental evaluation · Academic writing",
+      de: "Entwicklung eigener Filter · Experimentelle Bewertung · Wissenschaftliches Schreiben",
     },
     stack: ["Python", "OpenCV", "NumPy", "MobileNetV1", "MobileNetV2"],
     cover: {
