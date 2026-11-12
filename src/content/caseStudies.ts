@@ -469,36 +469,6 @@ export const caseStudies: CaseStudy[] = [
           { type: "publications" },
         ],
       },
-      {
-        id: "contribution",
-        title: L("Katkım", "My contribution", "Mein Beitrag"),
-        blocks: [
-          {
-            type: "p",
-            text: L(
-              "Symmetry çalışmasında özgün filtre yöntemlerinin geliştirilmesi, yazılımın uygulanması, deneysel analizler, veri düzenleme ve sonuçların görselleştirilmesi süreçlerinde aktif rol aldım.",
-              "In the Symmetry study I took an active part in developing the original filter methods, implementing the software, the experimental analyses, data curation, and visualizing the results.",
-              "In der Symmetry-Studie war ich aktiv an der Entwicklung der eigenen Filtermethoden, der Softwareumsetzung, den experimentellen Analysen, der Datenaufbereitung und der Visualisierung der Ergebnisse beteiligt.",
-            ),
-          },
-          {
-            type: "p",
-            text: L(
-              "Concurrency and Computation çalışmasını Dr. Öğr. Üyesi Fatma Akalın ile birlikte yürüttüm ve makalenin hazırlanmasına katkı sağladım.",
-              "I carried out the Concurrency and Computation study together with Asst. Prof. Fatma Akalın and contributed to preparing the paper.",
-              "Die Studie in Concurrency and Computation habe ich gemeinsam mit Dr. Fatma Akalın durchgeführt und zur Erstellung des Artikels beigetragen.",
-            ),
-          },
-          {
-            type: "p",
-            text: L(
-              "Her iki araştırma da 2025 yılında uluslararası hakemli dergilerde yayımlandı.",
-              "Both studies were published in international peer-reviewed journals in 2025.",
-              "Beide Studien wurden 2025 in internationalen begutachteten Fachzeitschriften veröffentlicht.",
-            ),
-          },
-        ],
-      },
     ],
   },
 
