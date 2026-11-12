@@ -61,6 +61,16 @@ export const projects: Project[] = [
       en: "Original filter development · Experimental evaluation · Academic writing",
       de: "Entwicklung eigener Filter · Experimentelle Bewertung · Wissenschaftliches Schreiben",
     },
+    team: {
+      tr: "Esma Kara, Nilgün Özkan Aksoy",
+      en: "Esma Kara, Nilgün Özkan Aksoy",
+      de: "Esma Kara, Nilgün Özkan Aksoy",
+    },
+    advisor: {
+      tr: "Dr. Öğr. Üyesi Fatma Akalın",
+      en: "Asst. Prof. Fatma Akalın",
+      de: "Dr. Fatma Akalın",
+    },
     stack: ["Python", "OpenCV", "NumPy", "MobileNetV1", "MobileNetV2"],
     cover: {
       src: "/images/work/cvd-image-filters/ishihara-after.webp",
