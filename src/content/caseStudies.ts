@@ -148,36 +148,16 @@ export const caseStudies: CaseStudy[] = [
             type: "list",
             items: LL(
               [
-                "Stacking Ensemble: SVM ve Random Forest modellerinin çıktıları, Gradient Boosting meta-öğrenicisiyle birleştirildi.",
-                "Weighted Voting Classifier: SVM, Lojistik Regresyon, CatBoost, XGBoost, Naive Bayes ve Random Forest modelleri ağırlıklı oylama yöntemiyle bir araya getirildi.",
+                "Stacking Ensemble: SVM ve Random Forest modellerinin çıktıları, Gradient Boosting meta-öğrenicisiyle birleştirildi. Stacking modeli 0,79 F1 skoruna ulaştı.",
+                "Weighted Voting Classifier: SVM, Lojistik Regresyon, CatBoost, XGBoost, Naive Bayes ve Random Forest modelleri ağırlıklı oylama yöntemiyle bir araya getirildi. Weighted Voting modeli 0,64 karar eşiğiyle 0,91 F1 skoruna ulaştı. Voting modeli hasta sınıfında 0,90 recall değeri elde etti.",
               ],
               [
-                "Stacking Ensemble: the outputs of SVM and Random Forest models were combined by a Gradient Boosting meta-learner.",
-                "Weighted Voting Classifier: SVM, Logistic Regression, CatBoost, XGBoost, Naive Bayes, and Random Forest models were combined by weighted voting.",
+                "Stacking Ensemble: the outputs of SVM and Random Forest models were combined by a Gradient Boosting meta-learner. The stacking model reached an F1 score of 0.79.",
+                "Weighted Voting Classifier: SVM, Logistic Regression, CatBoost, XGBoost, Naive Bayes, and Random Forest models were combined by weighted voting. With a 0.64 decision threshold, the weighted voting model reached an F1 score of 0.91. The voting model achieved a recall of 0.90 for the patient class.",
               ],
               [
-                "Stacking Ensemble: Die Ausgaben von SVM- und Random-Forest-Modellen wurden durch einen Gradient-Boosting-Meta-Learner kombiniert.",
-                "Weighted Voting Classifier: SVM, logistische Regression, CatBoost, XGBoost, Naive Bayes und Random Forest wurden per gewichteter Abstimmung zusammengeführt.",
-              ],
-            ),
-          },
-          {
-            type: "list",
-            items: LL(
-              [
-                "Stacking modeli 0,79 F1 skoruna ulaştı.",
-                "Weighted Voting modeli 0,64 karar eşiğiyle 0,91 F1 skoruna ulaştı.",
-                "Voting modeli hasta sınıfında 0,90 recall değeri elde etti.",
-              ],
-              [
-                "The stacking model reached an F1 score of 0.79.",
-                "With a 0.64 decision threshold, the weighted voting model reached an F1 score of 0.91.",
-                "The voting model achieved a recall of 0.90 for the patient class.",
-              ],
-              [
-                "Das Stacking-Modell erreichte einen F1-Wert von 0,79.",
-                "Das Weighted-Voting-Modell erreichte mit einem Entscheidungsschwellenwert von 0,64 einen F1-Wert von 0,91.",
-                "Das Voting-Modell erzielte für die Klasse „erkrankt“ einen Recall von 0,90.",
+                "Stacking Ensemble: Die Ausgaben von SVM- und Random-Forest-Modellen wurden durch einen Gradient-Boosting-Meta-Learner kombiniert. Das Stacking-Modell erreichte einen F1-Wert von 0,79.",
+                "Weighted Voting Classifier: SVM, logistische Regression, CatBoost, XGBoost, Naive Bayes und Random Forest wurden per gewichteter Abstimmung zusammengeführt. Das Weighted-Voting-Modell erreichte mit einem Entscheidungsschwellenwert von 0,64 einen F1-Wert von 0,91. Das Voting-Modell erzielte für die Klasse „erkrankt“ einen Recall von 0,90.",
               ],
             ),
           },
