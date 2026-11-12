@@ -119,9 +119,9 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi. Analiz, ateş ve döküntü gibi semptomların sağlıklı bireylerde de sık görüldüğünü; bu yüzden tek bir semptoma dayalı kararın yetersiz olduğunu gösterdi.",
-              "We ran exploratory data analysis (EDA) on the datasets and cleaned the data. The analysis showed that symptoms such as fever and rash are also common in healthy people, so a single symptom is not enough to decide.",
-              "Auf den Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt. Sie zeigte, dass Symptome wie Fieber und Ausschlag auch bei Gesunden häufig sind – ein einzelnes Symptom reicht für eine Entscheidung nicht aus.",
+              "Veri setleri üzerinde keşifçi veri analizi (EDA) yapıldı ve veriler temizlendi.",
+              "We ran exploratory data analysis (EDA) on the datasets and cleaned the data.",
+              "Auf den Datensätzen haben wir eine explorative Datenanalyse (EDA) durchgeführt und die Daten bereinigt.",
             ),
           },
           {
