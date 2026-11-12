@@ -154,10 +154,16 @@ export const projects: Project[] = [
       de: "Ein webbasiertes klinisches Entscheidungsunterstützungssystem zur Erkennung akuter lymphatischer Leukämie (ALL) mit Bildverarbeitung und KI. Mit dem Team SAU InWo erreichten wir das Halbfinale des Wettbewerbs „Technologie zum Wohl der Menschheit“.",
     },
     period: { tr: "Mart – Ağustos 2025", en: "Mar – Aug 2025", de: "März – Aug. 2025" },
-    role: {
-      tr: "Takım kaptanı · Esma Kara ve Hayrunnisa Yılmaz ile",
-      en: "Team captain · with Esma Kara and Hayrunnisa Yılmaz",
-      de: "Teamkapitänin · mit Esma Kara und Hayrunnisa Yılmaz",
+    role: { tr: "Takım Kaptanı", en: "Team Captain", de: "Teamkapitänin" },
+    team: {
+      tr: "Esma Kara, Hayrunnisa Yılmaz",
+      en: "Esma Kara, Hayrunnisa Yılmaz",
+      de: "Esma Kara, Hayrunnisa Yılmaz",
+    },
+    advisor: {
+      tr: "Dr. Öğr. Üyesi Fatma Akalın",
+      en: "Asst. Prof. Fatma Akalın",
+      de: "Dr. Fatma Akalın",
     },
     stack: ["Python", "OpenCV", "NumPy", "SciPy", "YOLOv9", "Flask"],
     cover: {
