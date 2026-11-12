@@ -94,8 +94,8 @@ export function CaseBlock({ block, locale }: { block: Block; locale: Locale }) {
       return (
         <figure className="rounded-2xl border border-line bg-paper p-5">
           {block.title && <p className="mb-4 font-display text-h3 text-ink">{block.title[locale]}</p>}
-          {/* One filter shown as a flow of stages, so no numbering: arrows lead from one stage to the next. */}
-          <ol className="flex gap-4 overflow-x-auto pb-1">
+          {/* Example outputs from a paper's filter stages, unnumbered: arrows only show the order. */}
+          <ul className="flex gap-4 overflow-x-auto pb-1">
             {block.items.map((step, i) => (
               <li key={step.src} className="relative flex min-w-[5.25rem] max-w-[9rem] flex-1 flex-col items-center text-center">
                 <Image src={step.src} width={step.width} height={step.height} alt="" className="aspect-square w-full rounded-lg object-cover" />
@@ -107,7 +107,7 @@ export function CaseBlock({ block, locale }: { block: Block; locale: Locale }) {
                 <span className="mt-2 text-[0.75rem] leading-snug text-ink">{step.label[locale]}</span>
               </li>
             ))}
-          </ol>
+          </ul>
           {block.caption && <figcaption className="mt-4 text-sm text-ink-muted">{block.caption[locale]}</figcaption>}
         </figure>
       );

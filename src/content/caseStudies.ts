@@ -411,9 +411,9 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "İki araştırmada geliştirilen filtrelerin aşamalarını aşağıdaki görsellerde karşılaştırmalı olarak inceleyebilirsiniz.",
-              "The images below compare the stages of the filters developed in the two studies.",
-              "Die folgenden Bilder vergleichen die Stufen der in beiden Studien entwickelten Filter.",
+              "Makalelerde filtreler aşama aşama geliştirilerek sunuldu. Aşağıdaki görseller, bu aşamalardan örnek çıktıları gösteriyor.",
+              "In the papers, the filters are presented stage by stage. The images below show example outputs from these stages.",
+              "In den Artikeln werden die Filter Stufe für Stufe vorgestellt. Die folgenden Bilder zeigen Beispielergebnisse aus diesen Stufen.",
             ),
           },
           {
@@ -429,9 +429,9 @@ export const caseStudies: CaseStudy[] = [
               plate("sym-step-6", 147, 145, L("Kontrast ve parlaklık", "Contrast and brightness", "Kontrast und Helligkeit")),
             ],
             caption: L(
-              "Orijinal görüntü ve filtre geliştirme sürecindeki aşamalar.",
-              "The original image and the stages of the filter's development.",
-              "Das Originalbild und die Stufen der Filterentwicklung.",
+              "Symmetry makalesindeki filtre aşamalarından örnek çıktılar.",
+              "Example outputs from the filter stages in the Symmetry paper.",
+              "Beispielergebnisse aus den Filterstufen im Symmetry-Artikel.",
             ),
           },
           {
@@ -447,9 +447,9 @@ export const caseStudies: CaseStudy[] = [
               plate("cpe-step-2", 169, 168, L("Kaydırma filtresi ve doygunluk", "Shifting filter and saturation", "Verschiebungsfilter und Sättigung")),
             ],
             caption: L(
-              "Orijinal görüntü ve üç aşamalı filtre uygulamasının çıktıları.",
-              "The original image and the outputs of the three-stage filter.",
-              "Das Originalbild und die Ergebnisse des dreistufigen Filters.",
+              "Concurrency and Computation makalesindeki filtre aşamalarından örnek çıktılar.",
+              "Example outputs from the filter stages in the Concurrency and Computation paper.",
+              "Beispielergebnisse aus den Filterstufen im Artikel in Concurrency and Computation.",
             ),
           },
         ],
@@ -461,25 +461,9 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "p",
             text: L(
-              "Beş aşamalı hibrit filtre yaklaşımı, MobileNetV1 ile yapılan değerlendirmelerde sınıflandırma F1 skorunu %33,95'ten %90,31'e yükseltti.",
-              "In the MobileNetV1 evaluations, the five-stage hybrid filter approach raised the classification F1 score from 33.95% to 90.31%.",
-              "In den Bewertungen mit MobileNetV1 steigerte der fünfstufige hybride Filteransatz den F1-Wert der Klassifikation von 33,95 % auf 90,31 %.",
-            ),
-          },
-          {
-            type: "p",
-            text: L(
-              "Üç aşamalı hibrit filtre yaklaşımı ise MobileNetV2 ile yapılan değerlendirmelerde yedi renk görme tipinin tamamında sınıflandırma performansını artırdı.",
-              "The three-stage hybrid filter approach, in turn, increased classification performance for all seven types of color vision deficiency in the MobileNetV2 evaluations.",
-              "Der dreistufige hybride Filteransatz wiederum steigerte in den Bewertungen mit MobileNetV2 die Klassifikationsleistung bei allen sieben Arten von Farbsehschwäche.",
-            ),
-          },
-          {
-            type: "p",
-            text: L(
-              "Bu sonuçlar, geliştirilen filtrelerin simüle edilmiş görüntüler üzerindeki sınıflandırma başarısına katkısını ortaya koydu.",
-              "These results showed how the filters contributed to classification success on simulated images.",
-              "Diese Ergebnisse zeigten den Beitrag der Filter zum Klassifikationserfolg auf simulierten Bildern.",
+              "Geliştirdiğimiz filtreler, iki uluslararası hakemli dergide yayımlanan makalelere dönüştü.",
+              "The filters we developed resulted in two papers published in international peer-reviewed journals.",
+              "Aus den entwickelten Filtern entstanden zwei Artikel in internationalen begutachteten Fachzeitschriften.",
             ),
           },
           { type: "publications" },
