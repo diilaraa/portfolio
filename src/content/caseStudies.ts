@@ -168,15 +168,15 @@ export const caseStudies: CaseStudy[] = [
             type: "list",
             items: LL(
               [
-                "Görüntü verisi: MSLD v2.0 ve MSID veri setleri birleştirildi; altı sınıf (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) 5 katlı çapraz doğrulama yapısında düzenlendi.",
+                "Görüntü verisi: iki açık lezyon görüntü veri seti birleştirildi; altı sınıf (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) 5 katlı çapraz doğrulama yapısında düzenlendi.",
                 "Etiketleme: veri setlerinde lezyon koordinatı olmadığı için her görüntü, tamamını kapsayan tek bir kutu ile etiketlendi. Bu yüzden değerlendirme, görüntü düzeyinde sınıflandırma metrikleriyle (precision, recall, F1) yapıldı.",
               ],
               [
-                "Image data: the MSLD v2.0 and MSID datasets were merged and organized into six classes (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) with 5-fold cross-validation.",
+                "Image data: two public skin-lesion image datasets were merged and organized into six classes (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) with 5-fold cross-validation.",
                 "Labeling: the datasets have no lesion coordinates, so each image was labeled with a single box covering the whole image. Evaluation therefore uses image-level classification metrics (precision, recall, F1).",
               ],
               [
-                "Bilddaten: Die Datensätze MSLD v2.0 und MSID wurden zusammengeführt und in sechs Klassen (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) mit 5-facher Kreuzvalidierung organisiert.",
+                "Bilddaten: Zwei öffentliche Datensätze mit Hautläsionsbildern wurden zusammengeführt und in sechs Klassen (Monkeypox, Healthy, Cowpox, Chickenpox, HFMD, Measles) mit 5-facher Kreuzvalidierung organisiert.",
                 "Annotation: Die Datensätze enthalten keine Läsionskoordinaten, daher wurde jedes Bild mit einer Box über das ganze Bild annotiert. Bewertet wird deshalb mit Klassifikationsmetriken auf Bildebene (Precision, Recall, F1).",
               ],
             ),
