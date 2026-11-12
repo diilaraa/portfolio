@@ -318,7 +318,7 @@ export const caseStudies: CaseStudy[] = [
           {
             type: "image",
             image: mpoxImg(
-              "epidemiology-charts.webp",
+              "epidemiology-charts-v2.webp",
               1878,
               991,
               L(
