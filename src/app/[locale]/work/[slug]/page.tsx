@@ -74,7 +74,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/wor
       {project.cover && (
         <div className="mx-auto mt-10 w-full max-w-[77.5rem] px-5 md:mt-14 md:px-10">
           <div className={`flex justify-center overflow-hidden rounded-2xl border border-line ${project.cover.fit === "contain" ? "bg-paper" : "bg-band-gray"}`}>
-            <ProjectCover project={project} locale={locale} />
+            <ProjectCover project={project} locale={locale} natural sizes="(min-width: 1240px) 1240px, 100vw" />
           </div>
         </div>
       )}

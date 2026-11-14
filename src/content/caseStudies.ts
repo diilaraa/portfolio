@@ -477,112 +477,51 @@ export const caseStudies: CaseStudy[] = [
     slug: "electricmotor",
     sections: [
       {
-        id: "brief",
-        title: L("İhtiyaç", "The brief", "Die Aufgabe"),
+        id: "goal",
+        title: L("Projenin amacı", "Project goal", "Ziel des Projekts"),
         blocks: [
           {
             type: "p",
             text: L(
-              "Sharjah'ta (BAE) Tesla araçlarına bakım ve onarım hizmeti veren bağımsız bir servis merkezi, hizmetlerini anlatan ve müşterinin kolayca randevu talebi bırakabileceği bir web sitesine ihtiyaç duyuyordu.",
-              "An independent service center in Sharjah (UAE) that maintains and repairs Tesla vehicles needed a website that explains its services and lets customers easily request an appointment.",
-              "Ein unabhängiges Servicezentrum in Sharjah (VAE), das Tesla-Fahrzeuge wartet und repariert, brauchte eine Website, die die Leistungen erklärt und Kunden einfach einen Termin anfragen lässt.",
+              "Servis merkezinin sunduğu bakım ve onarım hizmetlerini dijital ortamda anlaşılır biçimde sunmak ve müşterilerin kolayca iletişime geçebileceği bir platform oluşturmak.",
+              "To present the service center's maintenance and repair services clearly online and to create a platform where customers can get in touch easily.",
+              "Die Wartungs- und Reparaturleistungen des Servicezentrums online verständlich darzustellen und eine Plattform zu schaffen, über die Kunden einfach Kontakt aufnehmen können.",
             ),
           },
         ],
       },
       {
-        id: "structure",
-        title: L("Bilgi mimarisi ve deneyim", "Information architecture and UX", "Informationsarchitektur und UX"),
-        blocks: [
-          {
-            type: "list",
-            items: LL(
-              [
-                "Ana sayfa: model seçici (Model S, 3, X, Y, Cybertruck), hizmet özetleri, süreç ve müşteri yorumları.",
-                "Hizmetler sayfası: bakım, fren ve süspansiyon, klima ve soğutma, batarya ve şarj gibi başlıklara doğrudan bağlantılar.",
-                "Dört adımlı \"nasıl çalışır\" akışı: randevudan teslimata kadar müşteriyi ne beklediği açık.",
-                "İletişim akışı: ad, telefon, araç modeli ve sorun bilgisiyle randevu formu; telefon, e-posta, konum ve yol tarifi.",
-                "Gizlilik: gizlilik politikası ve çerez tercihleri; çerezler kullanıcı izin vermeden yerleştirilmez.",
-              ],
-              [
-                "Home: model selector (Model S, 3, X, Y, Cybertruck), service highlights, process, and customer reviews.",
-                "Services page with direct links to sections such as maintenance, brakes and suspension, AC and cooling, and battery and charging.",
-                "A four-step \"how it works\" flow, so customers know what to expect from booking to delivery.",
-                "Contact flow: a booking form for name, phone, vehicle model, and issue, plus phone, email, location, and directions.",
-                "Privacy: a privacy policy and cookie preferences; cookies are only placed after consent.",
-              ],
-              [
-                "Startseite: Modellauswahl (Model S, 3, X, Y, Cybertruck), Leistungsübersicht, Ablauf und Kundenbewertungen.",
-                "Leistungsseite mit direkten Links zu Bereichen wie Wartung, Bremsen und Fahrwerk, Klima und Kühlung sowie Batterie und Laden.",
-                "Ein vierstufiger „So funktioniert's“-Ablauf, damit Kunden wissen, was sie von der Buchung bis zur Übergabe erwartet.",
-                "Kontaktablauf: Terminformular mit Name, Telefon, Fahrzeugmodell und Anliegen sowie Telefon, E-Mail, Standort und Anfahrt.",
-                "Datenschutz: Datenschutzerklärung und Cookie-Einstellungen; Cookies werden erst nach Einwilligung gesetzt.",
-              ],
-            ),
-          },
-          {
-            type: "image",
-            image: {
-              src: "/images/work/electricmotor/home-hero.webp",
-              width: 1897,
-              height: 910,
-              alt: L(
-                "ElectricMotor ana sayfası: koyu zemin üzerinde kırmızı bir Tesla Roadster, hizmet sloganı ve randevu butonları.",
-                "ElectricMotor home page: a red Tesla Roadster on a dark background with the service tagline and booking buttons.",
-                "ElectricMotor-Startseite: ein roter Tesla Roadster auf dunklem Hintergrund mit Leistungsslogan und Termin-Buttons.",
-              ),
-              caption: L("Ana sayfa", "Home page", "Startseite"),
-            },
-          },
-        ],
-      },
-      {
-        id: "build",
-        title: L("Teknik yaklaşım", "Technical approach", "Technischer Ansatz"),
-        blocks: [
-          {
-            type: "list",
-            items: LL(
-              [
-                "Next.js, React ve TypeScript ile bileşen tabanlı yapı.",
-                "Mobil ve masaüstüne uyumlu, responsive tasarım.",
-                "SEO: sayfa başına metadata ve site haritası.",
-                "Güvenlik değerlendirmeleri ve çerez onayı.",
-              ],
-              [
-                "Component-based structure with Next.js, React, and TypeScript.",
-                "Responsive design for mobile and desktop.",
-                "SEO: per-page metadata and a sitemap.",
-                "Security considerations and cookie consent.",
-              ],
-              [
-                "Komponentenbasierter Aufbau mit Next.js, React und TypeScript.",
-                "Responsives Design für Mobilgeräte und Desktop.",
-                "SEO: Metadaten pro Seite und eine Sitemap.",
-                "Sicherheitsaspekte und Cookie-Einwilligung.",
-              ],
-            ),
-          },
-          {
-            type: "callout",
-            text: L(
-              "Site bir bilgi ve randevu talebi sitesidir; online ödeme, mağaza veya müşteri hesabı içermez.",
-              "The site is for information and appointment requests; it has no online payments, shop, or customer accounts.",
-              "Die Website dient Information und Terminanfragen; sie hat keine Online-Zahlung, keinen Shop und keine Kundenkonten.",
-            ),
-          },
-        ],
-      },
-      {
-        id: "launch",
-        title: L("Yayına alma", "Launch", "Launch"),
+        id: "design",
+        title: L("Tasarım ve geliştirme", "Design and development", "Design und Entwicklung"),
         blocks: [
           {
             type: "p",
             text: L(
-              "Tasarımdan geliştirmeye ve yayına almaya kadar tüm süreci tek başıma yürüttüm. Site Ağustos 2026'da Vercel üzerinden yayına alındı.",
-              "I handled the whole process on my own, from design and development to launch. The site went live on Vercel in August 2026.",
-              "Den gesamten Prozess von Design und Entwicklung bis zum Launch habe ich allein umgesetzt. Die Website ging im August 2026 auf Vercel live.",
+              "Web sitesini markanın kurumsal kimliğine uygun, modern ve mobil cihazlarla uyumlu bir tasarımla geliştirdim. Tesla modellerine göre hizmet bilgilerini düzenledim; bakım, batarya, fren ve klima gibi servis hizmetlerini ayrı bölümlerde sundum.",
+              "I built the website with a modern, mobile-friendly design that fits the brand's corporate identity. I organized the service information by Tesla model and presented services such as maintenance, battery, brakes, and air conditioning in separate sections.",
+              "Ich habe die Website mit einem modernen, mobilfreundlichen Design entwickelt, das zur Corporate Identity der Marke passt. Die Serviceinformationen habe ich nach Tesla-Modellen geordnet und Leistungen wie Wartung, Batterie, Bremsen und Klimaanlage in eigenen Bereichen dargestellt.",
+            ),
+          },
+          {
+            type: "p",
+            text: L(
+              "Randevu talep formu, iletişim bilgileri ve konum yönlendirmelerini siteye entegre ettim. Ayrıca sayfa bazlı meta veriler, site haritası ve arama motoru optimizasyonu (SEO) çalışmalarını gerçekleştirdim. Gizlilik politikası ve çerez tercihlerini de projeye dâhil ettim.",
+              "I integrated an appointment request form, contact details, and directions into the site. I also added per-page metadata and a sitemap and handled search engine optimization (SEO). A privacy policy and cookie preferences are part of the project as well.",
+              "Ein Formular für Terminanfragen, Kontaktdaten und eine Wegbeschreibung habe ich in die Website integriert. Außerdem habe ich seitenweise Metadaten, eine Sitemap und Suchmaschinenoptimierung (SEO) umgesetzt. Eine Datenschutzerklärung und Cookie-Einstellungen gehören ebenfalls zum Projekt.",
+            ),
+          },
+        ],
+      },
+      {
+        id: "result",
+        title: L("Sonuç", "Result", "Ergebnis"),
+        blocks: [
+          {
+            type: "p",
+            text: L(
+              "Tasarım, geliştirme, SEO ve teknik yayına alma süreçlerinin tamamını bağımsız olarak yürüttüm. Web sitesi Ağustos 2026'da Vercel üzerinde yayına alındı.",
+              "I handled design, development, SEO, and the technical launch entirely on my own. The website went live on Vercel in August 2026.",
+              "Design, Entwicklung, SEO und den technischen Launch habe ich vollständig selbstständig umgesetzt. Die Website ging im August 2026 auf Vercel online.",
             ),
           },
         ],

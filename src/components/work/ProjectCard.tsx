@@ -69,7 +69,21 @@ export function ProjectCard({ project, locale, statusLabel, readLabel, headingLe
  * Project image. With `fill`, it covers the whole panel it sits in (card image column);
  * without, it keeps a 16:10 frame (case study header).
  */
-export function ProjectCover({ project, locale, fill = false }: { project: Project; locale: Locale; fill?: boolean }) {
+export function ProjectCover({
+  project,
+  locale,
+  fill = false,
+  natural = false,
+  sizes = "(min-width: 768px) 58vw, 100vw",
+}: {
+  project: Project;
+  locale: Locale;
+  fill?: boolean;
+  /** Show the whole image at its own aspect ratio (case study page) instead of cropping it. */
+  natural?: boolean;
+  /** The case study page shows the cover full width, so it asks for a larger file. */
+  sizes?: string;
+}) {
   if (!project.cover) return null;
 
   // The CVD study shows the filters' plate outputs as an uncaptioned mosaic.
@@ -93,7 +107,7 @@ export function ProjectCover({ project, locale, fill = false }: { project: Proje
 
   const contain = project.cover.fit === "contain";
   const position = contain ? "object-center" : project.cover.focus === "left" ? "object-left-top" : "object-top";
-  const frame = fill ? "aspect-[16/10] md:absolute md:inset-0 md:aspect-auto md:h-full" : contain ? "aspect-[16/10] max-h-[24rem]" : "aspect-[16/10]";
+  const frame = natural && !contain ? "h-auto w-auto max-w-full max-h-[40rem]" : fill ? "aspect-[16/10] md:absolute md:inset-0 md:aspect-auto md:h-full" : contain ? "aspect-[16/10] max-h-[24rem]" : "aspect-[16/10]";
 
   return (
     <Image
@@ -101,8 +115,8 @@ export function ProjectCover({ project, locale, fill = false }: { project: Proje
       width={project.cover.width}
       height={project.cover.height}
       alt={project.cover.alt[locale]}
-      sizes="(min-width: 768px) 58vw, 100vw"
-      className={`${frame} w-full ${contain ? "object-contain p-10 md:p-14" : "object-cover"} ${position} transition-transform duration-500 ease-soft group-hover:scale-[1.03]`}
+      sizes={sizes}
+      className={`${frame} ${natural && !contain ? "" : "w-full"} ${contain ? "object-contain p-10 md:p-14" : "object-cover"} ${position} transition-transform duration-500 ease-soft group-hover:scale-[1.03]`}
     />
   );
 }
