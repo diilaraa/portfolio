@@ -120,15 +120,15 @@ export const projects: Project[] = [
     status: "live",
     title: { tr: "Dokar Zemin", en: "Dokar Zemin", de: "Dokar Zemin" },
     summary: {
-      tr: "Zemin iyileştirme ve temel mühendisliği alanında faaliyet gösteren Dokar Zemin için Türkçe ve İngilizce kurumsal web sitesini tasarladım, geliştirdim ve yayına aldım.",
-      en: "I designed, built, and launched the Turkish and English corporate website for Dokar Zemin, a company working in ground improvement and foundation engineering.",
-      de: "Für Dokar Zemin, ein Unternehmen für Baugrundverbesserung und Grundbau, habe ich die türkisch- und englischsprachige Unternehmenswebsite gestaltet, entwickelt und veröffentlicht.",
+      tr: "Zemin iyileştirme ve temel mühendisliği alanında faaliyet gösteren Dokar Zemin için Türkçe ve İngilizce kurumsal web sitesini tasarladım, geliştirdim ve yayına aldım. Firmanın hizmetlerini, mühendislik projelerini ve saha deneyimini dijital ortamda tanıtan kapsamlı bir web platformu oluşturdum.",
+      en: "I designed, built, and launched the Turkish and English corporate website for Dokar Zemin, a company working in ground improvement and foundation engineering. I created a comprehensive web platform that presents the company's services, engineering projects, and field experience online.",
+      de: "Für Dokar Zemin, ein Unternehmen für Baugrundverbesserung und Grundbau, habe ich die türkisch- und englischsprachige Unternehmenswebsite gestaltet, entwickelt und veröffentlicht. Entstanden ist eine umfassende Webplattform, die Leistungen, Ingenieurprojekte und Praxiserfahrung des Unternehmens online vorstellt.",
     },
     period: { tr: "2026", en: "2026", de: "2026" },
     role: {
-      tr: "Tasarım, geliştirme ve yayına alma",
-      en: "Design, development, and launch",
-      de: "Design, Entwicklung und Launch",
+      tr: "Tasarım · Web geliştirme · SEO · Yayına alma",
+      en: "Design · Web development · SEO · Launch",
+      de: "Design · Webentwicklung · SEO · Launch",
     },
     stack: ["Web design", "Information architecture", "SEO"],
     cover: {

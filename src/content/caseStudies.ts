@@ -477,51 +477,23 @@ export const caseStudies: CaseStudy[] = [
     slug: "electricmotor",
     sections: [
       {
-        id: "goal",
-        title: L("Projenin amacı", "Project goal", "Ziel des Projekts"),
+        id: "about",
+        title: L("Proje hakkında", "About the project", "Über das Projekt"),
         blocks: [
           {
             type: "p",
             text: L(
-              "Servis merkezinin sunduğu bakım ve onarım hizmetlerini dijital ortamda anlaşılır biçimde sunmak ve müşterilerin kolayca iletişime geçebileceği bir platform oluşturmak.",
-              "To present the service center's maintenance and repair services clearly online and to create a platform where customers can get in touch easily.",
-              "Die Wartungs- und Reparaturleistungen des Servicezentrums online verständlich darzustellen und eine Plattform zu schaffen, über die Kunden einfach Kontakt aufnehmen können.",
-            ),
-          },
-        ],
-      },
-      {
-        id: "design",
-        title: L("Tasarım ve geliştirme", "Design and development", "Design und Entwicklung"),
-        blocks: [
-          {
-            type: "p",
-            text: L(
-              "Web sitesini markanın kurumsal kimliğine uygun, modern ve mobil cihazlarla uyumlu bir tasarımla geliştirdim. Tesla modellerine göre hizmet bilgilerini düzenledim; bakım, batarya, fren ve klima gibi servis hizmetlerini ayrı bölümlerde sundum.",
-              "I built the website with a modern, mobile-friendly design that fits the brand's corporate identity. I organized the service information by Tesla model and presented services such as maintenance, battery, brakes, and air conditioning in separate sections.",
-              "Ich habe die Website mit einem modernen, mobilfreundlichen Design entwickelt, das zur Corporate Identity der Marke passt. Die Serviceinformationen habe ich nach Tesla-Modellen geordnet und Leistungen wie Wartung, Batterie, Bremsen und Klimaanlage in eigenen Bereichen dargestellt.",
+              "Markanın kurumsal kimliğine uygun, modern ve mobil uyumlu bir tasarım hazırladım. Tesla modellerine göre hizmet içeriklerini düzenleyerek bakım, fren ve süspansiyon, batarya, klima ve soğutma gibi servis kategorilerini ayrı bölümlerde sundum.",
+              "I created a modern, mobile-friendly design that fits the brand's corporate identity. I organized the service content by Tesla model and presented service categories such as maintenance, brakes and suspension, battery, and air conditioning and cooling in separate sections.",
+              "Ich habe ein modernes, mobilfreundliches Design entworfen, das zur Corporate Identity der Marke passt. Die Serviceinhalte habe ich nach Tesla-Modellen geordnet und Kategorien wie Wartung, Bremsen und Fahrwerk, Batterie sowie Klima und Kühlung in eigenen Bereichen dargestellt.",
             ),
           },
           {
             type: "p",
             text: L(
-              "Randevu talep formu, iletişim bilgileri ve konum yönlendirmelerini siteye entegre ettim. Ayrıca sayfa bazlı meta veriler, site haritası ve arama motoru optimizasyonu (SEO) çalışmalarını gerçekleştirdim. Gizlilik politikası ve çerez tercihlerini de projeye dâhil ettim.",
-              "I integrated an appointment request form, contact details, and directions into the site. I also added per-page metadata and a sitemap and handled search engine optimization (SEO). A privacy policy and cookie preferences are part of the project as well.",
-              "Ein Formular für Terminanfragen, Kontaktdaten und eine Wegbeschreibung habe ich in die Website integriert. Außerdem habe ich seitenweise Metadaten, eine Sitemap und Suchmaschinenoptimierung (SEO) umgesetzt. Eine Datenschutzerklärung und Cookie-Einstellungen gehören ebenfalls zum Projekt.",
-            ),
-          },
-        ],
-      },
-      {
-        id: "result",
-        title: L("Sonuç", "Result", "Ergebnis"),
-        blocks: [
-          {
-            type: "p",
-            text: L(
-              "Tasarım, geliştirme, SEO ve teknik yayına alma süreçlerinin tamamını bağımsız olarak yürüttüm. Web sitesi Ağustos 2026'da Vercel üzerinde yayına alındı.",
-              "I handled design, development, SEO, and the technical launch entirely on my own. The website went live on Vercel in August 2026.",
-              "Design, Entwicklung, SEO und den technischen Launch habe ich vollständig selbstständig umgesetzt. Die Website ging im August 2026 auf Vercel online.",
+              "Randevu talep formu, iletişim bilgileri ve konum yönlendirmeleriyle müşterilerin servise ulaşmasını kolaylaştırdım. Ayrıca sayfa bazlı meta veriler, site haritası ve diğer SEO düzenlemelerini gerçekleştirdim. Gizlilik politikası ve çerez tercihlerini de projeye dâhil ettim. Tasarımdan geliştirmeye, SEO çalışmalarından teknik yayına almaya kadar tüm süreci bağımsız olarak yürüttüm. Web sitesi Ağustos 2026'da Vercel üzerinde yayına alındı.",
+              "With an appointment request form, contact details, and directions, I made it easy for customers to reach the service center. I also added per-page metadata, a sitemap, and other SEO work, and included a privacy policy and cookie preferences. I ran the whole process independently, from design and development to SEO and the technical launch. The website went live on Vercel in August 2026.",
+              "Mit einem Formular für Terminanfragen, Kontaktdaten und einer Wegbeschreibung habe ich Kunden den Weg zum Servicezentrum erleichtert. Außerdem habe ich seitenweise Metadaten, eine Sitemap und weitere SEO-Maßnahmen umgesetzt sowie eine Datenschutzerklärung und Cookie-Einstellungen eingebunden. Den gesamten Prozess von Design und Entwicklung bis zu SEO und dem technischen Launch habe ich selbstständig umgesetzt. Die Website ging im August 2026 auf Vercel online.",
             ),
           },
         ],
@@ -534,61 +506,23 @@ export const caseStudies: CaseStudy[] = [
     slug: "dokar-zemin",
     sections: [
       {
-        id: "context",
-        title: L("Bağlam", "Context", "Kontext"),
+        id: "about",
+        title: L("Proje hakkında", "About the project", "Über das Projekt"),
         blocks: [
           {
             type: "p",
             text: L(
-              "Dokar Zemin; fore kazık, ankraj ve deep soil mixing uygulamaları yapan bir zemin iyileştirme firması. Firmanın kurumsal web sitesini tasarladım, geliştirdim ve dokarzemin.com.tr adresinde yayına aldım. Site Türkçe ve İngilizce olarak hizmet veriyor.",
-              "Dokar Zemin is a ground improvement company working with bored piles, anchors, and deep soil mixing. I designed and built their corporate website and launched it at dokarzemin.com.tr. The site is available in Turkish and English.",
-              "Dokar Zemin ist ein Unternehmen für Baugrundverbesserung (Bohrpfähle, Anker, Deep Soil Mixing). Ich habe die Unternehmenswebsite gestaltet, entwickelt und unter dokarzemin.com.tr veröffentlicht. Die Seite ist auf Türkisch und Englisch verfügbar.",
+              "Markanın kurumsal kimliğine uygun, modern ve mobil uyumlu bir web sitesi hazırladım. Kurumsal bilgiler, faaliyet alanları, projeler, makine parkı, referanslar, kalite belgeleri ve galeri içeriklerini kullanıcıların kolayca erişebileceği bir yapıda düzenledim.",
+              "I built a modern, mobile-friendly website that fits the brand's corporate identity. I organized the company information, fields of activity, projects, machine park, references, quality certificates, and gallery so that visitors can find them easily.",
+              "Ich habe eine moderne, mobilfreundliche Website erstellt, die zur Corporate Identity der Marke passt. Unternehmensinformationen, Tätigkeitsbereiche, Projekte, Maschinenpark, Referenzen, Qualitätszertifikate und Galerie habe ich so strukturiert, dass Besucher sie leicht finden.",
             ),
           },
           {
-            type: "image",
-            image: {
-              src: "/images/work/dokar-zemin/homepage.webp",
-              width: 1896,
-              height: 872,
-              alt: L(
-                "Dokar Zemin ana sayfa tasarımı: şantiyedeki fore kazık makineleri üzerinde \"Zemin İyileştirme Sistemleri\" başlığı ve iki buton.",
-                "Dokar Zemin home page design: the headline \"Zemin İyileştirme Sistemleri\" over piling rigs on a site, with two buttons.",
-                "Dokar-Zemin-Startseitendesign: die Überschrift „Zemin İyileştirme Sistemleri“ über Bohrgeräten auf einer Baustelle, mit zwei Buttons.",
-              ),
-              caption: L("Ana sayfa", "Home page", "Startseite"),
-            },
-          },
-        ],
-      },
-      {
-        id: "focus",
-        title: L("Odak noktaları", "Focus areas", "Schwerpunkte"),
-        blocks: [
-          {
-            type: "list",
-            items: LL(
-              [
-                "Modern ve premium bir görsel dil; marka kimliğinin dijitale aktarılması.",
-                "Bilgi mimarisi: kurumsal, faaliyet alanları, projeler, makine parkı, referanslar, galeri ve iletişim.",
-                "Türkçe ve İngilizce için dil seçicili gezinme.",
-                "Hosting ve yayına alma seçimi; güvenlik, istikrar ve bakım kolaylığı.",
-                "SEO ve performans.",
-              ],
-              [
-                "A modern, premium visual language that carries the brand identity online.",
-                "Information architecture: company, fields of activity, projects, machine park, references, gallery, and contact.",
-                "Navigation with a language switcher for Turkish and English.",
-                "Choice of hosting and deployment; security, stability, and ease of maintenance.",
-                "SEO and performance.",
-              ],
-              [
-                "Eine moderne, hochwertige Bildsprache, die die Markenidentität digital überträgt.",
-                "Informationsarchitektur: Unternehmen, Tätigkeitsbereiche, Projekte, Maschinenpark, Referenzen, Galerie und Kontakt.",
-                "Navigation mit Sprachumschalter für Türkisch und Englisch.",
-                "Wahl von Hosting und Deployment; Sicherheit, Stabilität und Wartbarkeit.",
-                "SEO und Performance.",
-              ],
+            type: "p",
+            text: L(
+              "Türkçe ve İngilizce dil desteğini entegre ederek firmanın farklı pazarlardaki ziyaretçilere ulaşmasını hedefledim. Ayrıca sayfa bazlı SEO düzenlemeleri, Gizlilik politikası ve çerez tercihlerini projeye dâhil ettim. Tasarımdan geliştirmeye, optimizasyondan yayına almaya kadar tüm süreci bağımsız olarak yürüttüm. Web sitesi 2026 yılında yayına alındı.",
+              "By adding Turkish and English language support, I aimed to help the company reach visitors in different markets. I also included per-page SEO work, a privacy policy, and cookie preferences. I ran the whole process independently, from design and development to optimization and launch. The website went live in 2026.",
+              "Mit türkischer und englischer Sprachunterstützung sollte das Unternehmen Besucher in verschiedenen Märkten erreichen. Außerdem habe ich seitenweise SEO-Maßnahmen, eine Datenschutzerklärung und Cookie-Einstellungen eingebunden. Den gesamten Prozess von Design und Entwicklung bis zu Optimierung und Launch habe ich selbstständig umgesetzt. Die Website ging 2026 online.",
             ),
           },
         ],
