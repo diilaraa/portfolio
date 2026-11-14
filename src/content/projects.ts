@@ -126,11 +126,11 @@ export const projects: Project[] = [
     },
     period: { tr: "2026", en: "2026", de: "2026" },
     role: {
-      tr: "Tasarım · Web geliştirme · SEO · Yayına alma",
-      en: "Design · Web development · SEO · Launch",
-      de: "Design · Webentwicklung · SEO · Launch",
+      tr: "Tasarım · Frontend ve web geliştirme · Yayına alma",
+      en: "Design · Frontend and web development · Launch",
+      de: "Design · Frontend- und Webentwicklung · Launch",
     },
-    stack: ["Web design", "Information architecture", "SEO"],
+    stack: ["Astro", "Tailwind CSS", "Vercel"],
     cover: {
       src: "/images/work/dokar-zemin/homepage.webp",
       width: 1896,
