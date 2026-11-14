@@ -7,7 +7,6 @@ import { pageMetadata } from "@/lib/seo";
 import { projects } from "@/content/projects";
 import { getCaseStudy } from "@/content/caseStudies";
 import { StatusBadge } from "@/components/ui/StatusBadge";
-import { ButtonLink } from "@/components/ui/Button";
 import { ProjectCover } from "@/components/work/ProjectCard";
 import { CaseBlock } from "@/components/work/CaseBlocks";
 import { TechList } from "@/components/ui/TechList";
@@ -35,8 +34,6 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/wor
   const { project, study } = await load(params);
   const copy = pages.caseStudy;
 
-  const index = projects.findIndex((p) => p.slug === project.slug);
-  const next = projects[(index + 1) % projects.length];
   const notice =
     project.slug === "mpox-decision-support" ? copy.researchNotice : project.status === "in-progress" ? copy.inProgressNotice : null;
 
@@ -140,17 +137,6 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/wor
         </div>
       </div>
 
-      <footer className="border-t border-line bg-band-gray">
-        <div className="mx-auto flex w-full max-w-[77.5rem] flex-wrap items-center justify-between gap-6 px-5 py-12 md:px-10">
-          <div>
-            <p className="text-label font-medium text-ink-muted">{copy.next}</p>
-            <p className="mt-2 max-w-[30ch] font-display text-h2 text-ink">{next.title[locale]}</p>
-          </div>
-          <ButtonLink href={href(locale, `/work/${next.slug}`)} arrow>
-            {dict.work.readCase}
-          </ButtonLink>
-        </div>
-      </footer>
     </article>
   );
 }

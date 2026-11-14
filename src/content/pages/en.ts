@@ -19,7 +19,6 @@ export const enPages: PagesCopy = {
     stack: "Stack",
     status: "Status",
     links: "Links",
-    next: "Next project",
     researchNotice:
       "This is a research prototype. It is not a clinically validated diagnostic tool and does not replace medical judgment.",
     inProgressNotice: "This project is in progress; the page will be updated as design and development move forward.",

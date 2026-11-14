@@ -19,7 +19,6 @@ export const dePages: PagesCopy = {
     stack: "Technologien",
     status: "Status",
     links: "Links",
-    next: "Nächstes Projekt",
     researchNotice:
       "Dies ist ein Forschungsprototyp. Er ist kein klinisch validiertes Diagnosewerkzeug und ersetzt keine ärztliche Entscheidung.",
     inProgressNotice: "Dieses Projekt läuft noch; die Seite wird mit dem Fortschritt von Design und Entwicklung aktualisiert.",

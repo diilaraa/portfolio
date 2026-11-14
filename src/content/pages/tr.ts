@@ -18,7 +18,6 @@ export const trPages = {
     stack: "Teknolojiler",
     status: "Durum",
     links: "Bağlantılar",
-    next: "Sonraki çalışma",
     researchNotice:
       "Bu bir araştırma prototipidir; klinik olarak doğrulanmış bir teşhis aracı değildir ve tıbbi karar yerine geçmez.",
     inProgressNotice: "Bu proje devam ediyor; sayfa tasarım ve geliştirme ilerledikçe güncellenecek.",
