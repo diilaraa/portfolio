@@ -100,7 +100,7 @@ export const projects: Project[] = [
       en: "Design · Frontend and web development · Launch",
       de: "Design · Frontend- und Webentwicklung · Launch",
     },
-    stack: ["Next.js", "React", "TypeScript", "Vercel"],
+    stack: ["Next.js", "React", "TypeScript"],
     cover: {
       src: "/images/work/electricmotor/home-hero-hd.webp",
       width: 1901,
@@ -130,7 +130,7 @@ export const projects: Project[] = [
       en: "Design · Frontend and web development · Launch",
       de: "Design · Frontend- und Webentwicklung · Launch",
     },
-    stack: ["Astro", "Tailwind CSS", "Vercel"],
+    stack: ["Astro", "Tailwind CSS"],
     cover: {
       src: "/images/work/dokar-zemin/homepage.webp",
       width: 1896,
